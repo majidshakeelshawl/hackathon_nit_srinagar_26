@@ -37,19 +37,32 @@ We are proud to build with the tools provided during the Kashmir Hackathon:
 
 ## Environment variables
 
-From the **repository root**, copy the example env and edit keys:
+This project uses **separate env files** for server and client.
+
+Create `server/.env`:
 
 ```bash
-cp .env.example server/.env
-# optional: cp .env.example client/.env
+NVIDIA_NIM_API_KEY=<ADD_YOUR_KEY>
+PORT=3001
+UPLOAD_DIR=./tmp/uploads
+NODE_ENV=development
+```
+
+Create `client/.env`:
+
+```bash
+VITE_API_URL=http://localhost:3001
+VITE_CONVEX_URL=https://your-project.convex.cloud
 ```
 
 | Variable | Where | Purpose |
 |----------|--------|---------|
 | `NVIDIA_NIM_API_KEY` | `server/.env` | Required for NL→SQL inference and AI Insight generation. |
-| `PORT` | `server/.env` | API port (default `3001`) |
-| `VITE_API_URL` | `client/.env` | API base URL (defaults to `http://localhost:3001` if unset) |
-| `VITE_CONVEX_URL` | `client/.env` | Optional; set when using Convex client features |
+| `PORT` | `server/.env` | API port (default `3001`). |
+| `UPLOAD_DIR` | `server/.env` | Directory used to store uploaded files temporarily. |
+| `NODE_ENV` | `server/.env` | Runtime mode (`development` or `production`). |
+| `VITE_API_URL` | `client/.env` | Backend API base URL. |
+| `VITE_CONVEX_URL` | `client/.env` | Convex deployment URL. |
 
 ## Setup & Run
 
