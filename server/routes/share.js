@@ -1,14 +1,15 @@
 import { Router } from 'express';
 import { randomBytes } from 'crypto';
+import { convexMutation, convexQuery } from '../services/convex.js';
 
 const router = Router();
 
-/** In-memory snapshots (survives until server restart). Use Convex `snapshots` table for durable storage. */
+/** In-memory fallback cache. Convex `snapshots` table is the durable source when configured. */
 const snapshots = new Map();
 
 const MAX_ROWS = 500;
 
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const {
       question,
@@ -27,7 +28,7 @@ router.post('/', (req, res) => {
     const trimmed = results.slice(0, MAX_ROWS);
     const id = randomBytes(5).toString('hex').slice(0, 10);
 
-    snapshots.set(id, {
+    const snapshot = {
       question,
       sql,
       chartType: chartType || 'bar',
@@ -36,7 +37,23 @@ router.post('/', (req, res) => {
       explanation: explanation || '',
       insights: Array.isArray(insights) ? insights : [],
       createdAt: Date.now()
-    });
+    };
+    snapshots.set(id, snapshot);
+
+    try {
+      await convexMutation('snapshots:createSnapshot', {
+        shareId: id,
+        question: snapshot.question,
+        sql: snapshot.sql,
+        chartType: snapshot.chartType,
+        columns: snapshot.columns,
+        resultsJson: JSON.stringify(snapshot.results),
+        explanation: snapshot.explanation,
+        insights: snapshot.insights
+      });
+    } catch (e) {
+      console.warn('Convex snapshot save failed, using in-memory fallback:', e?.message || e);
+    }
 
     res.json({ shareId: id });
   } catch (e) {
@@ -45,12 +62,28 @@ router.post('/', (req, res) => {
   }
 });
 
-router.get('/:id', (req, res) => {
-  const snap = snapshots.get(req.params.id);
-  if (!snap) {
-    return res.status(404).json({ error: 'Snapshot not found or expired' });
+router.get('/:id', async (req, res) => {
+  try {
+    const fromConvex = await convexQuery('snapshots:getSnapshot', { shareId: req.params.id });
+    if (fromConvex) {
+      return res.json({
+        question: fromConvex.question,
+        sql: fromConvex.sql,
+        chartType: fromConvex.chartType || 'bar',
+        columns: Array.isArray(fromConvex.columns) ? fromConvex.columns : [],
+        results: fromConvex.resultsJson ? JSON.parse(fromConvex.resultsJson) : [],
+        explanation: fromConvex.explanation || '',
+        insights: Array.isArray(fromConvex.insights) ? fromConvex.insights : [],
+        createdAt: fromConvex.createdAt || fromConvex._creationTime
+      });
+    }
+  } catch (e) {
+    console.warn('Convex snapshot read failed, trying in-memory fallback:', e?.message || e);
   }
-  res.json(snap);
+
+  const snap = snapshots.get(req.params.id);
+  if (!snap) return res.status(404).json({ error: 'Snapshot not found or expired' });
+  return res.json(snap);
 });
 
 export default router;

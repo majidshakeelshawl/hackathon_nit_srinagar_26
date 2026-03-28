@@ -26,14 +26,24 @@ Behind the scenes, the platform leverages state-of-the-art LLMs (Llama 3.1 via N
 | Charts | Recharts + html2canvas | Powerful and reactive D3 wrappers configured for Bar, Line, Pie, and Scatter visualization. Ability to snapshot to PNG. |
 | SQL engine | DuckDB (in-process) | Lightning-fast local analytics engine routing standard natural language to `read_csv_auto` optimized streams. Handles multiple in-memory VIEW architectures concurrently. |
 | AI Pipeline | NVIDIA NIM (`meta/llama-3.1-70b-instruct`) | The brain of natural language comprehension. Provides lightning-fast response times to convert plain english to strict DuckDB-dialect SQL, along with contextual data insights and schema extraction. |
-| Backend | Node.js + Express | Handles asynchronous multi-part `.csv` and `.xlsx` upload streams, proxy streams SSE from NVIDIA NIM API, and serves Convex interactions. |
+| Backend | Node.js + Express | Handles asynchronous multi-part `.csv` and `.xlsx` upload streams, SSE query streaming, and DuckDB query execution APIs. |
+| Realtime DB / Persistence | Convex | Durable cloud data layer used to persist query history and share snapshots, with in-memory fallback when Convex is not configured. |
 
 ## 🏆 Hackathon Partner Technologies
 
 We are proud to build with the tools provided during the Kashmir Hackathon:
 
-- **Convex:** The core realtime database layer of our platform. We rely on Convex to manage user schemas, synchronize state effortlessly between the client and server, and securely preserve the history of every AI query generated.
+- **Convex (what it is):** Convex is a backend platform/database for app data and functions. It gives us durable storage with simple query/mutation APIs.
+- **Where we use Convex in QueryWise (current implementation):**
+  - Query history persistence from the query API flow (`history:saveQuery`) in `server/routes/query.js`.
+  - Share snapshot persistence and retrieval (`snapshots:createSnapshot`, `snapshots:getSnapshot`) in `server/routes/share.js`.
+  - Convex function definitions live in `convex/history.js`, `convex/snapshots.js`, and `convex/schema.js`.
+  - Fallback behavior: if Convex is not configured, the app continues with in-memory storage.
 - **Cursor Pro:** The primary AI-powered IDE that significantly accelerated the entire development lifecycle of this project.
+
+### Convex Usage Proof (Organizer Reference)
+
+![Convex usage screenshot](docs/assets/convex-usage.png)
 
 ## Environment variables
 
@@ -43,6 +53,7 @@ Create `server/.env`:
 
 ```bash
 NVIDIA_NIM_API_KEY=<ADD_YOUR_KEY>
+CONVEX_URL=https://your-project.convex.cloud
 PORT=3001
 UPLOAD_DIR=./tmp/uploads
 NODE_ENV=development
@@ -58,11 +69,12 @@ VITE_CONVEX_URL=https://your-project.convex.cloud
 | Variable | Where | Purpose |
 |----------|--------|---------|
 | `NVIDIA_NIM_API_KEY` | `server/.env` | Required for NL→SQL inference and AI Insight generation. |
+| `CONVEX_URL` | `server/.env` | Convex deployment URL used by backend to persist query history and share snapshots. |
 | `PORT` | `server/.env` | API port (default `3001`). |
 | `UPLOAD_DIR` | `server/.env` | Directory used to store uploaded files temporarily. |
 | `NODE_ENV` | `server/.env` | Runtime mode (`development` or `production`). |
 | `VITE_API_URL` | `client/.env` | Backend API base URL. |
-| `VITE_CONVEX_URL` | `client/.env` | Convex deployment URL. |
+| `VITE_CONVEX_URL` | `client/.env` | Optional client-side Convex URL (reserved for direct client integration). |
 
 ## Setup & Run
 
@@ -93,5 +105,5 @@ To demonstrate the power of Query Wise, simply toggle to **Multiple files (JOIN)
 ```
 client/          # Vite + React app (SaaS Dashboard, Recharts, File Upload state)
 server/          # Express API (Upload routing, API Query Streams, DuckDB orchestration, NVIDIA NIM)
-convex/          # Convex schema (Robust data sharing capabilities and query history preservation)
+convex/          # Convex schema + functions used for durable query history and share snapshots
 ```

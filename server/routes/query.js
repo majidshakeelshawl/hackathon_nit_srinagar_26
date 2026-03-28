@@ -10,6 +10,7 @@ import {
 } from '../services/nim.js';
 import { runQuery } from '../services/duckdb.js';
 import { flagAnomalyRows } from '../utils/anomalies.js';
+import { convexMutation } from '../services/convex.js';
 
 const router = Router();
 
@@ -22,6 +23,11 @@ function queryContext(body) {
   const { previousSql, previousQuestion } = body;
   if (!previousSql) return {};
   return { previousSql, previousQuestion: previousQuestion || '' };
+}
+
+function querySessionId(body, fileId) {
+  if (body?.sessionId && typeof body.sessionId === 'string') return body.sessionId;
+  return `file:${fileId}`;
 }
 
 // Natural language query
@@ -59,6 +65,19 @@ router.post('/', async (req, res) => {
       insights = await generateInsights(sql, columns, rows);
     } catch {
       // non-critical
+    }
+
+    try {
+      await convexMutation('history:saveQuery', {
+        sessionId: querySessionId(req.body, fileId),
+        fileId,
+        question,
+        sql,
+        rowCount: rows.length,
+        executionTimeMs
+      });
+    } catch (e) {
+      console.warn('Convex history save failed:', e?.message || e);
     }
 
     res.json({
@@ -185,6 +204,19 @@ router.post('/stream', async (req, res) => {
       sseWrite(res, 'insights', { bullets: insights });
     } catch {
       sseWrite(res, 'insights', { bullets: [] });
+    }
+
+    try {
+      await convexMutation('history:saveQuery', {
+        sessionId: querySessionId(req.body, fileId),
+        fileId,
+        question,
+        sql,
+        rowCount: rows.length,
+        executionTimeMs
+      });
+    } catch (e) {
+      console.warn('Convex history save failed:', e?.message || e);
     }
 
     sseWrite(res, 'done', {});
