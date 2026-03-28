@@ -1,0 +1,11 @@
+{
+  "name": "querywise",
+  "private": true,
+  "scripts": {
+    "convex:codegen": "convex codegen",
+    "smoke": "node scripts/smoke.mjs"
+  },
+  "devDependencies": {
+    "convex": "^1.7.1"
+  }
+}

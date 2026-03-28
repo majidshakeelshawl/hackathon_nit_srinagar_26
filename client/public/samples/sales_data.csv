@@ -1,0 +1,501 @@
+order_id,date,product_name,category,region,salesperson,units_sold,unit_price,total_revenue,customer_name
+ORD-0001,2024-06-08,Standing Desk,Furniture,West,David Lee,39,610,23790,Westfield Digital
+ORD-0002,2024-06-11,Standing Desk,Furniture,South,Henry Brown,45,593,26685,Westfield Digital
+ORD-0003,2024-09-22,Standing Desk,Furniture,East,Frank Garcia,12,615,7380,BrightPath Inc
+ORD-0004,2024-10-03,Standing Desk,Furniture,South,Carol Davis,47,601,28247,Lambda Software
+ORD-0005,2023-08-19,Webcam,Accessories,South,Emma Wilson,16,66,1056,SilverLine Corp
+ORD-0006,2024-11-29,Office Chair,Furniture,East,Henry Brown,2,360,720,Nova Enterprises
+ORD-0007,2023-05-22,Webcam,Accessories,Central,Emma Wilson,42,66,2772,InnoVate Systems
+ORD-0008,2023-01-09,Monitor 4K,Electronics,Central,Carol Davis,43,465,19995,Lambda Software
+ORD-0009,2024-10-31,USB Hub,Accessories,South,Alice Johnson,8,34,272,RedRock Industries
+ORD-0010,2024-10-15,Headphones,Electronics,East,Isabel Chen,12,198,2376,Irongate Digital
+ORD-0011,2023-06-27,Wireless Mouse,Accessories,Central,Henry Brown,31,28,868,Atlas Solutions
+ORD-0012,2023-08-22,Headphones,Electronics,West,Isabel Chen,22,208,4576,TechFlow Inc
+ORD-0013,2023-04-30,Office Chair,Furniture,West,Grace Kim,47,352,16544,Unity Systems
+ORD-0014,2023-10-06,USB Hub,Accessories,North,Henry Brown,15,34,510,PrimeWare Corp
+ORD-0015,2023-09-18,Wireless Mouse,Accessories,North,David Lee,7,30,210,CoreTech Partners
+ORD-0016,2023-11-26,USB Hub,Accessories,Central,Carol Davis,17,34,578,Summit Industries
+ORD-0017,2024-05-23,USB Hub,Accessories,Central,Carol Davis,1,34,34,Harbor Digital
+ORD-0018,2024-10-18,Office Chair,Furniture,North,Frank Garcia,7,357,2499,GoldStar Media
+ORD-0019,2024-09-15,Webcam,Accessories,North,Carol Davis,38,68,2584,CloudPeak Solutions
+ORD-0020,2024-07-09,Laptop Pro,Electronics,North,Emma Wilson,18,1204,21672,Irongate Digital
+ORD-0021,2023-05-12,Tablet,Electronics,North,Jack Taylor,5,507,2535,Canyon Corp
+ORD-0022,2024-02-14,Keyboard,Accessories,South,Emma Wilson,13,76,988,Globe Systems
+ORD-0023,2024-11-15,Monitor 4K,Electronics,North,Emma Wilson,5,444,2220,Xenon Corp
+ORD-0024,2024-10-27,Laptop Pro,Electronics,Central,Bob Smith,1,1255,1255,TechFlow Inc
+ORD-0025,2023-02-02,Keyboard,Accessories,Central,Frank Garcia,26,81,2106,PrimeWare Corp
+ORD-0026,2023-06-29,Monitor 4K,Electronics,North,Grace Kim,32,438,14016,RedRock Industries
+ORD-0027,2023-07-03,Tablet,Electronics,East,Isabel Chen,26,506,13156,NexGen Tech
+ORD-0028,2024-04-23,Standing Desk,Furniture,West,Henry Brown,22,612,13464,SilverLine Corp
+ORD-0029,2024-09-02,USB Hub,Accessories,West,Isabel Chen,28,34,952,Westfield Digital
+ORD-0030,2024-07-02,Standing Desk,Furniture,West,Isabel Chen,2,575,1150,Xenon Corp
+ORD-0031,2024-07-26,Tablet,Electronics,North,Grace Kim,46,518,23828,Alpine Tech
+ORD-0032,2023-07-23,Laptop Pro,Electronics,East,David Lee,18,1156,20808,GreenLeaf Holdings
+ORD-0033,2023-05-01,USB Hub,Accessories,Central,Carol Davis,35,36,1260,Vanguard Labs
+ORD-0034,2023-08-10,Headphones,Electronics,West,Carol Davis,2,203,406,Delta Systems
+ORD-0035,2023-05-06,Webcam,Accessories,South,Grace Kim,4,66,264,Zenith Partners
+ORD-0036,2024-04-04,Webcam,Accessories,South,Frank Garcia,37,62,2294,InnoVate Systems
+ORD-0037,2023-10-27,Wireless Mouse,Accessories,Central,Emma Wilson,48,28,1344,Beacon Solutions
+ORD-0038,2023-11-27,Headphones,Electronics,East,Jack Taylor,4,191,764,SilverLine Corp
+ORD-0039,2024-10-29,Tablet,Electronics,West,Henry Brown,46,490,22540,Falcon Networks
+ORD-0040,2023-01-23,USB Hub,Accessories,Central,David Lee,49,35,1715,Meridian Group
+ORD-0041,2024-03-07,Standing Desk,Furniture,North,Isabel Chen,36,580,20880,Unity Systems
+ORD-0042,2023-10-20,Laptop Pro,Electronics,North,Carol Davis,11,1147,12617,CoreTech Partners
+ORD-0043,2024-12-12,Tablet,Electronics,Central,Bob Smith,46,475,21850,GreenLeaf Holdings
+ORD-0044,2024-04-22,Laptop Pro,Electronics,North,Bob Smith,22,1232,27104,Highland Corp
+ORD-0045,2023-10-26,Tablet,Electronics,Central,Bob Smith,8,513,4104,QuickByte Solutions
+ORD-0046,2023-05-06,Tablet,Electronics,North,David Lee,34,502,17068,Skyline Enterprises
+ORD-0047,2023-12-19,Monitor 4K,Electronics,Central,Carol Davis,27,456,12312,PrimeWare Corp
+ORD-0048,2023-07-25,Standing Desk,Furniture,North,Carol Davis,30,582,17460,Meridian Group
+ORD-0049,2024-03-27,Standing Desk,Furniture,Central,Emma Wilson,11,624,6864,Delta Systems
+ORD-0050,2023-03-07,Webcam,Accessories,West,Alice Johnson,36,68,2448,Irongate Digital
+ORD-0051,2024-02-20,Office Chair,Furniture,East,Henry Brown,41,346,14186,Ridgeline Tech
+ORD-0052,2023-11-29,Tablet,Electronics,North,Carol Davis,8,493,3944,Granite Works
+ORD-0053,2023-08-27,Headphones,Electronics,Central,Jack Taylor,15,207,3105,QuickByte Solutions
+ORD-0054,2023-07-25,Webcam,Accessories,South,Isabel Chen,43,67,2881,Skyline Enterprises
+ORD-0055,2023-02-13,Webcam,Accessories,North,Bob Smith,36,68,2448,Beacon Solutions
+ORD-0056,2023-12-26,Monitor 4K,Electronics,West,Emma Wilson,34,462,15708,GoldStar Media
+ORD-0057,2023-09-05,Tablet,Electronics,East,Frank Garcia,37,516,19092,Alpine Tech
+ORD-0058,2024-06-15,Keyboard,Accessories,Central,Jack Taylor,27,79,2133,Vertex Digital
+ORD-0059,2023-07-31,Tablet,Electronics,South,Bob Smith,36,523,18828,Ridgeline Tech
+ORD-0060,2024-03-29,Office Chair,Furniture,North,Emma Wilson,41,334,13694,Elm Street Tech
+ORD-0061,2023-12-21,Wireless Mouse,Accessories,North,David Lee,14,28,392,SilverLine Corp
+ORD-0062,2023-09-30,Office Chair,Furniture,South,Jack Taylor,39,343,13377,Trident Media
+ORD-0063,2023-10-30,Laptop Pro,Electronics,South,Grace Kim,26,1224,31824,NexGen Tech
+ORD-0064,2023-10-09,Tablet,Electronics,South,Bob Smith,21,508,10668,Atlas Solutions
+ORD-0065,2023-05-28,USB Hub,Accessories,West,Emma Wilson,5,36,180,Zenith Partners
+ORD-0066,2023-05-03,Webcam,Accessories,East,Bob Smith,3,63,189,Yield Analytics
+ORD-0067,2023-05-06,Office Chair,Furniture,East,Grace Kim,5,346,1730,Omega Corp
+ORD-0068,2023-09-09,Tablet,Electronics,East,Henry Brown,9,493,4437,Xenon Corp
+ORD-0069,2024-08-29,Monitor 4K,Electronics,South,Frank Garcia,8,451,3608,IronClad Tech
+ORD-0070,2024-05-27,Webcam,Accessories,West,Jack Taylor,35,63,2205,Keystone Analytics
+ORD-0071,2024-02-01,Keyboard,Accessories,North,Grace Kim,14,81,1134,CloudPeak Solutions
+ORD-0072,2023-02-02,Headphones,Electronics,North,Grace Kim,13,191,2483,Highland Corp
+ORD-0073,2023-04-26,Laptop Pro,Electronics,Central,Bob Smith,24,1254,30096,Dome Industries
+ORD-0074,2024-09-05,Wireless Mouse,Accessories,Central,Alice Johnson,37,30,1110,Jupiter Consulting
+ORD-0075,2024-09-25,Headphones,Electronics,South,Emma Wilson,37,194,7178,Highland Corp
+ORD-0076,2023-09-09,Laptop Pro,Electronics,East,Alice Johnson,20,1255,25100,Vertex Digital
+ORD-0077,2024-06-16,Wireless Mouse,Accessories,East,Carol Davis,8,29,232,Elm Street Tech
+ORD-0078,2024-01-10,Laptop Pro,Electronics,South,Henry Brown,35,1231,43085,BlueOcean Analytics
+ORD-0079,2023-08-11,Monitor 4K,Electronics,East,Alice Johnson,26,435,11310,Dome Industries
+ORD-0080,2023-11-30,Wireless Mouse,Accessories,East,Frank Garcia,45,29,1305,GoldStar Media
+ORD-0081,2024-04-11,Wireless Mouse,Accessories,Central,David Lee,11,30,330,Keystone Analytics
+ORD-0082,2024-11-14,Office Chair,Furniture,Central,Jack Taylor,39,354,13806,Xenon Corp
+ORD-0083,2023-01-23,Wireless Mouse,Accessories,South,Emma Wilson,48,29,1392,BlueOcean Analytics
+ORD-0084,2023-12-22,Keyboard,Accessories,South,Bob Smith,8,78,624,Delta Systems
+ORD-0085,2024-06-11,Office Chair,Furniture,Central,Grace Kim,1,336,336,Canyon Corp
+ORD-0086,2023-08-19,Tablet,Electronics,East,Jack Taylor,38,489,18582,Skyline Enterprises
+ORD-0087,2023-02-21,USB Hub,Accessories,Central,Jack Taylor,11,36,396,Meridian Group
+ORD-0088,2024-11-05,Laptop Pro,Electronics,West,Frank Garcia,19,1223,23237,Dome Industries
+ORD-0089,2024-06-04,Monitor 4K,Electronics,East,Jack Taylor,49,447,21903,CloudPeak Solutions
+ORD-0090,2023-02-23,Headphones,Electronics,Central,Isabel Chen,28,200,5600,PrimeWare Corp
+ORD-0091,2024-09-03,Keyboard,Accessories,West,Bob Smith,7,80,560,Beacon Solutions
+ORD-0092,2024-02-09,Wireless Mouse,Accessories,Central,Carol Davis,47,29,1363,Vanguard Labs
+ORD-0093,2024-02-17,Webcam,Accessories,North,Jack Taylor,9,67,603,Globe Systems
+ORD-0094,2023-05-24,USB Hub,Accessories,South,David Lee,34,36,1224,SilverLine Corp
+ORD-0095,2024-08-26,Tablet,Electronics,North,Carol Davis,42,490,20580,Zenith Partners
+ORD-0096,2024-02-29,Keyboard,Accessories,East,David Lee,33,82,2706,IronClad Tech
+ORD-0097,2024-06-09,Keyboard,Accessories,Central,Alice Johnson,48,82,3936,BlueOcean Analytics
+ORD-0098,2023-08-14,Tablet,Electronics,East,Bob Smith,8,499,3992,Summit Industries
+ORD-0099,2023-12-15,Laptop Pro,Electronics,Central,David Lee,35,1164,40740,Nova Enterprises
+ORD-0100,2023-08-24,Wireless Mouse,Accessories,South,Alice Johnson,9,28,252,Skyline Enterprises
+ORD-0101,2024-07-11,Laptop Pro,Electronics,East,Bob Smith,34,1193,40562,InnoVate Systems
+ORD-0102,2024-01-24,Wireless Mouse,Accessories,Central,Grace Kim,23,28,644,Omega Corp
+ORD-0103,2024-12-21,USB Hub,Accessories,North,David Lee,46,34,1564,Unity Systems
+ORD-0104,2023-02-21,Monitor 4K,Electronics,East,Emma Wilson,4,450,1800,Pacific Data
+ORD-0105,2023-11-25,Office Chair,Furniture,West,Carol Davis,49,366,17934,DataSync Ltd
+ORD-0106,2024-07-23,USB Hub,Accessories,East,Carol Davis,18,36,648,IronClad Tech
+ORD-0107,2024-12-02,Monitor 4K,Electronics,South,Jack Taylor,15,461,6915,Acme Corp
+ORD-0108,2024-05-17,Webcam,Accessories,South,David Lee,3,63,189,Harbor Digital
+ORD-0109,2024-03-21,USB Hub,Accessories,South,Emma Wilson,20,34,680,Meridian Group
+ORD-0110,2023-07-04,Webcam,Accessories,Central,Carol Davis,33,63,2079,Beacon Solutions
+ORD-0111,2023-01-14,Webcam,Accessories,Central,David Lee,3,67,201,Alpine Tech
+ORD-0112,2023-09-13,Headphones,Electronics,West,Bob Smith,45,207,9315,Globe Systems
+ORD-0113,2024-01-31,Headphones,Electronics,North,Emma Wilson,22,192,4224,Jupiter Consulting
+ORD-0114,2023-11-20,Standing Desk,Furniture,Central,Carol Davis,7,590,4130,Meridian Group
+ORD-0115,2023-10-28,Monitor 4K,Electronics,South,Grace Kim,37,431,15947,CoreTech Partners
+ORD-0116,2024-01-11,Standing Desk,Furniture,South,Frank Garcia,15,596,8940,GreenLeaf Holdings
+ORD-0117,2024-08-05,Keyboard,Accessories,West,Henry Brown,49,78,3822,Beacon Solutions
+ORD-0118,2023-09-16,Keyboard,Accessories,North,David Lee,23,77,1771,Xenon Corp
+ORD-0119,2024-11-21,USB Hub,Accessories,East,Henry Brown,4,36,144,GoldStar Media
+ORD-0120,2023-07-08,Office Chair,Furniture,North,Carol Davis,5,344,1720,Frontier Labs
+ORD-0121,2024-07-11,Tablet,Electronics,East,Carol Davis,9,489,4401,Zenith Partners
+ORD-0122,2023-02-26,Monitor 4K,Electronics,South,Bob Smith,16,470,7520,CoreTech Partners
+ORD-0123,2024-10-10,Standing Desk,Furniture,Central,Frank Garcia,20,606,12120,Falcon Networks
+ORD-0124,2023-11-05,Keyboard,Accessories,West,Carol Davis,27,76,2052,Delta Systems
+ORD-0125,2023-12-07,Tablet,Electronics,North,Henry Brown,31,484,15004,Frontier Labs
+ORD-0126,2023-10-11,Tablet,Electronics,North,Alice Johnson,42,513,21546,RedRock Industries
+ORD-0127,2023-02-02,Keyboard,Accessories,North,Henry Brown,33,82,2706,Meridian Group
+ORD-0128,2023-09-02,Webcam,Accessories,South,Henry Brown,11,66,726,BlueOcean Analytics
+ORD-0129,2024-09-18,Keyboard,Accessories,North,Jack Taylor,15,82,1230,Quantum Labs
+ORD-0130,2023-10-25,Standing Desk,Furniture,East,Isabel Chen,45,600,27000,Beacon Solutions
+ORD-0131,2023-06-02,Monitor 4K,Electronics,East,Jack Taylor,4,463,1852,Granite Works
+ORD-0132,2023-07-29,Headphones,Electronics,Central,Bob Smith,20,204,4080,GoldStar Media
+ORD-0133,2023-09-30,Keyboard,Accessories,North,Isabel Chen,48,80,3840,Elm Street Tech
+ORD-0134,2023-12-09,Tablet,Electronics,West,Alice Johnson,35,512,17920,DataSync Ltd
+ORD-0135,2024-10-31,Standing Desk,Furniture,East,David Lee,8,574,4592,Echo Group
+ORD-0136,2024-10-21,Tablet,Electronics,West,Alice Johnson,36,517,18612,Meridian Group
+ORD-0137,2023-06-25,Standing Desk,Furniture,North,Emma Wilson,8,571,4568,Skyline Enterprises
+ORD-0138,2023-09-20,Monitor 4K,Electronics,East,Henry Brown,46,453,20838,Vanguard Labs
+ORD-0139,2023-06-10,Wireless Mouse,Accessories,Central,Carol Davis,37,29,1073,Skyline Enterprises
+ORD-0140,2024-04-30,Standing Desk,Furniture,North,Bob Smith,30,580,17400,Omega Corp
+ORD-0141,2024-09-20,Office Chair,Furniture,North,Isabel Chen,14,345,4830,Skyline Enterprises
+ORD-0142,2024-09-28,Keyboard,Accessories,North,David Lee,7,81,567,Acme Corp
+ORD-0143,2024-11-24,Keyboard,Accessories,North,Alice Johnson,1,78,78,CloudPeak Solutions
+ORD-0144,2023-05-20,Standing Desk,Furniture,Central,Henry Brown,47,580,27260,Nova Enterprises
+ORD-0145,2024-01-09,Standing Desk,Furniture,North,Jack Taylor,39,571,22269,Delta Systems
+ORD-0146,2023-12-21,Tablet,Electronics,South,Isabel Chen,37,506,18722,Highland Corp
+ORD-0147,2023-05-05,Wireless Mouse,Accessories,West,Carol Davis,34,30,1020,Atlas Solutions
+ORD-0148,2024-05-24,Laptop Pro,Electronics,North,Carol Davis,41,1239,50799,Jupiter Consulting
+ORD-0149,2024-09-19,Tablet,Electronics,East,Jack Taylor,25,521,13025,Harbor Digital
+ORD-0150,2023-01-18,Wireless Mouse,Accessories,Central,Alice Johnson,17,29,493,Pacific Data
+ORD-0151,2024-12-02,Laptop Pro,Electronics,West,David Lee,20,1181,23620,Elm Street Tech
+ORD-0152,2024-05-31,Headphones,Electronics,South,Alice Johnson,1,192,192,Keystone Analytics
+ORD-0153,2024-04-03,Headphones,Electronics,South,Emma Wilson,12,203,2436,Unity Systems
+ORD-0154,2024-08-02,Keyboard,Accessories,West,Grace Kim,20,80,1600,Quantum Labs
+ORD-0155,2024-12-02,Monitor 4K,Electronics,West,Bob Smith,4,439,1756,Pacific Data
+ORD-0156,2024-05-15,USB Hub,Accessories,West,Henry Brown,20,35,700,NexGen Tech
+ORD-0157,2024-10-02,Monitor 4K,Electronics,East,Isabel Chen,27,435,11745,SilverLine Corp
+ORD-0158,2024-10-12,Monitor 4K,Electronics,West,Frank Garcia,1,469,469,Trident Media
+ORD-0159,2024-11-13,Tablet,Electronics,South,Grace Kim,35,501,17535,Delta Systems
+ORD-0160,2024-05-12,Wireless Mouse,Accessories,North,Carol Davis,48,28,1344,Omega Corp
+ORD-0161,2024-02-07,USB Hub,Accessories,South,Bob Smith,32,36,1152,Irongate Digital
+ORD-0162,2024-09-30,Webcam,Accessories,Central,Grace Kim,41,67,2747,Irongate Digital
+ORD-0163,2024-09-03,USB Hub,Accessories,South,Henry Brown,7,36,252,InnoVate Systems
+ORD-0164,2023-09-11,USB Hub,Accessories,North,Emma Wilson,12,35,420,Lambda Software
+ORD-0165,2023-06-10,Monitor 4K,Electronics,West,Isabel Chen,7,464,3248,Falcon Networks
+ORD-0166,2024-08-22,Office Chair,Furniture,West,Emma Wilson,15,364,5460,Canyon Corp
+ORD-0167,2024-12-07,Headphones,Electronics,North,Carol Davis,45,200,9000,Jupiter Consulting
+ORD-0168,2024-10-02,Webcam,Accessories,Central,Henry Brown,42,67,2814,TechFlow Inc
+ORD-0169,2023-06-15,Laptop Pro,Electronics,East,Alice Johnson,22,1194,26268,GoldStar Media
+ORD-0170,2023-02-16,Tablet,Electronics,Central,Bob Smith,4,485,1940,GreenLeaf Holdings
+ORD-0171,2023-03-09,Webcam,Accessories,North,Bob Smith,49,62,3038,Jupiter Consulting
+ORD-0172,2023-02-04,Headphones,Electronics,Central,Jack Taylor,2,207,414,BlueOcean Analytics
+ORD-0173,2023-07-13,Standing Desk,Furniture,Central,Frank Garcia,28,609,17052,Beacon Solutions
+ORD-0174,2023-09-12,Office Chair,Furniture,Central,Jack Taylor,45,346,15570,CoreTech Partners
+ORD-0175,2024-02-26,Laptop Pro,Electronics,North,Carol Davis,6,1243,7458,InnoVate Systems
+ORD-0176,2024-03-08,Laptop Pro,Electronics,North,Alice Johnson,46,1249,57454,Westfield Digital
+ORD-0177,2023-06-04,Keyboard,Accessories,West,Henry Brown,8,80,640,Granite Works
+ORD-0178,2023-04-04,Wireless Mouse,Accessories,Central,Emma Wilson,13,30,390,Summit Industries
+ORD-0179,2024-09-10,Headphones,Electronics,West,Carol Davis,46,203,9338,Ridgeline Tech
+ORD-0180,2024-06-20,Standing Desk,Furniture,South,Alice Johnson,42,572,24024,Nova Enterprises
+ORD-0181,2024-05-20,Laptop Pro,Electronics,East,Frank Garcia,38,1240,47120,Xenon Corp
+ORD-0182,2024-05-02,USB Hub,Accessories,East,David Lee,2,34,68,InnoVate Systems
+ORD-0183,2024-04-16,USB Hub,Accessories,Central,Alice Johnson,11,34,374,Skyline Enterprises
+ORD-0184,2024-05-04,Office Chair,Furniture,Central,Jack Taylor,24,364,8736,TechFlow Inc
+ORD-0185,2023-02-08,Standing Desk,Furniture,South,Jack Taylor,24,583,13992,Dome Industries
+ORD-0186,2024-09-27,Tablet,Electronics,South,Emma Wilson,9,508,4572,BlueOcean Analytics
+ORD-0187,2023-10-31,Monitor 4K,Electronics,West,Bob Smith,22,454,9988,RedRock Industries
+ORD-0188,2024-08-27,Monitor 4K,Electronics,East,Grace Kim,9,455,4095,Frontier Labs
+ORD-0189,2024-04-05,Webcam,Accessories,East,Frank Garcia,21,65,1365,Quantum Labs
+ORD-0190,2023-02-25,Headphones,Electronics,West,Carol Davis,2,195,390,SilverLine Corp
+ORD-0191,2024-07-02,Tablet,Electronics,North,Bob Smith,41,516,21156,Nova Enterprises
+ORD-0192,2024-03-16,Keyboard,Accessories,South,Jack Taylor,7,76,532,Vertex Digital
+ORD-0193,2023-03-29,USB Hub,Accessories,South,Grace Kim,22,36,792,Unity Systems
+ORD-0194,2024-05-23,Keyboard,Accessories,North,Isabel Chen,25,79,1975,BlueOcean Analytics
+ORD-0195,2024-01-02,Standing Desk,Furniture,North,David Lee,7,612,4284,Westfield Digital
+ORD-0196,2023-01-02,Standing Desk,Furniture,South,Carol Davis,32,623,19936,Harbor Digital
+ORD-0197,2024-07-21,Headphones,Electronics,South,David Lee,7,199,1393,Pacific Data
+ORD-0198,2023-06-22,Headphones,Electronics,West,Emma Wilson,45,203,9135,GoldStar Media
+ORD-0199,2024-01-17,Wireless Mouse,Accessories,East,Alice Johnson,22,29,638,Jupiter Consulting
+ORD-0200,2024-04-09,Tablet,Electronics,East,Henry Brown,7,476,3332,Delta Systems
+ORD-0201,2023-09-02,Wireless Mouse,Accessories,Central,Isabel Chen,14,28,392,RedRock Industries
+ORD-0202,2023-10-28,Laptop Pro,Electronics,East,Emma Wilson,11,1256,13816,Ridgeline Tech
+ORD-0203,2024-07-21,Tablet,Electronics,West,Henry Brown,46,479,22034,Omega Corp
+ORD-0204,2023-11-23,Keyboard,Accessories,Central,Carol Davis,21,81,1701,CloudPeak Solutions
+ORD-0205,2023-06-06,Tablet,Electronics,East,Frank Garcia,41,492,20172,Unity Systems
+ORD-0206,2023-01-30,Laptop Pro,Electronics,North,Frank Garcia,40,1155,46200,Irongate Digital
+ORD-0207,2024-02-06,Laptop Pro,Electronics,South,Isabel Chen,12,1219,14628,Yield Analytics
+ORD-0208,2024-08-17,Tablet,Electronics,Central,Alice Johnson,39,503,19617,Vertex Digital
+ORD-0209,2024-01-02,USB Hub,Accessories,Central,David Lee,48,36,1728,Trident Media
+ORD-0210,2023-09-13,Webcam,Accessories,Central,Emma Wilson,23,66,1518,Harbor Digital
+ORD-0211,2024-11-25,Webcam,Accessories,South,Isabel Chen,15,67,1005,Atlas Solutions
+ORD-0212,2023-09-21,Keyboard,Accessories,West,Henry Brown,18,77,1386,IronClad Tech
+ORD-0213,2023-01-09,Laptop Pro,Electronics,East,Bob Smith,4,1244,4976,Beacon Solutions
+ORD-0214,2024-03-24,Keyboard,Accessories,South,Frank Garcia,41,78,3198,IronClad Tech
+ORD-0215,2023-10-27,Office Chair,Furniture,East,Henry Brown,38,337,12806,Irongate Digital
+ORD-0216,2024-08-19,Headphones,Electronics,South,Emma Wilson,49,191,9359,GreenLeaf Holdings
+ORD-0217,2024-03-12,Monitor 4K,Electronics,South,Emma Wilson,30,464,13920,Elm Street Tech
+ORD-0218,2023-11-09,Wireless Mouse,Accessories,North,Alice Johnson,25,29,725,Lambda Software
+ORD-0219,2023-07-11,USB Hub,Accessories,West,Bob Smith,33,36,1188,Xenon Corp
+ORD-0220,2024-10-30,Wireless Mouse,Accessories,North,Henry Brown,22,28,616,Xenon Corp
+ORD-0221,2023-12-07,Monitor 4K,Electronics,East,Alice Johnson,22,443,9746,CoreTech Partners
+ORD-0222,2023-10-14,Office Chair,Furniture,North,Emma Wilson,50,358,17900,Omega Corp
+ORD-0223,2024-01-05,Wireless Mouse,Accessories,West,Frank Garcia,19,29,551,QuickByte Solutions
+ORD-0224,2024-06-28,Office Chair,Furniture,East,Bob Smith,45,356,16020,Acme Corp
+ORD-0225,2023-03-18,Wireless Mouse,Accessories,North,David Lee,29,28,812,Keystone Analytics
+ORD-0226,2024-08-31,Standing Desk,Furniture,Central,Henry Brown,21,624,13104,Summit Industries
+ORD-0227,2023-05-04,Office Chair,Furniture,South,Bob Smith,40,355,14200,Irongate Digital
+ORD-0228,2023-12-26,Wireless Mouse,Accessories,South,Carol Davis,33,29,957,Meridian Group
+ORD-0229,2023-07-26,Keyboard,Accessories,South,Grace Kim,50,77,3850,DataSync Ltd
+ORD-0230,2024-09-01,Tablet,Electronics,South,Carol Davis,9,505,4545,Summit Industries
+ORD-0231,2024-10-01,Keyboard,Accessories,East,David Lee,25,79,1975,DataSync Ltd
+ORD-0232,2024-03-06,Headphones,Electronics,East,Isabel Chen,12,193,2316,Canyon Corp
+ORD-0233,2023-10-04,USB Hub,Accessories,West,Frank Garcia,2,35,70,Summit Industries
+ORD-0234,2023-10-14,Keyboard,Accessories,Central,Alice Johnson,6,80,480,Echo Group
+ORD-0235,2023-11-20,USB Hub,Accessories,West,Alice Johnson,18,34,612,Yield Analytics
+ORD-0236,2023-12-12,Office Chair,Furniture,South,Emma Wilson,43,366,15738,Frontier Labs
+ORD-0237,2023-01-10,Laptop Pro,Electronics,East,Carol Davis,18,1204,21672,Summit Industries
+ORD-0238,2024-08-30,Monitor 4K,Electronics,South,David Lee,35,463,16205,Delta Systems
+ORD-0239,2023-03-12,Headphones,Electronics,North,Grace Kim,44,200,8800,IronClad Tech
+ORD-0240,2023-06-24,Standing Desk,Furniture,South,Isabel Chen,28,618,17304,Canyon Corp
+ORD-0241,2023-07-31,Headphones,Electronics,West,Carol Davis,33,197,6501,DataSync Ltd
+ORD-0242,2024-12-11,Keyboard,Accessories,Central,Henry Brown,12,76,912,Beacon Solutions
+ORD-0243,2024-05-15,Office Chair,Furniture,Central,Emma Wilson,30,332,9960,RedRock Industries
+ORD-0244,2023-03-28,Wireless Mouse,Accessories,East,Alice Johnson,12,30,360,Frontier Labs
+ORD-0245,2023-06-25,Headphones,Electronics,East,Henry Brown,7,194,1358,Harbor Digital
+ORD-0246,2024-09-04,Tablet,Electronics,West,Frank Garcia,8,505,4040,PrimeWare Corp
+ORD-0247,2023-10-21,Tablet,Electronics,North,Emma Wilson,31,518,16058,Vanguard Labs
+ORD-0248,2023-02-27,Tablet,Electronics,West,Henry Brown,8,487,3896,Globe Systems
+ORD-0249,2023-09-27,Monitor 4K,Electronics,West,David Lee,42,429,18018,Lambda Software
+ORD-0250,2023-02-20,Standing Desk,Furniture,Central,Isabel Chen,3,579,1737,CloudPeak Solutions
+ORD-0251,2023-11-14,USB Hub,Accessories,East,Frank Garcia,46,35,1610,Pacific Data
+ORD-0252,2024-11-14,Tablet,Electronics,East,Jack Taylor,3,517,1551,Canyon Corp
+ORD-0253,2023-03-26,Wireless Mouse,Accessories,East,Alice Johnson,3,28,84,Keystone Analytics
+ORD-0254,2024-03-22,Tablet,Electronics,South,Frank Garcia,18,507,9126,BrightPath Inc
+ORD-0255,2023-11-22,Tablet,Electronics,Central,Grace Kim,10,477,4770,Vanguard Labs
+ORD-0256,2024-05-25,Headphones,Electronics,Central,Bob Smith,25,196,4900,CloudPeak Solutions
+ORD-0257,2024-12-10,Headphones,Electronics,West,Isabel Chen,13,190,2470,Omega Corp
+ORD-0258,2024-01-31,Standing Desk,Furniture,West,Henry Brown,10,602,6020,Dome Industries
+ORD-0259,2023-12-11,Webcam,Accessories,North,Henry Brown,47,62,2914,Zenith Partners
+ORD-0260,2024-01-05,Monitor 4K,Electronics,East,David Lee,7,456,3192,Summit Industries
+ORD-0261,2024-01-07,Wireless Mouse,Accessories,North,Frank Garcia,36,28,1008,Frontier Labs
+ORD-0262,2023-07-28,Laptop Pro,Electronics,West,Carol Davis,43,1163,50009,Delta Systems
+ORD-0263,2023-06-13,Webcam,Accessories,South,Henry Brown,38,68,2584,Pacific Data
+ORD-0264,2023-09-15,Laptop Pro,Electronics,North,David Lee,46,1166,53636,NexGen Tech
+ORD-0265,2023-07-03,Office Chair,Furniture,North,Bob Smith,43,362,15566,Falcon Networks
+ORD-0266,2024-08-07,Webcam,Accessories,West,Jack Taylor,15,64,960,Alpine Tech
+ORD-0267,2024-01-12,Standing Desk,Furniture,North,Emma Wilson,45,627,28215,Canyon Corp
+ORD-0268,2024-04-11,Laptop Pro,Electronics,Central,Grace Kim,23,1200,27600,Harbor Digital
+ORD-0269,2023-12-08,Keyboard,Accessories,East,Carol Davis,31,77,2387,Atlas Solutions
+ORD-0270,2024-08-13,Office Chair,Furniture,West,Jack Taylor,17,352,5984,BrightPath Inc
+ORD-0271,2024-03-04,USB Hub,Accessories,East,Alice Johnson,8,35,280,Harbor Digital
+ORD-0272,2023-05-26,Laptop Pro,Electronics,North,Alice Johnson,14,1197,16758,CoreTech Partners
+ORD-0273,2024-01-01,Wireless Mouse,Accessories,East,Isabel Chen,30,30,900,Ridgeline Tech
+ORD-0274,2023-05-16,Webcam,Accessories,Central,David Lee,11,66,726,CoreTech Partners
+ORD-0275,2023-12-15,Webcam,Accessories,East,Jack Taylor,25,62,1550,Xenon Corp
+ORD-0276,2023-05-10,Headphones,Electronics,North,Grace Kim,25,192,4800,DataSync Ltd
+ORD-0277,2024-11-15,USB Hub,Accessories,West,Henry Brown,16,34,544,Canyon Corp
+ORD-0278,2024-07-07,Standing Desk,Furniture,South,Frank Garcia,11,625,6875,NexGen Tech
+ORD-0279,2023-05-15,Standing Desk,Furniture,Central,Bob Smith,43,607,26101,Alpine Tech
+ORD-0280,2024-11-08,Wireless Mouse,Accessories,North,Frank Garcia,47,29,1363,Jupiter Consulting
+ORD-0281,2024-06-07,USB Hub,Accessories,South,David Lee,50,36,1800,Echo Group
+ORD-0282,2023-05-30,Standing Desk,Furniture,Central,David Lee,27,592,15984,Beacon Solutions
+ORD-0283,2024-09-17,USB Hub,Accessories,Central,Henry Brown,40,35,1400,GreenLeaf Holdings
+ORD-0284,2024-04-24,Wireless Mouse,Accessories,West,Alice Johnson,15,30,450,GoldStar Media
+ORD-0285,2024-02-12,Laptop Pro,Electronics,North,Carol Davis,30,1180,35400,BrightPath Inc
+ORD-0286,2023-02-16,Wireless Mouse,Accessories,Central,Grace Kim,41,29,1189,Ridgeline Tech
+ORD-0287,2024-10-26,Webcam,Accessories,Central,Emma Wilson,26,63,1638,Yield Analytics
+ORD-0288,2023-12-07,Headphones,Electronics,North,Jack Taylor,49,194,9506,Vertex Digital
+ORD-0289,2023-01-27,Monitor 4K,Electronics,North,Frank Garcia,3,463,1389,Highland Corp
+ORD-0290,2023-02-02,Headphones,Electronics,Central,Henry Brown,35,193,6755,Westfield Digital
+ORD-0291,2023-11-10,Tablet,Electronics,East,Bob Smith,32,522,16704,Vertex Digital
+ORD-0292,2023-12-27,Webcam,Accessories,North,Emma Wilson,25,64,1600,Vertex Digital
+ORD-0293,2023-08-17,Tablet,Electronics,North,Emma Wilson,8,515,4120,SilverLine Corp
+ORD-0294,2024-02-02,USB Hub,Accessories,West,David Lee,40,34,1360,Frontier Labs
+ORD-0295,2023-12-04,Keyboard,Accessories,East,Grace Kim,22,81,1782,BlueOcean Analytics
+ORD-0296,2024-12-14,Office Chair,Furniture,South,Henry Brown,25,360,9000,Ridgeline Tech
+ORD-0297,2024-07-19,Headphones,Electronics,West,Bob Smith,33,205,6765,RedRock Industries
+ORD-0298,2024-08-23,Monitor 4K,Electronics,North,Carol Davis,1,460,460,CoreTech Partners
+ORD-0299,2023-02-24,USB Hub,Accessories,South,Bob Smith,19,35,665,Dome Industries
+ORD-0300,2023-05-20,Wireless Mouse,Accessories,North,David Lee,2,30,60,PrimeWare Corp
+ORD-0301,2023-12-18,Keyboard,Accessories,South,Henry Brown,14,80,1120,Pacific Data
+ORD-0302,2023-05-09,Keyboard,Accessories,Central,Emma Wilson,3,76,228,Zenith Partners
+ORD-0303,2023-10-26,Office Chair,Furniture,Central,Jack Taylor,38,360,13680,Summit Industries
+ORD-0304,2023-02-27,Office Chair,Furniture,South,Carol Davis,5,338,1690,Dome Industries
+ORD-0305,2023-04-26,Keyboard,Accessories,West,David Lee,44,81,3564,Zenith Partners
+ORD-0306,2023-05-25,Monitor 4K,Electronics,East,Carol Davis,7,450,3150,Lambda Software
+ORD-0307,2023-10-31,Standing Desk,Furniture,East,Grace Kim,25,591,14775,Highland Corp
+ORD-0308,2023-06-27,Webcam,Accessories,North,Carol Davis,22,63,1386,Omega Corp
+ORD-0309,2024-02-16,Webcam,Accessories,West,Isabel Chen,15,62,930,Highland Corp
+ORD-0310,2024-11-17,Monitor 4K,Electronics,South,Emma Wilson,27,445,12015,Lambda Software
+ORD-0311,2024-01-12,USB Hub,Accessories,North,Carol Davis,50,35,1750,Falcon Networks
+ORD-0312,2024-04-16,Monitor 4K,Electronics,South,Carol Davis,21,436,9156,Yield Analytics
+ORD-0313,2023-11-26,Keyboard,Accessories,North,David Lee,46,79,3634,GoldStar Media
+ORD-0314,2023-03-29,Wireless Mouse,Accessories,East,Grace Kim,18,28,504,Elm Street Tech
+ORD-0315,2023-02-17,USB Hub,Accessories,West,Frank Garcia,13,35,455,TechFlow Inc
+ORD-0316,2024-01-17,Office Chair,Furniture,South,Jack Taylor,48,358,17184,Harbor Digital
+ORD-0317,2024-10-05,USB Hub,Accessories,West,Henry Brown,33,35,1155,Pacific Data
+ORD-0318,2023-04-22,Standing Desk,Furniture,East,Henry Brown,48,580,27840,NexGen Tech
+ORD-0319,2024-02-15,Headphones,Electronics,Central,David Lee,18,206,3708,Dome Industries
+ORD-0320,2023-12-05,Laptop Pro,Electronics,Central,Emma Wilson,19,1198,22762,Unity Systems
+ORD-0321,2023-07-23,Office Chair,Furniture,Central,Frank Garcia,8,352,2816,Xenon Corp
+ORD-0322,2024-05-09,Laptop Pro,Electronics,East,Alice Johnson,10,1167,11670,Trident Media
+ORD-0323,2024-05-23,Standing Desk,Furniture,Central,Frank Garcia,32,573,18336,TechFlow Inc
+ORD-0324,2023-03-28,Tablet,Electronics,East,Carol Davis,32,485,15520,GreenLeaf Holdings
+ORD-0325,2023-11-13,Wireless Mouse,Accessories,North,Carol Davis,9,29,261,Jupiter Consulting
+ORD-0326,2023-10-05,USB Hub,Accessories,South,Grace Kim,47,34,1598,Summit Industries
+ORD-0327,2024-10-10,Webcam,Accessories,South,Henry Brown,28,67,1876,Nova Enterprises
+ORD-0328,2023-12-06,Headphones,Electronics,West,Grace Kim,16,194,3104,Vanguard Labs
+ORD-0329,2023-05-30,Wireless Mouse,Accessories,South,Frank Garcia,49,29,1421,NexGen Tech
+ORD-0330,2023-11-11,Tablet,Electronics,Central,Jack Taylor,34,480,16320,TechFlow Inc
+ORD-0331,2024-02-22,Tablet,Electronics,East,Alice Johnson,3,482,1446,RedRock Industries
+ORD-0332,2024-11-01,Keyboard,Accessories,West,Jack Taylor,10,76,760,Atlas Solutions
+ORD-0333,2024-12-02,Headphones,Electronics,South,Alice Johnson,50,199,9950,GreenLeaf Holdings
+ORD-0334,2023-04-15,Wireless Mouse,Accessories,Central,Henry Brown,31,30,930,Vanguard Labs
+ORD-0335,2023-04-18,Keyboard,Accessories,West,Bob Smith,2,80,160,Canyon Corp
+ORD-0336,2023-01-03,USB Hub,Accessories,South,Frank Garcia,7,34,238,Elm Street Tech
+ORD-0337,2024-10-01,Keyboard,Accessories,North,Frank Garcia,17,80,1360,Unity Systems
+ORD-0338,2024-03-26,Headphones,Electronics,East,David Lee,46,197,9062,Pacific Data
+ORD-0339,2024-05-19,Tablet,Electronics,South,Henry Brown,28,510,14280,Omega Corp
+ORD-0340,2023-10-18,Office Chair,Furniture,East,Isabel Chen,12,340,4080,Westfield Digital
+ORD-0341,2024-07-04,Keyboard,Accessories,South,David Lee,12,76,912,SilverLine Corp
+ORD-0342,2023-12-06,Wireless Mouse,Accessories,East,Grace Kim,50,29,1450,BrightPath Inc
+ORD-0343,2024-09-25,Standing Desk,Furniture,North,Isabel Chen,7,611,4277,Skyline Enterprises
+ORD-0344,2023-06-03,Keyboard,Accessories,West,Frank Garcia,2,80,160,Omega Corp
+ORD-0345,2024-08-08,Office Chair,Furniture,East,David Lee,38,353,13414,Irongate Digital
+ORD-0346,2024-11-05,Headphones,Electronics,Central,Jack Taylor,48,204,9792,Nova Enterprises
+ORD-0347,2024-03-13,Headphones,Electronics,North,Alice Johnson,41,206,8446,Jupiter Consulting
+ORD-0348,2023-11-03,Webcam,Accessories,North,Henry Brown,30,66,1980,Atlas Solutions
+ORD-0349,2023-05-27,USB Hub,Accessories,West,Frank Garcia,17,36,612,Atlas Solutions
+ORD-0350,2024-03-12,Office Chair,Furniture,Central,Emma Wilson,35,350,12250,CoreTech Partners
+ORD-0351,2024-05-03,Laptop Pro,Electronics,North,Carol Davis,20,1165,23300,Globe Systems
+ORD-0352,2023-01-14,USB Hub,Accessories,East,Henry Brown,50,36,1800,Quantum Labs
+ORD-0353,2024-04-26,Office Chair,Furniture,West,Carol Davis,18,335,6030,Elm Street Tech
+ORD-0354,2023-12-30,Keyboard,Accessories,East,Frank Garcia,43,79,3397,Irongate Digital
+ORD-0355,2023-06-09,Wireless Mouse,Accessories,West,Bob Smith,20,30,600,CoreTech Partners
+ORD-0356,2023-08-04,Monitor 4K,Electronics,West,Emma Wilson,43,430,18490,Unity Systems
+ORD-0357,2023-09-20,Wireless Mouse,Accessories,North,Frank Garcia,33,30,990,Vertex Digital
+ORD-0358,2024-07-25,Office Chair,Furniture,North,Bob Smith,5,332,1660,Quantum Labs
+ORD-0359,2024-12-29,USB Hub,Accessories,South,Emma Wilson,20,34,680,Beacon Solutions
+ORD-0360,2023-02-14,Headphones,Electronics,Central,Jack Taylor,28,192,5376,Zenith Partners
+ORD-0361,2024-09-18,Standing Desk,Furniture,South,Isabel Chen,2,620,1240,PrimeWare Corp
+ORD-0362,2024-07-04,Tablet,Electronics,East,Bob Smith,15,521,7815,Echo Group
+ORD-0363,2023-04-28,Standing Desk,Furniture,West,Bob Smith,30,602,18060,NexGen Tech
+ORD-0364,2024-06-19,Wireless Mouse,Accessories,East,Henry Brown,28,29,812,Delta Systems
+ORD-0365,2024-07-08,Tablet,Electronics,Central,Jack Taylor,27,498,13446,Beacon Solutions
+ORD-0366,2023-05-28,Headphones,Electronics,South,Bob Smith,41,208,8528,TechFlow Inc
+ORD-0367,2024-04-11,USB Hub,Accessories,North,Henry Brown,20,35,700,Canyon Corp
+ORD-0368,2023-12-20,Laptop Pro,Electronics,East,Henry Brown,3,1156,3468,IronClad Tech
+ORD-0369,2023-02-10,Keyboard,Accessories,South,Emma Wilson,23,77,1771,Harbor Digital
+ORD-0370,2024-09-12,Webcam,Accessories,West,Frank Garcia,9,63,567,Delta Systems
+ORD-0371,2024-06-08,Wireless Mouse,Accessories,Central,Frank Garcia,20,30,600,Westfield Digital
+ORD-0372,2024-02-29,Headphones,Electronics,South,Henry Brown,48,207,9936,Nova Enterprises
+ORD-0373,2024-11-15,Laptop Pro,Electronics,East,Grace Kim,21,1220,25620,Trident Media
+ORD-0374,2024-12-22,Webcam,Accessories,Central,Isabel Chen,20,65,1300,Yield Analytics
+ORD-0375,2023-11-02,Standing Desk,Furniture,West,Jack Taylor,20,579,11580,CloudPeak Solutions
+ORD-0376,2023-04-21,Keyboard,Accessories,North,Henry Brown,47,82,3854,Falcon Networks
+ORD-0377,2023-03-01,Keyboard,Accessories,North,Carol Davis,33,78,2574,Pacific Data
+ORD-0378,2023-02-01,USB Hub,Accessories,South,Frank Garcia,20,36,720,Echo Group
+ORD-0379,2024-06-24,Office Chair,Furniture,South,Grace Kim,32,357,11424,PrimeWare Corp
+ORD-0380,2023-10-06,Headphones,Electronics,East,Jack Taylor,21,194,4074,Yield Analytics
+ORD-0381,2024-12-27,Tablet,Electronics,North,Frank Garcia,35,502,17570,Acme Corp
+ORD-0382,2023-02-15,USB Hub,Accessories,North,Jack Taylor,15,34,510,Meridian Group
+ORD-0383,2024-10-02,Standing Desk,Furniture,East,Bob Smith,39,621,24219,Pacific Data
+ORD-0384,2024-08-01,Monitor 4K,Electronics,East,Carol Davis,43,450,19350,Lambda Software
+ORD-0385,2024-12-21,USB Hub,Accessories,East,Bob Smith,29,34,986,Delta Systems
+ORD-0386,2024-12-28,USB Hub,Accessories,Central,Emma Wilson,29,34,986,Quantum Labs
+ORD-0387,2024-06-16,Office Chair,Furniture,East,Bob Smith,43,338,14534,Yield Analytics
+ORD-0388,2024-02-27,Keyboard,Accessories,Central,Alice Johnson,15,77,1155,QuickByte Solutions
+ORD-0389,2024-06-29,USB Hub,Accessories,South,Frank Garcia,34,35,1190,Frontier Labs
+ORD-0390,2023-01-08,Headphones,Electronics,West,Jack Taylor,46,208,9568,Pacific Data
+ORD-0391,2024-03-11,Standing Desk,Furniture,Central,Henry Brown,45,604,27180,Quantum Labs
+ORD-0392,2023-12-19,Webcam,Accessories,Central,Bob Smith,35,67,2345,Skyline Enterprises
+ORD-0393,2023-05-18,Tablet,Electronics,North,Emma Wilson,31,522,16182,Atlas Solutions
+ORD-0394,2024-10-16,Standing Desk,Furniture,South,Bob Smith,45,609,27405,CoreTech Partners
+ORD-0395,2024-04-29,Headphones,Electronics,North,Henry Brown,40,199,7960,Granite Works
+ORD-0396,2024-01-26,USB Hub,Accessories,North,Frank Garcia,23,35,805,Nova Enterprises
+ORD-0397,2024-09-22,Tablet,Electronics,Central,Grace Kim,32,484,15488,Zenith Partners
+ORD-0398,2024-08-05,Keyboard,Accessories,Central,Carol Davis,42,81,3402,Dome Industries
+ORD-0399,2023-12-02,Keyboard,Accessories,South,Jack Taylor,30,79,2370,CloudPeak Solutions
+ORD-0400,2023-10-04,Tablet,Electronics,West,Emma Wilson,6,482,2892,Xenon Corp
+ORD-0401,2024-07-04,Wireless Mouse,Accessories,South,Emma Wilson,14,28,392,Globe Systems
+ORD-0402,2023-08-24,Monitor 4K,Electronics,South,Carol Davis,3,442,1326,Vanguard Labs
+ORD-0403,2023-04-29,Webcam,Accessories,East,Carol Davis,8,62,496,Meridian Group
+ORD-0404,2024-09-10,Standing Desk,Furniture,Central,Grace Kim,29,616,17864,BlueOcean Analytics
+ORD-0405,2023-02-08,Wireless Mouse,Accessories,South,David Lee,24,28,672,GoldStar Media
+ORD-0406,2024-12-20,Keyboard,Accessories,West,Emma Wilson,29,82,2378,Westfield Digital
+ORD-0407,2023-11-05,Monitor 4K,Electronics,East,Jack Taylor,9,456,4104,Xenon Corp
+ORD-0408,2024-04-08,Headphones,Electronics,South,Alice Johnson,47,198,9306,Acme Corp
+ORD-0409,2023-03-17,Webcam,Accessories,West,Henry Brown,8,66,528,Beacon Solutions
+ORD-0410,2024-06-14,Keyboard,Accessories,South,Jack Taylor,47,78,3666,Skyline Enterprises
+ORD-0411,2024-04-02,Headphones,Electronics,Central,Jack Taylor,24,190,4560,TechFlow Inc
+ORD-0412,2024-07-02,Standing Desk,Furniture,South,Carol Davis,40,580,23200,BrightPath Inc
+ORD-0413,2024-05-24,Monitor 4K,Electronics,East,Emma Wilson,12,449,5388,Lambda Software
+ORD-0414,2024-02-19,Tablet,Electronics,Central,Alice Johnson,38,491,18658,QuickByte Solutions
+ORD-0415,2023-09-09,Webcam,Accessories,South,Grace Kim,20,64,1280,Skyline Enterprises
+ORD-0416,2023-12-25,Office Chair,Furniture,West,Henry Brown,33,350,11550,Vanguard Labs
+ORD-0417,2024-01-25,Keyboard,Accessories,Central,Alice Johnson,38,81,3078,CloudPeak Solutions
+ORD-0418,2023-02-17,Office Chair,Furniture,Central,Frank Garcia,18,361,6498,Jupiter Consulting
+ORD-0419,2024-10-03,Headphones,Electronics,North,Alice Johnson,19,205,3895,Ridgeline Tech
+ORD-0420,2023-10-24,USB Hub,Accessories,East,David Lee,17,36,612,SilverLine Corp
+ORD-0421,2024-04-30,USB Hub,Accessories,West,Frank Garcia,11,34,374,CoreTech Partners
+ORD-0422,2023-05-31,USB Hub,Accessories,West,Frank Garcia,27,35,945,BrightPath Inc
+ORD-0423,2024-12-26,Headphones,Electronics,Central,Frank Garcia,31,194,6014,Nova Enterprises
+ORD-0424,2023-10-07,Monitor 4K,Electronics,East,Frank Garcia,29,454,13166,SilverLine Corp
+ORD-0425,2023-12-02,Office Chair,Furniture,North,Frank Garcia,35,340,11900,Canyon Corp
+ORD-0426,2023-08-03,Keyboard,Accessories,South,Isabel Chen,34,76,2584,SilverLine Corp
+ORD-0427,2023-05-07,Wireless Mouse,Accessories,East,Jack Taylor,10,30,300,Quantum Labs
+ORD-0428,2023-11-04,Standing Desk,Furniture,East,Alice Johnson,40,616,24640,Globe Systems
+ORD-0429,2024-07-24,Wireless Mouse,Accessories,Central,Grace Kim,33,28,924,Vertex Digital
+ORD-0430,2024-05-22,Keyboard,Accessories,East,Grace Kim,45,77,3465,InnoVate Systems
+ORD-0431,2023-08-28,Wireless Mouse,Accessories,East,David Lee,15,30,450,InnoVate Systems
+ORD-0432,2024-10-20,Wireless Mouse,Accessories,East,Frank Garcia,1,29,29,Jupiter Consulting
+ORD-0433,2024-07-06,Keyboard,Accessories,South,Henry Brown,6,76,456,Frontier Labs
+ORD-0434,2024-05-29,Standing Desk,Furniture,North,Jack Taylor,50,605,30250,Elm Street Tech
+ORD-0435,2023-03-05,Laptop Pro,Electronics,East,Alice Johnson,25,1255,31375,Canyon Corp
+ORD-0436,2024-10-28,Monitor 4K,Electronics,South,Bob Smith,28,430,12040,Dome Industries
+ORD-0437,2024-09-30,Monitor 4K,Electronics,Central,Bob Smith,34,431,14654,Echo Group
+ORD-0438,2023-08-28,Webcam,Accessories,East,Isabel Chen,38,65,2470,Frontier Labs
+ORD-0439,2023-11-05,Webcam,Accessories,South,Emma Wilson,29,68,1972,Granite Works
+ORD-0440,2024-04-30,Monitor 4K,Electronics,South,Carol Davis,27,467,12609,Beacon Solutions
+ORD-0441,2023-08-17,Webcam,Accessories,East,Henry Brown,31,68,2108,Acme Corp
+ORD-0442,2024-01-12,Headphones,Electronics,South,Frank Garcia,34,199,6766,Yield Analytics
+ORD-0443,2023-08-25,Webcam,Accessories,West,Isabel Chen,13,68,884,QuickByte Solutions
+ORD-0444,2023-07-18,Headphones,Electronics,East,Frank Garcia,3,198,594,Vanguard Labs
+ORD-0445,2024-07-20,Webcam,Accessories,South,Henry Brown,29,68,1972,Alpine Tech
+ORD-0446,2024-09-10,Headphones,Electronics,South,Grace Kim,28,205,5740,Ridgeline Tech
+ORD-0447,2023-02-24,Webcam,Accessories,Central,Isabel Chen,45,65,2925,Ridgeline Tech
+ORD-0448,2023-05-24,Tablet,Electronics,East,Alice Johnson,18,523,9414,Unity Systems
+ORD-0449,2024-09-20,Tablet,Electronics,West,Jack Taylor,20,508,10160,Echo Group
+ORD-0450,2023-01-11,USB Hub,Accessories,Central,Frank Garcia,21,36,756,Lambda Software
+ORD-0451,2024-11-03,Headphones,Electronics,South,Alice Johnson,25,194,4850,Quantum Labs
+ORD-0452,2024-03-14,USB Hub,Accessories,South,Grace Kim,8,34,272,Zenith Partners
+ORD-0453,2024-03-24,Wireless Mouse,Accessories,Central,David Lee,48,29,1392,Acme Corp
+ORD-0454,2024-03-14,Monitor 4K,Electronics,South,Grace Kim,14,436,6104,Quantum Labs
+ORD-0455,2024-09-27,Webcam,Accessories,West,Grace Kim,13,63,819,Skyline Enterprises
+ORD-0456,2023-10-24,Standing Desk,Furniture,South,Alice Johnson,41,590,24190,Keystone Analytics
+ORD-0457,2023-02-14,USB Hub,Accessories,Central,David Lee,21,36,756,Globe Systems
+ORD-0458,2024-03-22,Webcam,Accessories,East,Carol Davis,12,68,816,Yield Analytics
+ORD-0459,2024-03-24,Tablet,Electronics,East,Bob Smith,41,516,21156,RedRock Industries
+ORD-0460,2023-10-10,Headphones,Electronics,South,Carol Davis,28,190,5320,Irongate Digital
+ORD-0461,2024-06-24,Headphones,Electronics,North,Emma Wilson,26,203,5278,Dome Industries
+ORD-0462,2023-10-07,Webcam,Accessories,Central,David Lee,36,68,2448,DataSync Ltd
+ORD-0463,2023-11-20,Webcam,Accessories,Central,Jack Taylor,9,67,603,Skyline Enterprises
+ORD-0464,2023-09-23,Webcam,Accessories,West,Emma Wilson,4,67,268,QuickByte Solutions
+ORD-0465,2023-10-30,Wireless Mouse,Accessories,West,Carol Davis,14,29,406,Harbor Digital
+ORD-0466,2024-06-22,Monitor 4K,Electronics,West,Frank Garcia,47,429,20163,GreenLeaf Holdings
+ORD-0467,2023-05-26,USB Hub,Accessories,North,Isabel Chen,17,35,595,Alpine Tech
+ORD-0468,2024-03-04,Webcam,Accessories,North,Henry Brown,31,64,1984,BlueOcean Analytics
+ORD-0469,2023-12-24,Webcam,Accessories,South,Frank Garcia,32,66,2112,Echo Group
+ORD-0470,2023-09-13,Tablet,Electronics,West,Grace Kim,41,502,20582,Pacific Data
+ORD-0471,2023-10-14,Monitor 4K,Electronics,South,Henry Brown,27,469,12663,Acme Corp
+ORD-0472,2023-01-20,Standing Desk,Furniture,North,Frank Garcia,12,590,7080,Nova Enterprises
+ORD-0473,2023-03-17,Tablet,Electronics,North,Bob Smith,12,508,6096,Atlas Solutions
+ORD-0474,2023-03-10,USB Hub,Accessories,East,Emma Wilson,1,34,34,Skyline Enterprises
+ORD-0475,2023-03-12,Wireless Mouse,Accessories,South,Emma Wilson,21,28,588,Canyon Corp
+ORD-0476,2024-08-06,Tablet,Electronics,East,Jack Taylor,44,514,22616,InnoVate Systems
+ORD-0477,2023-06-14,Laptop Pro,Electronics,Central,Henry Brown,4,1233,4932,Westfield Digital
+ORD-0478,2024-12-07,Webcam,Accessories,West,Carol Davis,13,62,806,DataSync Ltd
+ORD-0479,2023-02-09,Laptop Pro,Electronics,East,Jack Taylor,9,1155,10395,Summit Industries
+ORD-0480,2023-02-08,Monitor 4K,Electronics,Central,Grace Kim,48,456,21888,Westfield Digital
+ORD-0481,2023-12-15,Laptop Pro,Electronics,West,David Lee,4,1245,4980,IronClad Tech
+ORD-0482,2023-06-23,Webcam,Accessories,North,David Lee,15,63,945,CloudPeak Solutions
+ORD-0483,2023-05-22,Tablet,Electronics,East,Frank Garcia,37,513,18981,Lambda Software
+ORD-0484,2024-12-25,Keyboard,Accessories,North,Isabel Chen,43,77,3311,Globe Systems
+ORD-0485,2023-11-09,Keyboard,Accessories,East,Jack Taylor,48,79,3792,Irongate Digital
+ORD-0486,2024-07-17,Wireless Mouse,Accessories,East,Henry Brown,50,29,1450,Westfield Digital
+ORD-0487,2024-08-28,Wireless Mouse,Accessories,North,Henry Brown,26,29,754,Delta Systems
+ORD-0488,2024-06-18,Standing Desk,Furniture,North,Emma Wilson,39,581,22659,Acme Corp
+ORD-0489,2024-05-07,Monitor 4K,Electronics,West,Carol Davis,24,469,11256,NexGen Tech
+ORD-0490,2024-09-14,Standing Desk,Furniture,North,Henry Brown,17,593,10081,GreenLeaf Holdings
+ORD-0491,2024-03-07,USB Hub,Accessories,West,Carol Davis,1,34,34,CloudPeak Solutions
+ORD-0492,2023-07-05,Wireless Mouse,Accessories,Central,Bob Smith,32,29,928,GoldStar Media
+ORD-0493,2023-08-30,Webcam,Accessories,Central,Isabel Chen,35,67,2345,Summit Industries
+ORD-0494,2023-05-14,Standing Desk,Furniture,East,Henry Brown,12,577,6924,Beacon Solutions
+ORD-0495,2023-07-26,Headphones,Electronics,North,Carol Davis,13,205,2665,Falcon Networks
+ORD-0496,2024-03-29,Webcam,Accessories,North,Henry Brown,36,65,2340,CoreTech Partners
+ORD-0497,2023-12-09,Office Chair,Furniture,Central,Jack Taylor,26,334,8684,CloudPeak Solutions
+ORD-0498,2023-11-19,Office Chair,Furniture,North,Isabel Chen,33,342,11286,Meridian Group
+ORD-0499,2023-04-12,Office Chair,Furniture,South,Jack Taylor,25,350,8750,Nova Enterprises
+ORD-0500,2023-08-07,Office Chair,Furniture,East,Emma Wilson,27,341,9207,Granite Works

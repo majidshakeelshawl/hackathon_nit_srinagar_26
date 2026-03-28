@@ -1,0 +1,301 @@
+order_id,customer_id,customer_name,product,category,price,quantity,order_date,delivery_date,status,rating
+EC-001,CUST-011,Skyler North,Running Shoes,Fashion,89,3,2024-10-25,2024-11-01,Pending,
+EC-002,CUST-009,Drew Patel,Winter Jacket,Fashion,129,2,2024-11-15,2024-11-29,Pending,
+EC-003,CUST-006,Riley Shaw,Yoga Mat,Sports,25,4,2024-10-22,2024-11-05,Delivered,4
+EC-004,CUST-008,Quinn Adams,Face Cream,Health,22,1,2024-11-19,2024-11-25,Pending,
+EC-005,CUST-004,Jordan Blake,Smartwatch,Electronics,199,4,2024-01-14,2024-01-23,Returned,
+EC-006,CUST-013,Reese Park,Running Shoes,Fashion,89,1,2024-01-16,2024-01-29,Returned,
+EC-007,CUST-022,River Banks,Protein Powder,Health,35,2,2024-03-24,2024-03-26,Returned,
+EC-008,CUST-012,Avery Cole,Desk Lamp,Home,39,1,2023-08-21,2023-08-24,Delivered,3
+EC-009,CUST-013,Reese Park,Desk Lamp,Home,39,5,2024-08-24,2024-09-03,Delivered,5
+EC-010,CUST-010,Jamie Cruz,Air Purifier,Home,149,3,2024-12-26,2025-01-08,Delivered,4
+EC-011,CUST-013,Reese Park,Protein Powder,Health,35,5,2024-08-20,2024-08-30,Returned,
+EC-012,CUST-019,Dakota Lane,Desk Lamp,Home,39,4,2023-10-26,2023-10-31,Delivered,4
+EC-013,CUST-002,Sam Rivera,Vitamin D Supplement,Health,15,1,2023-12-15,2023-12-27,Delivered,2
+EC-014,CUST-022,River Banks,Face Cream,Health,22,3,2024-10-22,2024-10-26,Returned,
+EC-015,CUST-010,Jamie Cruz,Desk Lamp,Home,39,4,2024-08-14,2024-08-16,Pending,
+EC-016,CUST-010,Jamie Cruz,Bluetooth Speaker,Electronics,45,2,2023-09-20,2023-10-02,Delivered,1
+EC-017,CUST-021,Charlie Webb,Coffee Maker,Home,79,5,2023-12-30,2024-01-10,Delivered,5
+EC-018,CUST-011,Skyler North,Yoga Mat,Sports,25,2,2024-01-27,2024-01-31,Delivered,1
+EC-019,CUST-014,Finley Gray,Protein Powder,Health,35,4,2023-02-09,2023-02-20,Delivered,1
+EC-020,CUST-014,Finley Gray,Face Cream,Health,22,4,2023-02-16,2023-02-20,Delivered,1
+EC-021,CUST-022,River Banks,Dumbbell Set,Sports,95,4,2023-03-16,2023-03-20,Delivered,3
+EC-022,CUST-008,Quinn Adams,Backpack,Fashion,55,3,2023-06-22,2023-06-27,Delivered,1
+EC-023,CUST-014,Finley Gray,Bluetooth Speaker,Electronics,45,2,2023-01-15,2023-01-22,Pending,
+EC-024,CUST-001,Alex Morgan,Bluetooth Speaker,Electronics,45,4,2024-02-26,,Cancelled,
+EC-025,CUST-021,Charlie Webb,Wireless Earbuds,Electronics,69,1,2023-11-27,,Cancelled,
+EC-026,CUST-018,Rowan Price,Smartwatch,Electronics,199,2,2024-09-28,2024-10-01,Delivered,2
+EC-027,CUST-023,Ellis Ford,Bluetooth Speaker,Electronics,45,4,2024-01-08,2024-01-18,Delivered,2
+EC-028,CUST-009,Drew Patel,Resistance Bands,Sports,18,2,2024-10-13,,Cancelled,
+EC-029,CUST-003,Taylor Swift,Dumbbell Set,Sports,95,3,2024-08-23,2024-09-04,Pending,
+EC-030,CUST-014,Finley Gray,Face Cream,Health,22,4,2024-06-19,2024-06-26,Delivered,5
+EC-031,CUST-002,Sam Rivera,Dumbbell Set,Sports,95,5,2024-07-16,2024-07-29,Pending,
+EC-032,CUST-001,Alex Morgan,Yoga Mat,Sports,25,5,2024-11-12,2024-11-20,Pending,
+EC-033,CUST-021,Charlie Webb,Resistance Bands,Sports,18,4,2024-10-01,2024-10-12,Delivered,3
+EC-034,CUST-012,Avery Cole,Desk Lamp,Home,39,3,2024-09-15,2024-09-18,Delivered,3
+EC-035,CUST-020,Emery Stone,Bluetooth Speaker,Electronics,45,1,2023-10-26,2023-11-04,Returned,
+EC-036,CUST-018,Rowan Price,Resistance Bands,Sports,18,3,2024-05-27,2024-06-05,Pending,
+EC-037,CUST-019,Dakota Lane,Yoga Mat,Sports,25,4,2024-11-20,2024-11-24,Pending,
+EC-038,CUST-002,Sam Rivera,Running Shoes,Fashion,89,5,2023-09-21,2023-09-30,Pending,
+EC-039,CUST-005,Casey Kim,Smartwatch,Electronics,199,1,2024-04-06,2024-04-16,Delivered,5
+EC-040,CUST-008,Quinn Adams,Desk Lamp,Home,39,4,2024-11-03,2024-11-11,Delivered,3
+EC-041,CUST-023,Ellis Ford,Yoga Mat,Sports,25,5,2023-05-16,2023-05-22,Pending,
+EC-042,CUST-006,Riley Shaw,Yoga Mat,Sports,25,2,2023-03-13,2023-03-22,Delivered,1
+EC-043,CUST-024,Harper Dean,Yoga Mat,Sports,25,3,2024-07-09,2024-07-15,Delivered,4
+EC-044,CUST-011,Skyler North,Backpack,Fashion,55,3,2023-05-10,2023-05-19,Pending,
+EC-045,CUST-012,Avery Cole,Dumbbell Set,Sports,95,4,2023-11-28,2023-12-04,Delivered,5
+EC-046,CUST-008,Quinn Adams,Wireless Earbuds,Electronics,69,1,2024-06-09,2024-06-11,Delivered,4
+EC-047,CUST-001,Alex Morgan,Backpack,Fashion,55,4,2024-01-10,2024-01-20,Delivered,5
+EC-048,CUST-020,Emery Stone,Dumbbell Set,Sports,95,2,2024-06-25,2024-07-08,Delivered,4
+EC-049,CUST-010,Jamie Cruz,Yoga Mat,Sports,25,4,2023-05-09,2023-05-22,Delivered,2
+EC-050,CUST-019,Dakota Lane,Face Cream,Health,22,3,2024-02-16,2024-02-25,Delivered,1
+EC-051,CUST-019,Dakota Lane,Resistance Bands,Sports,18,4,2024-12-18,,Cancelled,
+EC-052,CUST-022,River Banks,Yoga Mat,Sports,25,5,2023-11-02,,Cancelled,
+EC-053,CUST-003,Taylor Swift,Face Cream,Health,22,3,2024-05-13,2024-05-17,Pending,
+EC-054,CUST-019,Dakota Lane,Desk Lamp,Home,39,3,2024-08-26,2024-09-02,Delivered,4
+EC-055,CUST-022,River Banks,Resistance Bands,Sports,18,1,2023-08-04,2023-08-11,Delivered,3
+EC-056,CUST-023,Ellis Ford,Smartwatch,Electronics,199,5,2024-07-12,2024-07-24,Delivered,4
+EC-057,CUST-018,Rowan Price,Air Purifier,Home,149,4,2023-03-31,2023-04-08,Delivered,2
+EC-058,CUST-004,Jordan Blake,Winter Jacket,Fashion,129,1,2023-05-24,2023-06-04,Pending,
+EC-059,CUST-009,Drew Patel,Coffee Maker,Home,79,3,2023-06-22,,Cancelled,
+EC-060,CUST-009,Drew Patel,Yoga Mat,Sports,25,3,2024-03-25,2024-03-31,Delivered,1
+EC-061,CUST-017,Sage Hall,Desk Lamp,Home,39,5,2024-10-23,,Cancelled,
+EC-062,CUST-025,Lane Brooks,Face Cream,Health,22,4,2023-12-31,2024-01-12,Delivered,5
+EC-063,CUST-019,Dakota Lane,Backpack,Fashion,55,5,2023-10-21,2023-10-23,Delivered,2
+EC-064,CUST-003,Taylor Swift,Vitamin D Supplement,Health,15,1,2023-01-22,2023-02-04,Returned,
+EC-065,CUST-019,Dakota Lane,Running Shoes,Fashion,89,1,2024-07-13,2024-07-26,Delivered,1
+EC-066,CUST-007,Morgan Lee,Running Shoes,Fashion,89,5,2024-04-10,2024-04-20,Delivered,5
+EC-067,CUST-010,Jamie Cruz,Wireless Earbuds,Electronics,69,2,2024-01-08,2024-01-18,Returned,
+EC-068,CUST-004,Jordan Blake,Backpack,Fashion,55,2,2023-04-27,2023-05-03,Delivered,3
+EC-069,CUST-016,Cameron Fox,Protein Powder,Health,35,4,2024-07-31,2024-08-14,Returned,
+EC-070,CUST-003,Taylor Swift,Coffee Maker,Home,79,1,2024-11-30,2024-12-14,Delivered,3
+EC-071,CUST-025,Lane Brooks,Coffee Maker,Home,79,2,2023-08-15,2023-08-28,Delivered,3
+EC-072,CUST-025,Lane Brooks,Smartwatch,Electronics,199,2,2024-10-10,2024-10-13,Delivered,1
+EC-073,CUST-020,Emery Stone,Backpack,Fashion,55,3,2023-10-04,2023-10-18,Delivered,4
+EC-074,CUST-007,Morgan Lee,Bluetooth Speaker,Electronics,45,3,2023-06-06,,Cancelled,
+EC-075,CUST-014,Finley Gray,Winter Jacket,Fashion,129,5,2023-02-01,2023-02-09,Delivered,1
+EC-076,CUST-021,Charlie Webb,Coffee Maker,Home,79,1,2024-12-21,2024-12-25,Delivered,4
+EC-077,CUST-018,Rowan Price,Yoga Mat,Sports,25,5,2023-09-14,2023-09-17,Pending,
+EC-078,CUST-001,Alex Morgan,Yoga Mat,Sports,25,4,2023-03-05,2023-03-14,Delivered,3
+EC-079,CUST-002,Sam Rivera,Winter Jacket,Fashion,129,1,2024-04-03,,Cancelled,
+EC-080,CUST-001,Alex Morgan,Resistance Bands,Sports,18,1,2023-10-26,2023-11-06,Delivered,3
+EC-081,CUST-021,Charlie Webb,Yoga Mat,Sports,25,3,2024-01-02,2024-01-13,Delivered,5
+EC-082,CUST-025,Lane Brooks,Smartwatch,Electronics,199,3,2024-01-16,2024-01-19,Delivered,1
+EC-083,CUST-006,Riley Shaw,Winter Jacket,Fashion,129,3,2023-10-21,,Cancelled,
+EC-084,CUST-019,Dakota Lane,Face Cream,Health,22,1,2024-04-25,2024-05-08,Delivered,4
+EC-085,CUST-024,Harper Dean,Dumbbell Set,Sports,95,3,2024-05-21,2024-05-27,Delivered,4
+EC-086,CUST-010,Jamie Cruz,Coffee Maker,Home,79,4,2024-09-21,2024-09-24,Delivered,4
+EC-087,CUST-013,Reese Park,Desk Lamp,Home,39,3,2024-01-14,,Cancelled,
+EC-088,CUST-001,Alex Morgan,Coffee Maker,Home,79,4,2024-07-27,2024-08-04,Returned,
+EC-089,CUST-025,Lane Brooks,Dumbbell Set,Sports,95,2,2023-10-26,2023-11-03,Delivered,1
+EC-090,CUST-002,Sam Rivera,Vitamin D Supplement,Health,15,5,2024-08-28,,Cancelled,
+EC-091,CUST-002,Sam Rivera,Protein Powder,Health,35,1,2023-12-27,2024-01-10,Delivered,1
+EC-092,CUST-006,Riley Shaw,Resistance Bands,Sports,18,1,2023-11-11,2023-11-13,Pending,
+EC-093,CUST-009,Drew Patel,Yoga Mat,Sports,25,2,2024-09-27,2024-10-06,Delivered,4
+EC-094,CUST-021,Charlie Webb,Coffee Maker,Home,79,1,2024-02-20,2024-03-03,Returned,
+EC-095,CUST-020,Emery Stone,Air Purifier,Home,149,3,2023-03-09,2023-03-11,Pending,
+EC-096,CUST-013,Reese Park,Wireless Earbuds,Electronics,69,1,2023-12-19,2023-12-29,Delivered,4
+EC-097,CUST-016,Cameron Fox,Smartwatch,Electronics,199,5,2024-02-22,2024-03-03,Delivered,4
+EC-098,CUST-025,Lane Brooks,Running Shoes,Fashion,89,2,2023-05-21,2023-05-25,Returned,
+EC-099,CUST-014,Finley Gray,Wireless Earbuds,Electronics,69,2,2023-12-14,2023-12-16,Delivered,5
+EC-100,CUST-006,Riley Shaw,Face Cream,Health,22,3,2024-10-04,2024-10-06,Pending,
+EC-101,CUST-023,Ellis Ford,Backpack,Fashion,55,5,2023-06-19,2023-06-22,Delivered,1
+EC-102,CUST-002,Sam Rivera,Coffee Maker,Home,79,1,2023-07-23,2023-07-29,Delivered,4
+EC-103,CUST-006,Riley Shaw,Backpack,Fashion,55,5,2024-02-11,2024-02-14,Returned,
+EC-104,CUST-022,River Banks,Resistance Bands,Sports,18,2,2023-09-15,2023-09-22,Returned,
+EC-105,CUST-010,Jamie Cruz,Smartwatch,Electronics,199,4,2024-04-26,2024-05-03,Delivered,5
+EC-106,CUST-018,Rowan Price,Winter Jacket,Fashion,129,1,2024-10-26,2024-10-30,Delivered,3
+EC-107,CUST-003,Taylor Swift,Wireless Earbuds,Electronics,69,1,2024-10-15,2024-10-21,Delivered,5
+EC-108,CUST-017,Sage Hall,Running Shoes,Fashion,89,5,2024-07-26,2024-08-03,Delivered,1
+EC-109,CUST-003,Taylor Swift,Desk Lamp,Home,39,3,2024-03-14,2024-03-18,Delivered,4
+EC-110,CUST-012,Avery Cole,Air Purifier,Home,149,4,2024-12-08,,Cancelled,
+EC-111,CUST-005,Casey Kim,Winter Jacket,Fashion,129,2,2024-02-13,2024-02-20,Returned,
+EC-112,CUST-003,Taylor Swift,Coffee Maker,Home,79,3,2024-07-03,2024-07-14,Returned,
+EC-113,CUST-017,Sage Hall,Dumbbell Set,Sports,95,3,2023-08-31,2023-09-06,Delivered,4
+EC-114,CUST-006,Riley Shaw,Bluetooth Speaker,Electronics,45,5,2023-04-08,2023-04-12,Delivered,3
+EC-115,CUST-004,Jordan Blake,Smartwatch,Electronics,199,3,2023-07-24,2023-08-07,Delivered,4
+EC-116,CUST-024,Harper Dean,Bluetooth Speaker,Electronics,45,3,2023-06-29,2023-07-04,Delivered,3
+EC-117,CUST-009,Drew Patel,Face Cream,Health,22,3,2023-12-27,2024-01-09,Pending,
+EC-118,CUST-025,Lane Brooks,Resistance Bands,Sports,18,5,2024-11-29,2024-12-03,Delivered,2
+EC-119,CUST-004,Jordan Blake,Protein Powder,Health,35,4,2024-11-29,2024-12-08,Delivered,2
+EC-120,CUST-022,River Banks,Yoga Mat,Sports,25,3,2024-09-28,2024-10-07,Delivered,1
+EC-121,CUST-017,Sage Hall,Smartwatch,Electronics,199,4,2023-07-02,2023-07-12,Pending,
+EC-122,CUST-007,Morgan Lee,Smartwatch,Electronics,199,3,2023-04-11,2023-04-18,Pending,
+EC-123,CUST-021,Charlie Webb,Protein Powder,Health,35,3,2023-10-06,,Cancelled,
+EC-124,CUST-021,Charlie Webb,Wireless Earbuds,Electronics,69,2,2023-01-23,2023-01-25,Delivered,5
+EC-125,CUST-004,Jordan Blake,Dumbbell Set,Sports,95,3,2024-05-26,2024-06-05,Delivered,2
+EC-126,CUST-008,Quinn Adams,Coffee Maker,Home,79,3,2024-12-16,2024-12-25,Delivered,4
+EC-127,CUST-023,Ellis Ford,Running Shoes,Fashion,89,3,2023-04-30,2023-05-13,Pending,
+EC-128,CUST-004,Jordan Blake,Air Purifier,Home,149,1,2024-11-25,2024-12-02,Delivered,3
+EC-129,CUST-015,Blair West,Bluetooth Speaker,Electronics,45,1,2024-08-18,2024-08-29,Delivered,1
+EC-130,CUST-003,Taylor Swift,Desk Lamp,Home,39,4,2023-10-09,2023-10-13,Pending,
+EC-131,CUST-002,Sam Rivera,Backpack,Fashion,55,1,2023-07-14,2023-07-28,Pending,
+EC-132,CUST-017,Sage Hall,Desk Lamp,Home,39,4,2024-06-02,2024-06-09,Delivered,4
+EC-133,CUST-005,Casey Kim,Coffee Maker,Home,79,4,2024-03-04,,Cancelled,
+EC-134,CUST-002,Sam Rivera,Smartwatch,Electronics,199,5,2023-07-01,2023-07-07,Delivered,3
+EC-135,CUST-009,Drew Patel,Face Cream,Health,22,2,2023-12-10,2023-12-14,Pending,
+EC-136,CUST-022,River Banks,Protein Powder,Health,35,3,2024-08-09,2024-08-16,Delivered,4
+EC-137,CUST-009,Drew Patel,Air Purifier,Home,149,2,2024-01-14,2024-01-19,Delivered,1
+EC-138,CUST-022,River Banks,Coffee Maker,Home,79,3,2023-08-09,2023-08-19,Pending,
+EC-139,CUST-017,Sage Hall,Air Purifier,Home,149,1,2023-05-16,2023-05-26,Delivered,3
+EC-140,CUST-019,Dakota Lane,Backpack,Fashion,55,2,2024-08-10,2024-08-14,Delivered,1
+EC-141,CUST-022,River Banks,Vitamin D Supplement,Health,15,5,2023-08-10,2023-08-16,Delivered,2
+EC-142,CUST-001,Alex Morgan,Air Purifier,Home,149,4,2024-05-29,2024-06-04,Delivered,1
+EC-143,CUST-007,Morgan Lee,Running Shoes,Fashion,89,4,2023-12-08,2023-12-15,Delivered,2
+EC-144,CUST-008,Quinn Adams,Face Cream,Health,22,2,2024-06-22,,Cancelled,
+EC-145,CUST-002,Sam Rivera,Resistance Bands,Sports,18,3,2023-09-28,2023-10-01,Delivered,1
+EC-146,CUST-008,Quinn Adams,Bluetooth Speaker,Electronics,45,1,2023-09-18,2023-09-29,Delivered,3
+EC-147,CUST-005,Casey Kim,Running Shoes,Fashion,89,1,2024-09-20,2024-09-23,Returned,
+EC-148,CUST-023,Ellis Ford,Yoga Mat,Sports,25,2,2024-09-19,2024-09-22,Delivered,2
+EC-149,CUST-016,Cameron Fox,Backpack,Fashion,55,5,2023-01-03,2023-01-06,Pending,
+EC-150,CUST-005,Casey Kim,Yoga Mat,Sports,25,1,2024-11-27,2024-12-10,Pending,
+EC-151,CUST-020,Emery Stone,Backpack,Fashion,55,3,2024-01-02,2024-01-09,Delivered,2
+EC-152,CUST-011,Skyler North,Resistance Bands,Sports,18,3,2024-02-05,2024-02-11,Delivered,4
+EC-153,CUST-019,Dakota Lane,Resistance Bands,Sports,18,2,2023-10-20,2023-10-29,Pending,
+EC-154,CUST-006,Riley Shaw,Bluetooth Speaker,Electronics,45,3,2024-03-17,2024-03-30,Delivered,1
+EC-155,CUST-024,Harper Dean,Resistance Bands,Sports,18,5,2023-12-22,2024-01-04,Pending,
+EC-156,CUST-022,River Banks,Smartwatch,Electronics,199,5,2023-10-24,2023-11-01,Returned,
+EC-157,CUST-016,Cameron Fox,Backpack,Fashion,55,3,2023-10-01,2023-10-13,Delivered,5
+EC-158,CUST-014,Finley Gray,Protein Powder,Health,35,2,2023-10-13,2023-10-21,Pending,
+EC-159,CUST-012,Avery Cole,Dumbbell Set,Sports,95,4,2024-02-25,2024-03-04,Pending,
+EC-160,CUST-004,Jordan Blake,Vitamin D Supplement,Health,15,1,2023-07-04,2023-07-16,Delivered,4
+EC-161,CUST-014,Finley Gray,Backpack,Fashion,55,2,2024-06-11,2024-06-14,Delivered,2
+EC-162,CUST-025,Lane Brooks,Running Shoes,Fashion,89,5,2023-04-30,2023-05-07,Delivered,4
+EC-163,CUST-015,Blair West,Yoga Mat,Sports,25,3,2023-08-02,,Cancelled,
+EC-164,CUST-024,Harper Dean,Face Cream,Health,22,5,2023-10-08,2023-10-19,Delivered,3
+EC-165,CUST-010,Jamie Cruz,Desk Lamp,Home,39,2,2023-06-17,2023-06-28,Delivered,2
+EC-166,CUST-024,Harper Dean,Vitamin D Supplement,Health,15,1,2024-03-21,2024-03-28,Delivered,4
+EC-167,CUST-002,Sam Rivera,Face Cream,Health,22,4,2023-02-22,2023-02-28,Delivered,5
+EC-168,CUST-023,Ellis Ford,Coffee Maker,Home,79,3,2023-07-04,2023-07-08,Delivered,1
+EC-169,CUST-014,Finley Gray,Running Shoes,Fashion,89,2,2023-10-04,2023-10-09,Pending,
+EC-170,CUST-023,Ellis Ford,Resistance Bands,Sports,18,1,2023-06-23,2023-07-05,Delivered,1
+EC-171,CUST-009,Drew Patel,Backpack,Fashion,55,1,2023-01-03,2023-01-14,Delivered,2
+EC-172,CUST-025,Lane Brooks,Smartwatch,Electronics,199,4,2023-10-01,2023-10-10,Pending,
+EC-173,CUST-024,Harper Dean,Vitamin D Supplement,Health,15,5,2024-01-22,2024-01-26,Delivered,4
+EC-174,CUST-002,Sam Rivera,Air Purifier,Home,149,5,2024-01-22,2024-01-24,Pending,
+EC-175,CUST-006,Riley Shaw,Coffee Maker,Home,79,5,2023-05-10,2023-05-14,Pending,
+EC-176,CUST-023,Ellis Ford,Yoga Mat,Sports,25,1,2024-02-27,2024-03-01,Delivered,2
+EC-177,CUST-012,Avery Cole,Desk Lamp,Home,39,4,2023-07-24,2023-08-06,Returned,
+EC-178,CUST-009,Drew Patel,Protein Powder,Health,35,5,2023-09-10,2023-09-12,Delivered,1
+EC-179,CUST-014,Finley Gray,Backpack,Fashion,55,3,2024-09-18,2024-09-23,Delivered,5
+EC-180,CUST-017,Sage Hall,Wireless Earbuds,Electronics,69,4,2023-10-22,2023-11-04,Delivered,5
+EC-181,CUST-005,Casey Kim,Vitamin D Supplement,Health,15,3,2024-10-16,2024-10-23,Delivered,3
+EC-182,CUST-020,Emery Stone,Protein Powder,Health,35,3,2023-08-28,2023-09-09,Delivered,3
+EC-183,CUST-005,Casey Kim,Winter Jacket,Fashion,129,3,2023-10-28,2023-11-10,Pending,
+EC-184,CUST-020,Emery Stone,Air Purifier,Home,149,5,2023-02-15,2023-02-21,Delivered,1
+EC-185,CUST-009,Drew Patel,Yoga Mat,Sports,25,2,2023-06-17,2023-06-29,Delivered,5
+EC-186,CUST-025,Lane Brooks,Bluetooth Speaker,Electronics,45,2,2024-03-12,2024-03-21,Delivered,4
+EC-187,CUST-018,Rowan Price,Desk Lamp,Home,39,3,2024-07-14,2024-07-16,Delivered,5
+EC-188,CUST-018,Rowan Price,Bluetooth Speaker,Electronics,45,3,2023-06-21,2023-06-27,Delivered,4
+EC-189,CUST-017,Sage Hall,Resistance Bands,Sports,18,3,2023-09-13,2023-09-15,Delivered,2
+EC-190,CUST-002,Sam Rivera,Protein Powder,Health,35,3,2023-04-21,2023-04-26,Delivered,1
+EC-191,CUST-018,Rowan Price,Yoga Mat,Sports,25,1,2024-10-12,2024-10-21,Delivered,1
+EC-192,CUST-003,Taylor Swift,Vitamin D Supplement,Health,15,5,2023-11-10,2023-11-13,Delivered,5
+EC-193,CUST-014,Finley Gray,Resistance Bands,Sports,18,1,2024-11-26,,Cancelled,
+EC-194,CUST-009,Drew Patel,Resistance Bands,Sports,18,3,2023-03-30,2023-04-07,Delivered,3
+EC-195,CUST-013,Reese Park,Face Cream,Health,22,4,2023-05-24,2023-06-03,Delivered,2
+EC-196,CUST-021,Charlie Webb,Vitamin D Supplement,Health,15,2,2024-02-05,2024-02-19,Delivered,3
+EC-197,CUST-020,Emery Stone,Desk Lamp,Home,39,5,2023-05-06,2023-05-11,Pending,
+EC-198,CUST-021,Charlie Webb,Face Cream,Health,22,3,2024-08-04,2024-08-15,Delivered,2
+EC-199,CUST-016,Cameron Fox,Smartwatch,Electronics,199,5,2023-10-01,,Cancelled,
+EC-200,CUST-017,Sage Hall,Coffee Maker,Home,79,1,2024-10-31,2024-11-03,Delivered,3
+EC-201,CUST-024,Harper Dean,Resistance Bands,Sports,18,5,2024-06-01,2024-06-10,Delivered,3
+EC-202,CUST-007,Morgan Lee,Smartwatch,Electronics,199,3,2023-03-08,2023-03-18,Delivered,1
+EC-203,CUST-010,Jamie Cruz,Smartwatch,Electronics,199,4,2023-01-21,2023-01-23,Delivered,5
+EC-204,CUST-016,Cameron Fox,Wireless Earbuds,Electronics,69,3,2024-11-30,2024-12-13,Delivered,5
+EC-205,CUST-017,Sage Hall,Face Cream,Health,22,5,2023-03-29,,Cancelled,
+EC-206,CUST-016,Cameron Fox,Winter Jacket,Fashion,129,1,2024-01-03,2024-01-14,Pending,
+EC-207,CUST-025,Lane Brooks,Desk Lamp,Home,39,1,2023-05-30,2023-06-08,Delivered,1
+EC-208,CUST-005,Casey Kim,Wireless Earbuds,Electronics,69,4,2024-11-11,2024-11-21,Delivered,1
+EC-209,CUST-020,Emery Stone,Resistance Bands,Sports,18,5,2024-03-06,2024-03-11,Pending,
+EC-210,CUST-022,River Banks,Protein Powder,Health,35,3,2024-01-02,2024-01-15,Delivered,2
+EC-211,CUST-002,Sam Rivera,Smartwatch,Electronics,199,5,2023-06-11,2023-06-20,Delivered,1
+EC-212,CUST-018,Rowan Price,Coffee Maker,Home,79,3,2023-07-19,2023-07-22,Pending,
+EC-213,CUST-010,Jamie Cruz,Desk Lamp,Home,39,5,2024-09-18,,Cancelled,
+EC-214,CUST-019,Dakota Lane,Yoga Mat,Sports,25,3,2023-07-09,2023-07-21,Delivered,2
+EC-215,CUST-015,Blair West,Dumbbell Set,Sports,95,2,2024-05-31,2024-06-14,Delivered,3
+EC-216,CUST-014,Finley Gray,Desk Lamp,Home,39,3,2024-04-28,2024-05-07,Pending,
+EC-217,CUST-010,Jamie Cruz,Protein Powder,Health,35,1,2024-05-05,2024-05-11,Delivered,5
+EC-218,CUST-003,Taylor Swift,Air Purifier,Home,149,3,2023-12-21,2023-12-31,Pending,
+EC-219,CUST-005,Casey Kim,Backpack,Fashion,55,4,2023-06-20,2023-07-01,Delivered,5
+EC-220,CUST-005,Casey Kim,Winter Jacket,Fashion,129,2,2024-04-24,2024-05-04,Delivered,2
+EC-221,CUST-007,Morgan Lee,Bluetooth Speaker,Electronics,45,1,2024-12-24,,Cancelled,
+EC-222,CUST-012,Avery Cole,Bluetooth Speaker,Electronics,45,5,2024-09-26,2024-10-10,Pending,
+EC-223,CUST-015,Blair West,Desk Lamp,Home,39,3,2023-04-29,,Cancelled,
+EC-224,CUST-008,Quinn Adams,Protein Powder,Health,35,1,2023-09-22,2023-09-28,Delivered,5
+EC-225,CUST-024,Harper Dean,Resistance Bands,Sports,18,1,2023-05-20,2023-05-29,Returned,
+EC-226,CUST-023,Ellis Ford,Desk Lamp,Home,39,5,2024-02-17,,Cancelled,
+EC-227,CUST-002,Sam Rivera,Vitamin D Supplement,Health,15,2,2024-04-24,2024-04-29,Delivered,3
+EC-228,CUST-020,Emery Stone,Air Purifier,Home,149,3,2024-09-08,2024-09-15,Returned,
+EC-229,CUST-001,Alex Morgan,Winter Jacket,Fashion,129,1,2024-04-07,2024-04-16,Pending,
+EC-230,CUST-022,River Banks,Running Shoes,Fashion,89,2,2023-10-25,2023-11-02,Pending,
+EC-231,CUST-010,Jamie Cruz,Vitamin D Supplement,Health,15,4,2024-07-04,2024-07-11,Pending,
+EC-232,CUST-001,Alex Morgan,Vitamin D Supplement,Health,15,5,2023-08-09,2023-08-20,Delivered,2
+EC-233,CUST-013,Reese Park,Resistance Bands,Sports,18,2,2024-09-16,2024-09-24,Delivered,4
+EC-234,CUST-005,Casey Kim,Desk Lamp,Home,39,1,2024-07-19,2024-07-25,Delivered,1
+EC-235,CUST-019,Dakota Lane,Yoga Mat,Sports,25,4,2023-08-21,2023-09-04,Delivered,5
+EC-236,CUST-004,Jordan Blake,Desk Lamp,Home,39,1,2024-07-16,2024-07-18,Delivered,5
+EC-237,CUST-010,Jamie Cruz,Running Shoes,Fashion,89,4,2024-06-22,2024-07-04,Delivered,5
+EC-238,CUST-013,Reese Park,Face Cream,Health,22,1,2023-10-01,2023-10-10,Delivered,2
+EC-239,CUST-006,Riley Shaw,Wireless Earbuds,Electronics,69,1,2023-09-17,2023-09-30,Pending,
+EC-240,CUST-010,Jamie Cruz,Winter Jacket,Fashion,129,4,2024-03-24,2024-04-04,Pending,
+EC-241,CUST-007,Morgan Lee,Air Purifier,Home,149,4,2023-01-13,2023-01-25,Delivered,1
+EC-242,CUST-005,Casey Kim,Resistance Bands,Sports,18,1,2024-07-12,2024-07-22,Delivered,4
+EC-243,CUST-020,Emery Stone,Protein Powder,Health,35,1,2023-01-25,2023-02-03,Pending,
+EC-244,CUST-007,Morgan Lee,Resistance Bands,Sports,18,2,2024-01-30,2024-02-05,Pending,
+EC-245,CUST-009,Drew Patel,Desk Lamp,Home,39,2,2023-12-26,2023-12-28,Pending,
+EC-246,CUST-010,Jamie Cruz,Smartwatch,Electronics,199,3,2023-07-06,2023-07-09,Pending,
+EC-247,CUST-018,Rowan Price,Vitamin D Supplement,Health,15,3,2024-09-18,2024-10-01,Delivered,5
+EC-248,CUST-024,Harper Dean,Dumbbell Set,Sports,95,5,2024-01-21,2024-01-27,Returned,
+EC-249,CUST-016,Cameron Fox,Face Cream,Health,22,5,2023-07-06,2023-07-09,Delivered,1
+EC-250,CUST-010,Jamie Cruz,Resistance Bands,Sports,18,1,2024-10-04,2024-10-17,Delivered,2
+EC-251,CUST-006,Riley Shaw,Coffee Maker,Home,79,1,2023-01-14,2023-01-25,Delivered,2
+EC-252,CUST-021,Charlie Webb,Yoga Mat,Sports,25,5,2024-09-11,2024-09-17,Pending,
+EC-253,CUST-012,Avery Cole,Coffee Maker,Home,79,5,2023-05-22,2023-06-03,Delivered,4
+EC-254,CUST-022,River Banks,Wireless Earbuds,Electronics,69,3,2023-10-08,2023-10-21,Delivered,2
+EC-255,CUST-008,Quinn Adams,Smartwatch,Electronics,199,1,2023-11-24,2023-12-06,Pending,
+EC-256,CUST-022,River Banks,Face Cream,Health,22,4,2024-12-08,2024-12-15,Delivered,1
+EC-257,CUST-018,Rowan Price,Smartwatch,Electronics,199,3,2023-12-01,2023-12-12,Delivered,5
+EC-258,CUST-023,Ellis Ford,Backpack,Fashion,55,2,2023-04-26,2023-05-06,Delivered,5
+EC-259,CUST-012,Avery Cole,Bluetooth Speaker,Electronics,45,4,2024-08-27,2024-09-05,Pending,
+EC-260,CUST-006,Riley Shaw,Coffee Maker,Home,79,3,2023-04-26,2023-04-28,Delivered,1
+EC-261,CUST-019,Dakota Lane,Wireless Earbuds,Electronics,69,5,2024-01-11,2024-01-19,Returned,
+EC-262,CUST-007,Morgan Lee,Bluetooth Speaker,Electronics,45,4,2023-04-03,2023-04-08,Delivered,2
+EC-263,CUST-005,Casey Kim,Desk Lamp,Home,39,1,2024-07-25,2024-08-05,Returned,
+EC-264,CUST-013,Reese Park,Smartwatch,Electronics,199,2,2024-05-07,2024-05-09,Delivered,1
+EC-265,CUST-004,Jordan Blake,Running Shoes,Fashion,89,1,2024-01-25,2024-01-28,Delivered,4
+EC-266,CUST-020,Emery Stone,Winter Jacket,Fashion,129,2,2023-04-18,,Cancelled,
+EC-267,CUST-002,Sam Rivera,Resistance Bands,Sports,18,4,2023-03-09,2023-03-23,Pending,
+EC-268,CUST-001,Alex Morgan,Backpack,Fashion,55,4,2024-06-02,2024-06-15,Delivered,5
+EC-269,CUST-025,Lane Brooks,Air Purifier,Home,149,3,2024-11-24,,Cancelled,
+EC-270,CUST-005,Casey Kim,Yoga Mat,Sports,25,3,2023-12-25,2024-01-05,Pending,
+EC-271,CUST-017,Sage Hall,Wireless Earbuds,Electronics,69,3,2024-06-01,2024-06-12,Delivered,2
+EC-272,CUST-010,Jamie Cruz,Running Shoes,Fashion,89,1,2024-01-31,2024-02-12,Delivered,5
+EC-273,CUST-007,Morgan Lee,Protein Powder,Health,35,5,2023-06-10,,Cancelled,
+EC-274,CUST-023,Ellis Ford,Air Purifier,Home,149,5,2023-01-20,2023-01-27,Delivered,1
+EC-275,CUST-015,Blair West,Air Purifier,Home,149,1,2023-05-16,2023-05-28,Delivered,4
+EC-276,CUST-015,Blair West,Resistance Bands,Sports,18,4,2023-01-10,2023-01-19,Delivered,2
+EC-277,CUST-021,Charlie Webb,Running Shoes,Fashion,89,3,2024-02-08,2024-02-11,Delivered,5
+EC-278,CUST-025,Lane Brooks,Backpack,Fashion,55,4,2023-06-25,2023-06-27,Delivered,1
+EC-279,CUST-005,Casey Kim,Resistance Bands,Sports,18,3,2023-06-27,2023-07-11,Pending,
+EC-280,CUST-003,Taylor Swift,Backpack,Fashion,55,5,2023-11-21,2023-12-05,Delivered,4
+EC-281,CUST-006,Riley Shaw,Resistance Bands,Sports,18,1,2023-05-10,2023-05-12,Delivered,4
+EC-282,CUST-007,Morgan Lee,Air Purifier,Home,149,1,2024-01-02,2024-01-09,Delivered,2
+EC-283,CUST-019,Dakota Lane,Wireless Earbuds,Electronics,69,3,2023-02-28,2023-03-04,Delivered,1
+EC-284,CUST-017,Sage Hall,Protein Powder,Health,35,2,2024-07-03,2024-07-08,Delivered,3
+EC-285,CUST-007,Morgan Lee,Backpack,Fashion,55,4,2023-07-01,,Cancelled,
+EC-286,CUST-010,Jamie Cruz,Smartwatch,Electronics,199,5,2024-06-12,2024-06-20,Pending,
+EC-287,CUST-011,Skyler North,Dumbbell Set,Sports,95,2,2023-07-09,2023-07-13,Delivered,4
+EC-288,CUST-025,Lane Brooks,Desk Lamp,Home,39,3,2023-08-03,2023-08-13,Delivered,4
+EC-289,CUST-009,Drew Patel,Face Cream,Health,22,5,2023-06-06,2023-06-10,Pending,
+EC-290,CUST-016,Cameron Fox,Backpack,Fashion,55,4,2023-02-22,2023-03-01,Returned,
+EC-291,CUST-025,Lane Brooks,Dumbbell Set,Sports,95,5,2024-04-30,2024-05-09,Returned,
+EC-292,CUST-019,Dakota Lane,Face Cream,Health,22,2,2024-10-04,2024-10-10,Pending,
+EC-293,CUST-024,Harper Dean,Winter Jacket,Fashion,129,3,2023-05-12,2023-05-26,Delivered,2
+EC-294,CUST-007,Morgan Lee,Protein Powder,Health,35,1,2023-12-12,2023-12-22,Delivered,2
+EC-295,CUST-022,River Banks,Backpack,Fashion,55,3,2023-10-02,2023-10-07,Delivered,3
+EC-296,CUST-004,Jordan Blake,Wireless Earbuds,Electronics,69,2,2023-05-30,2023-06-13,Delivered,1
+EC-297,CUST-001,Alex Morgan,Resistance Bands,Sports,18,5,2024-05-08,2024-05-19,Pending,
+EC-298,CUST-006,Riley Shaw,Winter Jacket,Fashion,129,2,2023-12-12,2023-12-19,Pending,
+EC-299,CUST-022,River Banks,Dumbbell Set,Sports,95,4,2023-10-23,2023-11-04,Returned,
+EC-300,CUST-023,Ellis Ford,Protein Powder,Health,35,1,2024-08-23,2024-09-01,Delivered,2

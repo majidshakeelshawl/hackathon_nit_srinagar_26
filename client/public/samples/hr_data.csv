@@ -1,0 +1,201 @@
+employee_id,name,department,role,salary,hire_date,manager,performance_score,country
+EMP-001,Liam Johnson,Finance,Financial Analyst,109241,2018-08-28,James Cooper,5,Canada
+EMP-002,Margaret Harris,Sales,Sales Rep,48060,2018-03-15,James Cooper,4,USA
+EMP-003,Karen Ahmed,HR,Recruiter,88265,2022-06-28,Lisa Wang,4,India
+EMP-004,Susan Scott,HR,HR Director,123672,2022-11-11,Lisa Wang,4,USA
+EMP-005,Aisha Gonzalez,Finance,Financial Analyst,135745,2020-09-20,Ayesha Khan,4,Canada
+EMP-006,Nancy Tanaka,Marketing,Marketing Coordinator,87476,2018-08-21,David Park,1,UK
+EMP-007,John Walker,Engineering,DevOps Engineer,135009,2021-04-01,David Park,4,USA
+EMP-008,Sofia Hernandez,HR,Recruiter,95927,2019-01-31,Maria Santos,1,UK
+EMP-009,Anthony Miller,Marketing,Marketing Coordinator,118126,2022-10-07,James Cooper,2,USA
+EMP-010,Mark Singh,Engineering,Senior Engineer,116027,2020-06-30,Lisa Wang,5,India
+EMP-011,Betty Allen,Marketing,Content Manager,113534,2018-03-18,James Cooper,2,India
+EMP-012,Sarah Wright,Finance,Accountant,128806,2018-06-12,Maria Santos,3,UK
+EMP-013,Olga Kim,Finance,Controller,94652,2020-11-27,Maria Santos,2,USA
+EMP-014,Kenneth Clark,Finance,Finance Manager,127737,2019-11-22,David Park,1,India
+EMP-015,Matthew Jones,HR,Recruiter,116591,2020-12-15,David Park,2,Germany
+EMP-016,Jennifer Hill,Finance,Controller,112757,2021-05-06,Sarah Mitchell,5,USA
+EMP-017,Donna Harris,HR,HR Director,117981,2021-03-01,David Park,5,UK
+EMP-018,Paul Chen,Marketing,SEO Specialist,90183,2023-08-19,David Park,2,UK
+EMP-019,Matthew Taylor,Finance,Accountant,66902,2022-09-28,Ayesha Khan,3,Canada
+EMP-020,Raj Thompson,Operations,Operations Analyst,126700,2022-10-25,Ayesha Khan,4,UK
+EMP-021,Liam Nguyen,HR,HR Director,66436,2018-05-01,Maria Santos,1,USA
+EMP-022,Thomas Thompson,Operations,Operations Analyst,81333,2020-04-04,Sarah Mitchell,1,Canada
+EMP-023,Jessica Scott,HR,HR Coordinator,71087,2018-08-19,Ayesha Khan,3,India
+EMP-024,Aisha Perez,Operations,Logistics Coordinator,87328,2019-05-06,Tom Richardson,3,Canada
+EMP-025,William Wilson,Marketing,Marketing Director,104533,2022-07-18,Lisa Wang,5,USA
+EMP-026,Patricia Taylor,Sales,Sales Manager,71277,2019-01-25,James Cooper,2,USA
+EMP-027,Kenneth Torres,Finance,Finance Manager,100509,2021-08-21,Rachel Green,5,Canada
+EMP-028,Matthew Johnson,Marketing,Marketing Coordinator,108583,2019-03-12,Carlos Reyes,2,India
+EMP-029,Barbara Martinez,Sales,Sales Manager,48361,2024-05-21,David Park,4,UK
+EMP-030,Sandra Wilson,Marketing,Marketing Coordinator,92565,2021-07-17,Rachel Green,4,UK
+EMP-031,Thomas Ramirez,HR,HR Coordinator,67057,2020-09-19,David Park,4,Germany
+EMP-032,Kenneth Hernandez,HR,Recruiter,107028,2020-04-23,David Park,5,USA
+EMP-033,Barbara Wilson,Sales,Sales Manager,68994,2023-05-12,Mark Thompson,2,Canada
+EMP-034,Yuki Rodriguez,Engineering,Software Engineer,171657,2023-06-22,Mark Thompson,3,USA
+EMP-035,Dorothy Kumar,Engineering,Engineering Manager,132436,2019-04-09,James Cooper,1,India
+EMP-036,Liam Lewis,Finance,Finance Manager,87879,2018-03-31,Tom Richardson,4,USA
+EMP-037,Yuki Hill,Operations,Operations Analyst,99562,2022-07-14,Sarah Mitchell,4,UK
+EMP-038,Linda Flores,HR,HR Business Partner,88714,2018-07-17,Carlos Reyes,1,USA
+EMP-039,Matthew Perez,Sales,Account Executive,95994,2021-07-18,Sarah Mitchell,2,USA
+EMP-040,Karen Robinson,Engineering,Software Engineer,173845,2022-05-01,Mark Thompson,5,USA
+EMP-041,James Garcia,Sales,Sales Manager,52095,2024-02-06,James Cooper,2,India
+EMP-042,Dorothy Allen,Engineering,Staff Engineer,120352,2018-08-24,Mark Thompson,5,USA
+EMP-043,Susan Patel,Finance,Accountant,147431,2019-12-15,Sarah Mitchell,2,Canada
+EMP-044,Raj Moore,Finance,Financial Analyst,92083,2018-05-01,Maria Santos,1,USA
+EMP-045,Sarah Anderson,Marketing,Marketing Director,107387,2018-05-29,Mark Thompson,1,USA
+EMP-046,Hassan Ahmed,Sales,Account Executive,63120,2018-10-18,Ayesha Khan,3,USA
+EMP-047,Raj Smith,Finance,Finance Manager,82346,2023-01-05,Rachel Green,1,Canada
+EMP-048,Olga Martin,HR,Recruiter,49360,2023-06-18,James Cooper,3,USA
+EMP-049,Sarah Patel,HR,HR Business Partner,61367,2021-07-19,David Park,2,Canada
+EMP-050,James White,HR,HR Director,52621,2020-02-09,Lisa Wang,5,UK
+EMP-051,David Clark,HR,HR Business Partner,118878,2023-12-17,James Cooper,2,USA
+EMP-052,Paul Smith,Marketing,Content Manager,70498,2018-05-25,David Park,3,UK
+EMP-053,Kimberly Jackson,Engineering,QA Engineer,167395,2021-09-01,Tom Richardson,2,USA
+EMP-054,Jessica Hill,Operations,Operations Director,57891,2021-01-17,Lisa Wang,2,UK
+EMP-055,Kenneth Ivanov,Finance,Accountant,147064,2018-03-24,Sarah Mitchell,1,UK
+EMP-056,Nancy Robinson,Operations,Logistics Coordinator,52263,2024-04-09,Rachel Green,1,Canada
+EMP-057,Robert Singh,Marketing,Content Manager,99537,2020-07-24,Carlos Reyes,5,India
+EMP-058,Lisa King,Sales,Business Development Rep,71391,2019-08-11,Ayesha Khan,5,USA
+EMP-059,Dorothy Miller,Marketing,Marketing Coordinator,115901,2020-01-24,Carlos Reyes,2,UK
+EMP-060,Susan Johnson,Sales,Sales Manager,107280,2019-11-09,Mark Thompson,4,Canada
+EMP-061,Margaret Ivanov,Sales,Business Development Rep,80177,2018-12-22,James Cooper,2,India
+EMP-062,Kimberly Anderson,HR,HR Business Partner,85669,2023-03-16,Carlos Reyes,4,India
+EMP-063,Sandra Young,Engineering,Engineering Manager,154019,2023-04-11,David Park,2,USA
+EMP-064,Yuki Jackson,Finance,Financial Analyst,125476,2019-06-05,Carlos Reyes,4,Germany
+EMP-065,Donna Young,Marketing,Marketing Director,97488,2023-04-10,Mark Thompson,5,India
+EMP-066,Donna Nguyen,Engineering,Staff Engineer,157544,2018-04-25,Maria Santos,5,India
+EMP-067,Raj Martinez,Finance,Finance Manager,129996,2019-03-01,Sarah Mitchell,1,India
+EMP-068,Yuki Johnson,HR,HR Director,78873,2023-11-17,David Park,1,USA
+EMP-069,Steven Perez,Sales,Business Development Rep,91109,2022-12-04,Tom Richardson,1,UK
+EMP-070,Raj Martinez,Sales,Sales Rep,119904,2023-09-27,Mark Thompson,4,India
+EMP-071,Linda Jones,Operations,Operations Analyst,120660,2020-09-04,Tom Richardson,4,UK
+EMP-072,Jennifer Nguyen,Sales,Business Development Rep,55221,2021-02-20,Mark Thompson,1,Canada
+EMP-073,Michael Sanchez,Marketing,Marketing Coordinator,105281,2018-11-01,Tom Richardson,5,Germany
+EMP-074,Daniel Thomas,Marketing,Marketing Coordinator,87706,2023-07-05,James Cooper,4,India
+EMP-075,Anthony Wilson,Sales,Business Development Rep,51511,2019-01-19,Rachel Green,3,USA
+EMP-076,Lisa Ramirez,HR,HR Business Partner,55998,2022-02-13,James Cooper,4,USA
+EMP-077,Patricia Hill,Finance,Finance Manager,95432,2019-01-30,Mark Thompson,5,USA
+EMP-078,Paul Lewis,Operations,Operations Director,104524,2020-02-23,Maria Santos,1,India
+EMP-079,Liam Anderson,Operations,Logistics Coordinator,94777,2024-03-18,Tom Richardson,3,USA
+EMP-080,Sarah Kim,Marketing,SEO Specialist,105742,2020-02-15,Rachel Green,3,India
+EMP-081,Robert Allen,Engineering,QA Engineer,167971,2018-02-26,Sarah Mitchell,2,India
+EMP-082,Patricia Nguyen,Sales,Sales Rep,115148,2022-07-07,Carlos Reyes,3,Germany
+EMP-083,Richard Tanaka,HR,HR Business Partner,50274,2018-10-26,Mark Thompson,3,India
+EMP-084,Christopher Hill,HR,HR Director,78674,2019-11-16,Lisa Wang,5,USA
+EMP-085,Betty White,HR,HR Business Partner,81741,2023-10-13,David Park,1,USA
+EMP-086,Mary Lewis,HR,HR Coordinator,87769,2020-12-12,Carlos Reyes,1,India
+EMP-087,Fatima White,Finance,Controller,120257,2019-08-09,James Cooper,3,Canada
+EMP-088,Dorothy Johnson,HR,HR Director,88517,2019-07-30,David Park,1,Germany
+EMP-089,Raj Flores,Operations,Operations Analyst,79281,2021-12-23,Mark Thompson,2,Canada
+EMP-090,Sandra Young,HR,HR Business Partner,120452,2020-01-14,Maria Santos,3,Canada
+EMP-091,David Singh,Operations,Project Manager,58574,2021-10-16,Mark Thompson,1,India
+EMP-092,Kenneth Thompson,Engineering,Senior Engineer,179444,2023-01-11,David Park,5,India
+EMP-093,David Tanaka,Finance,Financial Analyst,149917,2023-06-12,Mark Thompson,3,UK
+EMP-094,Sarah Jones,Engineering,DevOps Engineer,86404,2022-02-08,James Cooper,1,UK
+EMP-095,Kenneth Murphy,Operations,Operations Director,68269,2021-12-22,Sarah Mitchell,4,Canada
+EMP-096,Christopher Harris,Marketing,SEO Specialist,120129,2022-04-09,Maria Santos,2,UK
+EMP-097,Kimberly Clark,HR,HR Business Partner,60012,2022-08-09,Rachel Green,2,Canada
+EMP-098,Joseph Hill,Engineering,Staff Engineer,112257,2023-11-02,Sarah Mitchell,2,UK
+EMP-099,Fatima White,Engineering,QA Engineer,104128,2020-12-16,Mark Thompson,1,UK
+EMP-100,Patricia Ivanov,Finance,Finance Manager,140546,2022-06-12,Rachel Green,4,USA
+EMP-101,Lisa White,Finance,Controller,119186,2023-03-06,Mark Thompson,2,India
+EMP-102,David Clark,Engineering,Engineering Manager,82981,2024-05-02,Sarah Mitchell,1,USA
+EMP-103,Linda Miller,Marketing,SEO Specialist,54590,2023-04-09,James Cooper,4,Canada
+EMP-104,Mary Taylor,Sales,Sales Rep,109917,2023-12-23,Lisa Wang,5,USA
+EMP-105,Dorothy Clark,HR,HR Business Partner,85169,2023-03-01,Mark Thompson,4,UK
+EMP-106,Betty Smith,Sales,Sales Rep,108634,2022-03-16,James Cooper,5,India
+EMP-107,Yuki Garcia,Engineering,QA Engineer,84077,2023-05-19,David Park,3,USA
+EMP-108,Joseph Harris,HR,HR Director,82003,2020-08-29,Mark Thompson,5,UK
+EMP-109,Hassan Williams,HR,HR Coordinator,98258,2022-04-12,David Park,4,USA
+EMP-110,Dorothy Lewis,Finance,Financial Analyst,70192,2024-02-16,Tom Richardson,4,Germany
+EMP-111,Sandra Ahmed,HR,Recruiter,58776,2019-01-07,Mark Thompson,2,USA
+EMP-112,Susan Ahmed,HR,Recruiter,88665,2020-03-16,Sarah Mitchell,3,USA
+EMP-113,Matthew Lee,Marketing,Content Manager,112954,2018-08-02,Maria Santos,2,India
+EMP-114,Wei Patel,Operations,Logistics Coordinator,113118,2021-10-01,James Cooper,3,USA
+EMP-115,Robert Lewis,Operations,Project Manager,62419,2020-03-05,David Park,5,USA
+EMP-116,Robert Torres,HR,HR Director,92972,2018-05-02,Tom Richardson,2,UK
+EMP-117,Robert Patel,HR,Recruiter,59405,2022-04-17,Mark Thompson,4,UK
+EMP-118,Mark Martinez,HR,HR Business Partner,48426,2021-02-23,Ayesha Khan,4,Canada
+EMP-119,Thomas Jackson,Operations,Operations Director,91873,2022-05-16,Ayesha Khan,3,USA
+EMP-120,Liam Davis,Finance,Accountant,138046,2022-02-06,Maria Santos,3,USA
+EMP-121,Priya Johnson,Operations,Operations Director,96843,2023-03-06,Tom Richardson,5,Germany
+EMP-122,Michael Kim,Sales,Sales Rep,107231,2022-10-19,Mark Thompson,5,Canada
+EMP-123,Sandra Hill,Engineering,DevOps Engineer,175225,2023-03-05,Mark Thompson,4,USA
+EMP-124,Yuki Ivanov,Operations,Operations Director,112374,2020-09-14,Lisa Wang,1,Canada
+EMP-125,Yuki Walker,Marketing,Marketing Director,54799,2018-01-27,Carlos Reyes,1,India
+EMP-126,Liam Kumar,Marketing,Marketing Director,96103,2019-03-11,David Park,4,USA
+EMP-127,Ashley Gonzalez,Operations,Operations Analyst,133065,2020-10-13,Maria Santos,5,Canada
+EMP-128,Liam Wright,Finance,Accountant,91979,2020-09-14,David Park,4,UK
+EMP-129,Betty Thomas,Operations,Operations Director,56082,2022-10-10,James Cooper,3,USA
+EMP-130,Donald Taylor,HR,HR Director,52133,2020-06-24,Carlos Reyes,4,USA
+EMP-131,Hassan Lopez,Finance,Accountant,130697,2019-12-28,Rachel Green,3,USA
+EMP-132,Kenneth Taylor,HR,HR Coordinator,55170,2023-07-25,Rachel Green,2,USA
+EMP-133,Michael Allen,Finance,Financial Analyst,90505,2018-01-17,Tom Richardson,1,USA
+EMP-134,Emily Robinson,Operations,Operations Director,89329,2020-11-10,David Park,4,Canada
+EMP-135,Matthew Lewis,HR,HR Business Partner,120370,2020-06-30,Ayesha Khan,2,USA
+EMP-136,Andrew Lopez,Engineering,DevOps Engineer,152019,2021-02-11,Rachel Green,5,UK
+EMP-137,Nancy Wright,Engineering,Senior Engineer,100260,2020-06-28,Lisa Wang,4,Canada
+EMP-138,Daniel Brown,Operations,Project Manager,88196,2020-03-30,Rachel Green,4,Germany
+EMP-139,William Martinez,Sales,Sales Manager,69200,2018-09-07,Mark Thompson,4,India
+EMP-140,Yuki Garcia,Marketing,Marketing Director,83124,2021-10-06,David Park,2,UK
+EMP-141,Dorothy O'Brien,Operations,Operations Director,99150,2021-08-16,Carlos Reyes,3,USA
+EMP-142,Aisha Ahmed,Engineering,Engineering Manager,149531,2023-03-20,Rachel Green,1,USA
+EMP-143,James Rodriguez,Engineering,QA Engineer,79952,2020-09-07,Lisa Wang,1,USA
+EMP-144,Christopher Hill,HR,HR Business Partner,50146,2022-09-17,Lisa Wang,3,UK
+EMP-145,Betty Hill,Operations,Operations Director,52167,2019-12-09,Tom Richardson,3,USA
+EMP-146,Lisa Chen,Operations,Operations Director,83035,2021-05-03,Carlos Reyes,3,USA
+EMP-147,Matthew Harris,Operations,Project Manager,86275,2023-01-30,James Cooper,3,USA
+EMP-148,Priya Harris,Sales,Account Executive,45643,2021-09-30,Sarah Mitchell,1,UK
+EMP-149,Sandra Allen,Engineering,Senior Engineer,107618,2021-10-10,Lisa Wang,5,USA
+EMP-150,Daniel Thomas,Marketing,Marketing Coordinator,125840,2021-08-16,Rachel Green,2,Germany
+EMP-151,Betty Gonzalez,Finance,Financial Analyst,84714,2023-02-23,Lisa Wang,1,USA
+EMP-152,Paul Chen,Finance,Financial Analyst,110767,2018-09-09,Tom Richardson,4,UK
+EMP-153,Wei Miller,Operations,Operations Analyst,75272,2019-01-29,Mark Thompson,3,India
+EMP-154,Liam Sanchez,Marketing,Content Manager,88105,2023-06-14,Ayesha Khan,4,Canada
+EMP-155,Aisha Rodriguez,Operations,Operations Director,60761,2019-04-15,Maria Santos,2,UK
+EMP-156,Christopher Davis,Engineering,Software Engineer,140408,2024-02-13,Lisa Wang,3,Germany
+EMP-157,Steven Sanchez,Finance,Financial Analyst,138472,2021-05-28,Carlos Reyes,3,UK
+EMP-158,Thomas Wright,Finance,Controller,117113,2020-05-06,Maria Santos,3,India
+EMP-159,Emily Ahmed,Finance,Financial Analyst,90723,2019-10-21,Sarah Mitchell,4,Canada
+EMP-160,Barbara Williams,Operations,Logistics Coordinator,56245,2022-05-10,Maria Santos,2,Canada
+EMP-161,Richard O'Brien,HR,Recruiter,80984,2021-10-23,Rachel Green,2,India
+EMP-162,Liam Brown,Sales,Business Development Rep,52394,2019-04-19,David Park,1,USA
+EMP-163,Priya Murphy,Sales,Account Executive,84359,2021-06-26,Lisa Wang,3,USA
+EMP-164,Susan Harris,Finance,Accountant,91926,2021-07-27,Rachel Green,1,Canada
+EMP-165,Andrew Ivanov,Marketing,SEO Specialist,88429,2022-08-25,James Cooper,2,USA
+EMP-166,Thomas Chen,Sales,Business Development Rep,71383,2020-10-22,Carlos Reyes,1,Germany
+EMP-167,Anthony Kim,HR,Recruiter,61421,2023-11-04,Lisa Wang,2,USA
+EMP-168,Jessica Wright,Finance,Accountant,139970,2018-06-05,Maria Santos,5,USA
+EMP-169,David Ramirez,Marketing,Content Manager,113294,2024-05-04,Mark Thompson,1,India
+EMP-170,Jennifer Brown,Engineering,Engineering Manager,159678,2020-03-08,Ayesha Khan,4,UK
+EMP-171,Richard Kim,Sales,Sales Manager,92410,2024-04-22,Tom Richardson,1,USA
+EMP-172,Priya Allen,Operations,Logistics Coordinator,117059,2020-08-26,Lisa Wang,2,Germany
+EMP-173,Michael Sanchez,Operations,Operations Analyst,76981,2021-12-03,Lisa Wang,3,USA
+EMP-174,Thomas Nguyen,HR,HR Coordinator,102864,2023-08-23,Mark Thompson,1,Canada
+EMP-175,Daniel Hernandez,Marketing,Marketing Coordinator,98809,2019-09-06,James Cooper,4,UK
+EMP-176,Joseph Garcia,HR,HR Director,53935,2024-05-11,Ayesha Khan,1,USA
+EMP-177,Kenneth Smith,HR,HR Coordinator,50349,2023-05-06,David Park,2,India
+EMP-178,Daniel Lee,Operations,Logistics Coordinator,109586,2023-10-30,Lisa Wang,1,USA
+EMP-179,Hassan Sanchez,Engineering,Engineering Manager,169639,2019-07-17,Sarah Mitchell,3,USA
+EMP-180,Christopher Miller,Sales,Sales Manager,87218,2019-07-31,Tom Richardson,3,Germany
+EMP-181,Emily Chen,HR,HR Coordinator,110942,2021-05-08,Lisa Wang,5,Germany
+EMP-182,Lisa Gonzalez,Operations,Logistics Coordinator,77633,2023-10-23,Carlos Reyes,3,USA
+EMP-183,Dorothy Young,Finance,Accountant,131957,2019-06-02,Mark Thompson,1,Germany
+EMP-184,Joshua Singh,Sales,Business Development Rep,68864,2021-02-15,Sarah Mitchell,3,India
+EMP-185,Ashley Williams,HR,Recruiter,88052,2022-04-04,David Park,5,USA
+EMP-186,Joshua Jones,Finance,Controller,77431,2022-04-19,Mark Thompson,2,USA
+EMP-187,Anthony Hill,Finance,Financial Analyst,87587,2023-10-01,Lisa Wang,3,India
+EMP-188,William Garcia,Engineering,Software Engineer,118542,2022-10-07,Carlos Reyes,5,USA
+EMP-189,Christopher King,HR,HR Business Partner,60658,2021-05-01,Tom Richardson,2,USA
+EMP-190,Jennifer Ivanov,Marketing,SEO Specialist,73643,2020-02-06,Tom Richardson,1,USA
+EMP-191,Nancy Young,HR,HR Business Partner,50447,2022-10-15,Sarah Mitchell,4,Canada
+EMP-192,Patricia Tanaka,Marketing,SEO Specialist,65361,2019-09-10,Lisa Wang,1,USA
+EMP-193,Patricia Thomas,Sales,Sales Manager,54895,2020-08-20,David Park,1,Canada
+EMP-194,Christopher Gonzalez,HR,HR Coordinator,56863,2021-03-16,Rachel Green,5,UK
+EMP-195,Yuki Jones,Marketing,SEO Specialist,62994,2022-12-03,Tom Richardson,3,USA
+EMP-196,Mark Smith,Finance,Accountant,128507,2020-02-02,Maria Santos,1,Canada
+EMP-197,Elizabeth Patel,Operations,Project Manager,56341,2020-02-28,Maria Santos,5,India
+EMP-198,Richard Rodriguez,HR,HR Coordinator,67215,2022-05-10,Mark Thompson,3,UK
+EMP-199,Sofia Lee,Marketing,Content Manager,125552,2022-01-12,David Park,2,USA
+EMP-200,Daniel O'Brien,HR,HR Business Partner,96693,2021-12-11,Rachel Green,1,USA
