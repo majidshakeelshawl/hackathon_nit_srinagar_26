@@ -30,6 +30,10 @@ function querySessionId(body, fileId) {
   return `file:${fileId}`;
 }
 
+function compactResults(rows) {
+  return rows.slice(0, 300);
+}
+
 router.get('/history/:sessionId', async (req, res) => {
   try {
     const { sessionId } = req.params;
@@ -98,7 +102,11 @@ router.post('/', async (req, res) => {
         question,
         sql,
         rowCount: rows.length,
-        executionTimeMs
+        executionTimeMs,
+        columns,
+        resultsJson: JSON.stringify(compactResults(rows)),
+        explanation,
+        insights
       });
     } catch (e) {
       console.warn('Convex history save failed:', e?.message || e);
@@ -211,11 +219,13 @@ router.post('/stream', async (req, res) => {
       anomalyFlags
     });
 
+    let streamedExplanation = '';
     try {
       const exStream = await streamExplainSQL(sql);
       for await (const chunk of exStream) {
         const content = chunk.choices[0]?.delta?.content ?? '';
         if (content) {
+          streamedExplanation += content;
           sseWrite(res, 'explanation_chunk', { chunk: content });
         }
       }
@@ -223,8 +233,9 @@ router.post('/stream', async (req, res) => {
       // optional
     }
 
+    let insights = [];
     try {
-      const insights = await generateInsights(sql, columns, rows);
+      insights = await generateInsights(sql, columns, rows);
       sseWrite(res, 'insights', { bullets: insights });
     } catch {
       sseWrite(res, 'insights', { bullets: [] });
@@ -237,7 +248,11 @@ router.post('/stream', async (req, res) => {
         question,
         sql,
         rowCount: rows.length,
-        executionTimeMs
+        executionTimeMs,
+        columns,
+        resultsJson: JSON.stringify(compactResults(rows)),
+        explanation: streamedExplanation.trim(),
+        insights
       });
     } catch (e) {
       console.warn('Convex history save failed:', e?.message || e);

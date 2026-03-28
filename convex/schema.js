@@ -9,6 +9,10 @@ export default defineSchema({
     sql: v.string(),
     rowCount: v.number(),
     executionTimeMs: v.number(),
+    columns: v.optional(v.array(v.string())),
+    resultsJson: v.optional(v.string()),
+    explanation: v.optional(v.string()),
+    insights: v.optional(v.array(v.string())),
     createdAt: v.number(),
   }).index("by_session", ["sessionId", "createdAt"]),
 

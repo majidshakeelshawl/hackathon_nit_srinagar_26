@@ -49,6 +49,7 @@ export default function Workspace() {
 
   const [currentChartType, setCurrentChartType] = useState('bar');
   const [history, setHistory] = useState([]);
+  const hasActiveData = !!fileData;
 
   useEffect(() => {
     if (result?.chartType) {
@@ -62,13 +63,27 @@ export default function Workspace() {
       try {
         const persisted = await fetchQueryHistory(sessionId);
         if (!mounted) return;
+        const toParsedRows = (item) => {
+          if (!item?.resultsJson) return null;
+          try {
+            const out = JSON.parse(item.resultsJson);
+            return Array.isArray(out) ? out : null;
+          } catch {
+            return null;
+          }
+        };
         setHistory(persisted.map((item, idx) => ({
           _id: item._id || `${item.createdAt || item._creationTime || Date.now()}_${idx}`,
+          fileId: item.fileId,
           question: item.question,
           sql: item.sql,
           rowCount: item.rowCount,
           executionTimeMs: item.executionTimeMs,
-          createdAt: item.createdAt || item._creationTime || Date.now()
+          createdAt: item.createdAt || item._creationTime || Date.now(),
+          explanation: item.explanation || '',
+          insights: item.insights || [],
+          columns: Array.isArray(item.columns) ? item.columns : [],
+          results: toParsedRows(item)
         })));
       } catch {
         // non-critical; local history still works
@@ -126,8 +141,11 @@ export default function Workspace() {
     await executeRaw(fileData.fileId, sql);
   }, [fileData, executeRaw]);
 
-  const handleSelectHistory = useCallback((item) => {
-    if (item.results && item.columns) {
+  const handleSelectHistory = useCallback(async (item) => {
+    if (!item?.sql) return;
+
+    // Fast path: hydrated history entries already contain result rows.
+    if (item.results && item.columns && item.columns.length) {
       const chartType = selectChartType(item.columns, item.results);
       setResult({
         sql: item.sql,
@@ -146,8 +164,28 @@ export default function Workspace() {
         previousSql: item.sql,
         previousQuestion: item.question
       });
+      return;
     }
-  }, [setResult]);
+
+    // Persisted entries only have metadata + SQL, so execute SQL to rehydrate.
+    const targetFileId = item.fileId || fileData?.fileId;
+    if (!targetFileId) return;
+
+    const raw = await executeRaw(targetFileId, item.sql);
+    if (!raw) return;
+
+    setResult((prev) => ({
+      ...(prev || {}),
+      sql: item.sql,
+      question: item.question || prev?.question || '',
+      explanation: item.explanation || '',
+      insights: item.insights || []
+    }));
+    setConversationContext({
+      previousSql: item.sql,
+      previousQuestion: item.question || ''
+    });
+  }, [setResult, fileData?.fileId, executeRaw]);
 
   const handleClearHistory = useCallback(async () => {
     setHistory([]);
@@ -244,7 +282,7 @@ export default function Workspace() {
         )}
 
         <div className="flex-1 overflow-y-auto overflow-x-hidden px-3 sm:px-6 lg:px-8 py-4 sm:py-6 min-w-0">
-          {!fileData ? (
+          {!hasActiveData && !result ? (
             <div className="max-w-3xl mx-auto">
               <div className="text-center mb-6 sm:mb-8 fade-in">
                 <h1 className="text-2xl sm:text-4xl font-bold mb-3 tracking-tight" style={{ color: 'var(--text-primary)' }}>
@@ -310,15 +348,21 @@ export default function Workspace() {
             </div>
           ) : (
             <div className="max-w-4xl mx-auto flex flex-col gap-4 sm:gap-5">
-              <SchemaCard
-                mode={fileData.mode}
-                filename={fileData.filename}
-                schema={fileData.schema}
-                rowCount={fileData.rowCount}
-                fileData={fileData}
-              />
+              {hasActiveData ? (
+                <SchemaCard
+                  mode={fileData.mode}
+                  filename={fileData.filename}
+                  schema={fileData.schema}
+                  rowCount={fileData.rowCount}
+                  fileData={fileData}
+                />
+              ) : (
+                <div className="text-xs rounded-lg px-3 py-2" style={{ background: 'var(--bg-tertiary)', color: 'var(--text-secondary)', border: '1px solid var(--border)' }}>
+                  Viewing a persisted history result. Upload the source file(s) again to run follow-up queries.
+                </div>
+              )}
 
-              {conversationContext?.previousSql && (
+              {hasActiveData && conversationContext?.previousSql && (
                 <div className="text-xs rounded-lg px-3 py-2" style={{ background: 'var(--bg-tertiary)', color: 'var(--text-secondary)', border: '1px solid var(--border)' }}>
                   <span style={{ color: 'var(--text-tertiary)' }}>Conversation mode · </span>
                   Refining: <span style={{ color: 'var(--text-primary)' }}>{conversationContext.previousQuestion}</span>
@@ -333,13 +377,15 @@ export default function Workspace() {
                 </div>
               )}
 
-              <QueryInput
-                onSubmit={handleQuery}
-                loading={loading}
-                disabled={!fileData}
-                followUpActive={!!conversationContext?.previousSql}
-                fileData={fileData}
-              />
+              {hasActiveData && (
+                <QueryInput
+                  onSubmit={handleQuery}
+                  loading={loading}
+                  disabled={!fileData}
+                  followUpActive={!!conversationContext?.previousSql}
+                  fileData={fileData}
+                />
+              )}
 
               {queryError && (
                 <div className="rounded-xl p-4 flex items-center justify-between fade-in" style={{
@@ -365,6 +411,7 @@ export default function Workspace() {
                   executionTimeMs={result?.executionTimeMs}
                   rowCount={result?.rowCount}
                   onRawResult={handleRawResult}
+                  readOnly={!hasActiveData}
                 />
               )}
 
