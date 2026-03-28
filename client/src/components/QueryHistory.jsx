@@ -9,40 +9,18 @@ function getRelativeTime(timestamp) {
   return `${hours} hr ago`;
 }
 
-export default function QueryHistory({ history, onSelectHistory, onClearHistory }) {
-  const [hoveredIdx, setHoveredIdx] = useState(-1);
-
+function HistoryList({
+  history,
+  hoveredIdx,
+  setHoveredIdx,
+  onSelectHistory,
+  onClearHistory
+}) {
   return (
-    <div className="flex flex-col h-full" style={{
-      width: '240px',
-      background: 'var(--bg-secondary)',
-      borderRight: '1px solid var(--border)'
-    }}>
-      {/* Header */}
-      <div className="flex items-center justify-between px-4 py-3" style={{ borderBottom: '1px solid var(--border)' }}>
-        <div className="flex items-center gap-2">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--text-secondary)" strokeWidth="2">
-            <circle cx="12" cy="12" r="10" />
-            <polyline points="12,6 12,12 16,14" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-          <span className="text-sm font-medium" style={{ color: 'var(--text-primary)' }}>History</span>
-        </div>
-        {history && history.length > 0 && (
-          <span className="text-xs px-1.5 py-0.5 rounded-full" style={{ 
-            background: 'var(--bg-tertiary)', 
-            color: 'var(--text-tertiary)',
-            fontFamily: 'JetBrains Mono',
-            fontSize: '10px'
-          }}>
-            {history.length}
-          </span>
-        )}
-      </div>
-
-      {/* History items */}
-      <div className="flex-1 overflow-y-auto">
+    <>
+      <div className="flex-1 overflow-y-auto min-h-0">
         {(!history || history.length === 0) ? (
-          <div className="flex flex-col items-center justify-center h-full px-4 text-center">
+          <div className="flex flex-col items-center justify-center py-8 px-4 text-center">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--text-tertiary)" strokeWidth="1.5" className="mb-3 opacity-40">
               <circle cx="11" cy="11" r="8" />
               <line x1="21" y1="21" x2="16.65" y2="16.65" strokeLinecap="round"/>
@@ -87,9 +65,8 @@ export default function QueryHistory({ history, onSelectHistory, onClearHistory 
         )}
       </div>
 
-      {/* Clear button */}
       {history && history.length > 0 && (
-        <div className="px-3 py-2" style={{ borderTop: '1px solid var(--border)' }}>
+        <div className="px-3 py-2 shrink-0" style={{ borderTop: '1px solid var(--border)' }}>
           <button
             onClick={onClearHistory}
             className="w-full text-xs py-1.5 rounded-md transition-all duration-200"
@@ -101,6 +78,101 @@ export default function QueryHistory({ history, onSelectHistory, onClearHistory 
           </button>
         </div>
       )}
+    </>
+  );
+}
+
+export default function QueryHistory({
+  history,
+  onSelectHistory,
+  onClearHistory,
+  variant = 'sidebar',
+  open = false,
+  onClose
+}) {
+  const [hoveredIdx, setHoveredIdx] = useState(-1);
+
+  const header = (
+    <div className="flex items-center justify-between px-4 py-3 shrink-0" style={{ borderBottom: '1px solid var(--border)' }}>
+      <div className="flex items-center gap-2">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--text-secondary)" strokeWidth="2">
+          <circle cx="12" cy="12" r="10" />
+          <polyline points="12,6 12,12 16,14" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+        <span className="text-sm font-medium" style={{ color: 'var(--text-primary)' }}>History</span>
+      </div>
+      <div className="flex items-center gap-2">
+        {history && history.length > 0 && (
+          <span className="text-xs px-1.5 py-0.5 rounded-full" style={{
+            background: 'var(--bg-tertiary)',
+            color: 'var(--text-tertiary)',
+            fontFamily: 'JetBrains Mono',
+            fontSize: '10px'
+          }}>
+            {history.length}
+          </span>
+        )}
+        {variant === 'sheet' && onClose && (
+          <button
+            type="button"
+            onClick={onClose}
+            className="p-1 rounded-md text-lg leading-none"
+            style={{ color: 'var(--text-tertiary)' }}
+            aria-label="Close"
+          >
+            ×
+          </button>
+        )}
+      </div>
+    </div>
+  );
+
+  if (variant === 'sheet') {
+    if (!open) return null;
+    return (
+      <>
+        <div
+          className="fixed inset-0 z-[60] lg:hidden"
+          style={{ background: 'rgba(0,0,0,0.4)' }}
+          onClick={onClose}
+          aria-hidden
+        />
+        <div
+          className="fixed bottom-0 left-0 right-0 z-[61] flex flex-col max-h-[72vh] rounded-t-2xl lg:hidden shadow-2xl"
+          style={{
+            background: 'var(--bg-secondary)',
+            borderTop: '1px solid var(--border)'
+          }}
+        >
+          {header}
+          <HistoryList
+            history={history}
+            hoveredIdx={hoveredIdx}
+            setHoveredIdx={setHoveredIdx}
+            onSelectHistory={(item) => {
+              onSelectHistory(item);
+              onClose?.();
+            }}
+            onClearHistory={onClearHistory}
+          />
+        </div>
+      </>
+    );
+  }
+
+  return (
+    <div className="flex flex-col h-full w-full lg:w-[240px]" style={{
+      background: 'var(--bg-secondary)',
+      borderRight: '1px solid var(--border)'
+    }}>
+      {header}
+      <HistoryList
+        history={history}
+        hoveredIdx={hoveredIdx}
+        setHoveredIdx={setHoveredIdx}
+        onSelectHistory={onSelectHistory}
+        onClearHistory={onClearHistory}
+      />
     </div>
   );
 }

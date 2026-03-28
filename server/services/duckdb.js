@@ -14,17 +14,19 @@ function safePath(filePath) {
   return filePath.replace(/\\/g, '/');
 }
 
-export function runQuery(filePath, sql) {
+function isDual(fileInfo) {
+  return fileInfo?.mode === 'dual' && fileInfo.csvPathA && fileInfo.csvPathB;
+}
+
+/**
+ * Register view(s) and run SQL. Single-file uses VIEW `data`; two files use `a` and `b`.
+ */
+export function runQuery(fileInfo, sql) {
   return new Promise((resolve, reject) => {
     const conn = db.connect();
-    const fp = safePath(filePath);
     const start = Date.now();
 
-    conn.run(`CREATE OR REPLACE VIEW data AS SELECT * FROM read_csv_auto('${fp}', header=true)`, (err) => {
-      if (err) {
-        conn.close();
-        return reject(err);
-      }
+    const runSql = () => {
       conn.all(sql, (err2, rows) => {
         const executionTimeMs = Date.now() - start;
         if (err2) {
@@ -35,6 +37,39 @@ export function runQuery(filePath, sql) {
         conn.close();
         resolve({ rows, columns, executionTimeMs });
       });
+    };
+
+    if (isDual(fileInfo)) {
+      const fpA = safePath(fileInfo.csvPathA);
+      const fpB = safePath(fileInfo.csvPathB);
+      conn.run(`CREATE OR REPLACE VIEW a AS SELECT * FROM read_csv_auto('${fpA}', header=true)`, (err) => {
+        if (err) {
+          conn.close();
+          return reject(err);
+        }
+        conn.run(`CREATE OR REPLACE VIEW b AS SELECT * FROM read_csv_auto('${fpB}', header=true)`, (err2) => {
+          if (err2) {
+            conn.close();
+            return reject(err2);
+          }
+          runSql();
+        });
+      });
+      return;
+    }
+
+    const csvPath = fileInfo.csvPath || fileInfo.path;
+    if (!csvPath) {
+      conn.close();
+      return reject(new Error('No CSV path in file info'));
+    }
+    const fp = safePath(csvPath);
+    conn.run(`CREATE OR REPLACE VIEW data AS SELECT * FROM read_csv_auto('${fp}', header=true)`, (err) => {
+      if (err) {
+        conn.close();
+        return reject(err);
+      }
+      runSql();
     });
   });
 }

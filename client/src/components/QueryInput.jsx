@@ -7,7 +7,7 @@ const suggestions = [
   'Top 10 customers by total spend'
 ];
 
-export default function QueryInput({ onSubmit, loading, disabled }) {
+export default function QueryInput({ onSubmit, loading, disabled, followUpActive }) {
   const [value, setValue] = useState('');
   const inputRef = useRef(null);
 
@@ -39,7 +39,7 @@ export default function QueryInput({ onSubmit, loading, disabled }) {
   };
 
   return (
-    <div className="fade-in-2">
+    <div className="fade-in-2" data-tour="query">
       <div className="relative">
         <input
           ref={inputRef}
@@ -47,7 +47,7 @@ export default function QueryInput({ onSubmit, loading, disabled }) {
           value={value}
           onChange={(e) => setValue(e.target.value)}
           onKeyDown={handleKeyDown}
-          placeholder="Ask anything about your data..."
+          placeholder={followUpActive ? 'Follow up: e.g. “Only Q4” or “Break down by region”…' : 'Ask anything about your data…'}
           disabled={disabled || loading}
           className="w-full outline-none transition-all duration-200"
           style={{

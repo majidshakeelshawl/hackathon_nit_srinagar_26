@@ -9,13 +9,14 @@ import cors from 'cors';
 import fs from 'fs';
 import uploadRouter from './routes/upload.js';
 import queryRouter from './routes/query.js';
+import shareRouter from './routes/share.js';
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Middleware
 app.use(cors({ origin: '*' }));
-app.use(express.json());
+app.use(express.json({ limit: '15mb' }));
 
 // Create uploads directory
 fs.mkdirSync('./tmp/uploads', { recursive: true });
@@ -23,6 +24,7 @@ fs.mkdirSync('./tmp/uploads', { recursive: true });
 // Routes
 app.use('/api/upload', uploadRouter);
 app.use('/api/query', queryRouter);
+app.use('/api/share', shareRouter);
 
 // Health check
 app.get('/health', (req, res) => {

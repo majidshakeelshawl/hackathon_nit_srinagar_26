@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 :root {
+  color-scheme: dark light;
+}
+
+[data-theme="dark"] {
   --bg-primary: #0A0E1A;
   --bg-secondary: #111827;
   --bg-tertiary: #1A2235;
@@ -17,7 +21,25 @@
   --danger: #F87171;
   --text-primary: #F1F5F9;
   --text-secondary: #94A3B8;
-  --text-tertiary: #475569;
+  --text-tertiary: #64748B;
+}
+
+[data-theme="light"] {
+  --bg-primary: #F8FAFC;
+  --bg-secondary: #FFFFFF;
+  --bg-tertiary: #F1F5F9;
+  --bg-card: #FFFFFF;
+  --border: rgba(15, 23, 42, 0.08);
+  --border-hover: rgba(15, 23, 42, 0.14);
+  --accent: #2563EB;
+  --accent-hover: #1D4ED8;
+  --accent-glow: rgba(37, 99, 235, 0.1);
+  --success: #059669;
+  --warning: #D97706;
+  --danger: #DC2626;
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-tertiary: #64748B;
 }
 
 body {
@@ -112,13 +134,22 @@ body {
   background: transparent;
 }
 
-::-webkit-scrollbar-thumb {
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
   background: rgba(255,255,255,0.1);
   border-radius: 3px;
 }
 
-::-webkit-scrollbar-thumb:hover {
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
   background: rgba(255,255,255,0.2);
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: rgba(15, 23, 42, 0.15);
+  border-radius: 3px;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb:hover {
+  background: rgba(15, 23, 42, 0.25);
 }
 
 /* ─── Monaco Editor Overrides ─────────────────────────────── */

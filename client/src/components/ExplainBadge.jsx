@@ -1,9 +1,12 @@
 import LoadingSkeleton from './LoadingSkeleton';
 
-export default function ExplainBadge({ explanation }) {
-  if (!explanation) {
+export default function ExplainBadge({ explanation, streamingText, streaming }) {
+  const showSkeleton = !streaming && !streamingText && !explanation;
+  if (showSkeleton) {
     return <LoadingSkeleton lines={1} height={14} />;
   }
+
+  const text = streaming ? (streamingText || '') : explanation;
 
   return (
     <div className="fade-in-3 rounded-r-lg py-3 px-4 mt-3" style={{
@@ -15,7 +18,10 @@ export default function ExplainBadge({ explanation }) {
       </div>
       <div className="flex items-start gap-2">
         <span className="text-sm">💡</span>
-        <span className="text-sm" style={{ color: 'var(--text-secondary)' }}>{explanation}</span>
+        <span className="text-sm" style={{ color: 'var(--text-secondary)' }}>
+          {text}
+          {streaming && <span className="cursor-blink" />}
+        </span>
       </div>
     </div>
   );
