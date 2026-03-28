@@ -16,7 +16,6 @@ Behind the scenes, the platform leverages state-of-the-art LLMs (Llama 3.1 via N
 - **Conversational Analytics** — After a result, ask follow-ups like “Only Q4” or “Break that down by region.” The previous context loops into the LLM safely to preserve state context.
 - **Streaming SQL** — NL→SQL requests are streamed over SSE for a live "typing" effect.
 - **AI Business Insights** — A secondary LLM pass analyzes the query output and structures 3 high-impact, actionable business bullet points highlighting trends, anomalies, and metrics.
-- **Anomaly Detection** — Built-in math routines map dataset standard deviations to flag outlier rows in your Table view automatically.
 - **Share Links** — Create sharable URL snapshots containing your dataset's exact visualization state, SQL query, and AI insights.
 
 ## Tech stack
