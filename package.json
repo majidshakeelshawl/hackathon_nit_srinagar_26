@@ -10,7 +10,8 @@
     "dev:client": "npm run dev --prefix client",
     "build": "npm run build --prefix client",
     "convex:codegen": "convex codegen",
-    "smoke": "node scripts/smoke.mjs"
+    "smoke": "node scripts/smoke.mjs",
+    "install:all": "npm install && npm install --prefix client && npm install --prefix server"
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
