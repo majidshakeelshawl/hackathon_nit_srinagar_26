@@ -7,12 +7,10 @@ export default function SQLViewer({ sql, executionTimeMs, rowCount, fileId, onRa
   const [editMode, setEditMode] = useState(false);
   const [editedSql, setEditedSql] = useState('');
   const [copied, setCopied] = useState(false);
-  const prevSqlRef = useRef('');
 
   // Typewriter effect
   useEffect(() => {
-    if (!sql || sql === prevSqlRef.current) return;
-    prevSqlRef.current = sql;
+    if (!sql) return;
     setIsTyping(true);
     setDisplayedSql('');
     let i = 0;
