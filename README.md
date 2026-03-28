@@ -1,8 +1,8 @@
-# Query Wise
+# QueryWise
 
 > Query your company data in plain English. Get instant SQL, charts, and AI-driven insights. No coding needed.
 
-## What is Query Wise?
+## What is QueryWise?
 
 Query Wise is a next-generation AI-powered data analytics platform designed to democratize data exploration. Instead of relying on data scientists or knowing complex SQL queries, users can simply upload their raw data files (CSV, Excel) and "talk" to their data in natural language.
 
