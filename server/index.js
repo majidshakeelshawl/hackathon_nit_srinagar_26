@@ -1,6 +1,9 @@
 import dotenv from 'dotenv';
 dotenv.config();
 
+// Patch BigInt for JSON serialization
+BigInt.prototype.toJSON = function() { return Number(this); };
+
 import express from 'express';
 import cors from 'cors';
 import fs from 'fs';
