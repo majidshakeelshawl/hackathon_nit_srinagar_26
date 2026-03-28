@@ -9,7 +9,7 @@ const STEPS = [
   },
   {
     title: 'Ask in plain English',
-    body: 'Type a question — NVIDIA NIM generates DuckDB SQL and runs it for you.'
+    body: 'Type a question in plain English — the AI generates a query and runs it for you instantly.'
   },
   {
     title: 'See the chart',

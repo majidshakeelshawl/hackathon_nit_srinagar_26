@@ -138,17 +138,17 @@ export default function Workspace() {
         flexShrink: 0
       }}>
         <a href="/" className="flex items-center gap-2 min-w-0 transition-opacity hover:opacity-80">
-          <div className="w-8 h-8 rounded-xl flex items-center justify-center shrink-0 shadow-lg" style={{ background: 'var(--accent)' }}>
-            <span className="text-white text-sm font-bold">Q</span>
+          <div className="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 bg-accent-gradient">
+            <span className="text-white text-xs font-bold">Q</span>
           </div>
-          <span className="font-semibold text-base tracking-tight truncate" style={{ color: 'var(--text-primary)' }}>Query Wise</span>
+          <span className="font-semibold text-[15px] tracking-tight truncate" style={{ color: 'var(--text-primary)' }}>QueryWise</span>
         </a>
         <div className="flex items-center gap-2 sm:gap-3 shrink-0">
           <ThemeToggle />
           {fileData && (
             <button
               onClick={handleReset}
-              className="text-xs px-2 sm:px-3 py-1.5 rounded-lg transition-all duration-200 shadow-sm"
+              className="text-xs px-2 sm:px-3 py-1.5 rounded-lg transition-all duration-200"
               style={{ background: 'var(--bg-tertiary)', color: 'var(--text-secondary)', border: '1px solid var(--border)' }}
             >
               <span className="hidden sm:inline">← New file</span>
@@ -205,8 +205,8 @@ export default function Workspace() {
           {!fileData ? (
             <div className="max-w-3xl mx-auto">
               <div className="text-center mb-6 sm:mb-8 fade-in">
-                <h1 className="text-2xl sm:text-4xl font-bold mb-3" style={{ color: 'var(--text-primary)' }}>
-                  Query your data in <span style={{ color: 'var(--accent)' }}>plain English</span>
+                <h1 className="text-2xl sm:text-4xl font-bold mb-3 tracking-tight" style={{ color: 'var(--text-primary)' }}>
+                  Query your data in <span className="text-gradient">plain English</span>
                 </h1>
                 <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>
                   Upload one or multiple CSV/Excel files (up to 4). AI infers JOIN keys automatically. Ask follow-ups to refine results.

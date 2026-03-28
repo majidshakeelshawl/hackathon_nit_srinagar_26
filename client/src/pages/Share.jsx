@@ -47,11 +47,15 @@ export default function Share() {
 
   return (
     <div className="min-h-screen" style={{ background: 'var(--bg-primary)' }}>
-      <nav className="flex items-center justify-between px-5 py-3" style={{
-        background: 'var(--bg-secondary)',
+      <nav className="glass-nav flex items-center justify-between px-5 py-3" style={{
         borderBottom: '1px solid var(--border)'
       }}>
-        <Link to="/" className="text-sm font-semibold" style={{ color: 'var(--text-primary)' }}>QueryWise</Link>
+        <Link to="/" className="flex items-center gap-2">
+          <div className="w-7 h-7 rounded-lg flex items-center justify-center bg-accent-gradient">
+            <span className="text-white text-xs font-bold">Q</span>
+          </div>
+          <span className="text-[15px] font-semibold" style={{ color: 'var(--text-primary)' }}>QueryWise</span>
+        </Link>
         <span className="text-xs" style={{ color: 'var(--text-tertiary)' }}>Shared result · read-only</span>
       </nav>
 

@@ -77,7 +77,7 @@ export default function QueryInput({ onSubmit, loading, disabled, followUpActive
             padding: '14px 52px 14px 16px',
             color: 'var(--text-primary)',
             fontSize: '15px',
-            fontFamily: 'DM Sans'
+            fontFamily: 'Inter, sans-serif'
           }}
           onFocus={(e) => e.target.style.borderColor = 'var(--accent)'}
           onBlur={(e) => e.target.style.borderColor = 'var(--border)'}

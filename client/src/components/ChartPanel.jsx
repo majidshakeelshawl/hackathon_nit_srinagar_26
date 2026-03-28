@@ -22,7 +22,7 @@ const CustomTooltip = ({ active, payload, label }) => {
       border: '1px solid var(--border)',
       borderRadius: '8px',
       padding: '10px 14px',
-      fontFamily: 'DM Sans',
+      fontFamily: 'Inter, sans-serif',
       fontSize: '12px'
     }}>
       <p style={{ color: 'var(--text-secondary)', marginBottom: '4px' }}>{label}</p>
