@@ -37,14 +37,13 @@ function DropSlot({ label, file, onSelect, disabled }) {
 
 export default function FileUpload({
   onFileAccepted,
-  onDualAccepted,
-  dual = false,
+  onMultiAccepted,
+  multi = false,
   uploading,
   progress,
   error
 }) {
-  const [fileA, setFileA] = useState(null);
-  const [fileB, setFileB] = useState(null);
+  const [files, setFiles] = useState([null, null, null, null]);
 
   const onDrop = useCallback((acceptedFiles) => {
     if (acceptedFiles.length > 0) {
@@ -62,6 +61,14 @@ export default function FileUpload({
     maxFiles: 1,
     disabled: uploading
   });
+
+  const handleSelectMulti = (index, file) => {
+    const newFiles = [...files];
+    newFiles[index] = file;
+    setFiles(newFiles);
+  };
+
+  const selectedCount = files.filter(Boolean).length;
 
   if (uploading) {
     return (
@@ -89,24 +96,38 @@ export default function FileUpload({
     );
   }
 
-  if (dual && onDualAccepted) {
+  if (multi && onMultiAccepted) {
     return (
       <div className="space-y-4">
         <p className="text-sm text-center" style={{ color: 'var(--text-secondary)' }}>
-          Upload two related tables — the AI will infer join keys (e.g. shared <code className="text-xs">id</code> columns).
+          Upload between 2 and 4 related tables — the AI will infer join keys (e.g. shared <code className="text-xs">id</code> columns).
         </p>
-        <div className="flex flex-col sm:flex-row gap-3">
-          <DropSlot label="Table A" file={fileA} onSelect={setFileA} disabled={uploading} />
-          <DropSlot label="Table B" file={fileB} onSelect={setFileB} disabled={uploading} />
+        <div className="grid grid-cols-2 gap-3">
+          {[1, 2, 3, 4].map((num, i) => (
+            <DropSlot
+              key={num}
+              label={`File ${num}`}
+              file={files[i]}
+              onSelect={(f) => handleSelectMulti(i, f)}
+              disabled={uploading}
+            />
+          ))}
         </div>
         <button
           type="button"
-          disabled={!fileA || !fileB}
-          onClick={() => fileA && fileB && onDualAccepted(fileA, fileB)}
+          disabled={selectedCount < 2}
+          onClick={() => {
+            if (selectedCount >= 2) {
+              onMultiAccepted(files.filter(Boolean));
+            }
+          }}
           className="w-full py-3 rounded-xl text-sm font-semibold transition-opacity disabled:opacity-40"
           style={{ background: 'var(--accent)', color: '#fff' }}
         >
-          Upload &amp; analyze both datasets
+          {selectedCount < 2 
+            ? 'Select at least 2 files' 
+            : `Upload & analyze ${selectedCount} format${selectedCount > 1 ? 's' : ''}`
+          }
         </button>
         {error && (
           <div className="rounded-xl p-3 text-sm" style={{

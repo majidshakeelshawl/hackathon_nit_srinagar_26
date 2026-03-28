@@ -14,13 +14,6 @@ function safePath(filePath) {
   return filePath.replace(/\\/g, '/');
 }
 
-function isDual(fileInfo) {
-  return fileInfo?.mode === 'dual' && fileInfo.csvPathA && fileInfo.csvPathB;
-}
-
-/**
- * Register view(s) and run SQL. Single-file uses VIEW `data`; two files use `a` and `b`.
- */
 export function runQuery(fileInfo, sql) {
   return new Promise((resolve, reject) => {
     const conn = db.connect();
@@ -39,21 +32,20 @@ export function runQuery(fileInfo, sql) {
       });
     };
 
-    if (isDual(fileInfo)) {
-      const fpA = safePath(fileInfo.csvPathA);
-      const fpB = safePath(fileInfo.csvPathB);
-      conn.run(`CREATE OR REPLACE VIEW a AS SELECT * FROM read_csv_auto('${fpA}', header=true)`, (err) => {
-        if (err) {
-          conn.close();
-          return reject(err);
-        }
-        conn.run(`CREATE OR REPLACE VIEW b AS SELECT * FROM read_csv_auto('${fpB}', header=true)`, (err2) => {
-          if (err2) {
-            conn.close();
-            return reject(err2);
-          }
-          runSql();
-        });
+    if (fileInfo?.mode === 'multi' && fileInfo.files) {
+      let createViews = Promise.resolve();
+      fileInfo.files.forEach((f) => {
+        const fp = safePath(f.csvPath);
+        createViews = createViews.then(() => new Promise((res, rej) => {
+          conn.run(`CREATE OR REPLACE VIEW ${f.tablePrefix} AS SELECT * FROM read_csv_auto('${fp}', header=true)`, (err) => {
+            if (err) rej(err);
+            else res();
+          });
+        }));
+      });
+      createViews.then(runSql).catch((err) => {
+        conn.close();
+        reject(err);
       });
       return;
     }

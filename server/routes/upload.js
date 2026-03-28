@@ -26,69 +26,74 @@ function ensureCsvPath(diskPath, originalName) {
   return csvPath;
 }
 
-router.post('/dual', upload.fields([
-  { name: 'file1', maxCount: 1 },
-  { name: 'file2', maxCount: 1 }
-]), async (req, res) => {
+router.post('/multi', upload.array('files', 4), async (req, res) => {
   try {
-    const f1 = req.files?.file1?.[0];
-    const f2 = req.files?.file2?.[0];
-    if (!f1 || !f2) {
-      return res.status(400).json({ error: 'Two files (file1 and file2) are required' });
+    const files = req.files;
+    if (!files || files.length < 2) {
+      return res.status(400).json({ error: 'At least two files are required for JOIN mode' });
     }
 
-    let csvPathA;
-    let csvPathB;
-    try {
-      csvPathA = ensureCsvPath(f1.path, f1.originalname);
-    } catch (e) {
-      return res.status(400).json({ error: 'Failed to process file 1: ' + e.message });
-    }
-    try {
-      csvPathB = ensureCsvPath(f2.path, f2.originalname);
-    } catch (e) {
-      return res.status(400).json({ error: 'Failed to process file 2: ' + e.message });
+    const processedFiles = [];
+    let totalRows = 0;
+    const combinedSchema = [];
+
+    for (let i = 0; i < files.length; i++) {
+      const f = files[i];
+      let csvPath;
+      try {
+        csvPath = ensureCsvPath(f.path, f.originalname);
+      } catch (e) {
+        return res.status(400).json({ error: `Failed to process file ${i + 1}: ${e.message}` });
+      }
+
+      const schema = await inferSchema(csvPath);
+      const rowCount = await getRowCount(csvPath);
+      const tablePrefix = `table${i + 1}`;
+
+      processedFiles.push({
+        filename: f.originalname,
+        csvPath,
+        schema,
+        rowCount,
+        tablePrefix
+      });
+
+      totalRows += rowCount;
+      schema.forEach(c => {
+        combinedSchema.push({
+          ...c,
+          name: `${tablePrefix}.${c.name}`,
+          source: tablePrefix,
+          baseName: c.name
+        });
+      });
     }
 
-    const schemaA = await inferSchema(csvPathA);
-    const schemaB = await inferSchema(csvPathB);
-    const rowCountA = await getRowCount(csvPathA);
-    const rowCountB = await getRowCount(csvPathB);
     const fileId = uuidv4();
-
-    const combinedSchema = [
-      ...schemaA.map((c) => ({ ...c, name: `a.${c.name}`, source: 'a', baseName: c.name })),
-      ...schemaB.map((c) => ({ ...c, name: `b.${c.name}`, source: 'b', baseName: c.name }))
-    ];
+    const joinedNames = processedFiles.map(f => f.filename).join(' + ');
 
     fileRegistry.set(fileId, {
-      mode: 'dual',
-      csvPathA,
-      csvPathB,
-      filenameA: f1.originalname,
-      filenameB: f2.originalname,
-      schemaA,
-      schemaB,
+      mode: 'multi',
+      files: processedFiles,
       schema: combinedSchema,
-      rowCount: rowCountA + rowCountB,
-      filename: `${f1.originalname} + ${f2.originalname}`
+      rowCount: totalRows,
+      filename: joinedNames
     });
 
     res.json({
       fileId,
-      mode: 'dual',
-      filename: `${f1.originalname} + ${f2.originalname}`,
-      filenameA: f1.originalname,
-      filenameB: f2.originalname,
-      schemaA,
-      schemaB,
+      mode: 'multi',
+      filename: joinedNames,
+      files: processedFiles.map(f => ({
+        filename: f.filename,
+        schema: f.schema,
+        rowCount: f.rowCount
+      })),
       schema: combinedSchema,
-      rowCountA,
-      rowCountB,
-      rowCount: rowCountA + rowCountB
+      rowCount: totalRows
     });
   } catch (err) {
-    console.error('Dual upload error:', err);
+    console.error('Multi upload error:', err);
     res.status(500).json({ error: 'Failed to process files: ' + err.message });
   }
 });

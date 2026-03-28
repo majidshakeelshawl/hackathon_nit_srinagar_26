@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { uploadFile, uploadDualFiles } from '../lib/api';
+import { uploadFile, uploadMultiFiles } from '../lib/api';
 
 export function useFileUpload() {
   const [uploading, setUploading] = useState(false);
@@ -25,13 +25,13 @@ export function useFileUpload() {
     }
   };
 
-  const uploadDual = async (file1, file2) => {
+  const uploadMulti = async (files) => {
     setUploading(true);
     setProgress(0);
     setError(null);
 
     try {
-      const data = await uploadDualFiles(file1, file2, (pct) => setProgress(pct));
+      const data = await uploadMultiFiles(files, (pct) => setProgress(pct));
       setFileData(data);
       return data;
     } catch (err) {
@@ -49,5 +49,5 @@ export function useFileUpload() {
     setProgress(0);
   };
 
-  return { uploading, progress, error, fileData, upload, uploadDual, reset };
+  return { uploading, progress, error, fileData, upload, uploadMulti, reset };
 }

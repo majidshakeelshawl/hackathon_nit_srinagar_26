@@ -21,12 +21,11 @@ export async function uploadFile(file, onProgress) {
   return response.data;
 }
 
-export async function uploadDualFiles(file1, file2, onProgress) {
+export async function uploadMultiFiles(files, onProgress) {
   const formData = new FormData();
-  formData.append('file1', file1);
-  formData.append('file2', file2);
+  files.forEach((file) => formData.append('files', file));
 
-  const response = await api.post('/api/upload/dual', formData, {
+  const response = await api.post('/api/upload/multi', formData, {
     headers: { 'Content-Type': 'multipart/form-data' },
     onUploadProgress: (e) => {
       if (onProgress && e.total) {

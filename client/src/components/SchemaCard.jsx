@@ -49,37 +49,25 @@ export default function SchemaCard({
   schema,
   rowCount,
   mode,
-  filenameA,
-  filenameB,
-  schemaA,
-  schemaB,
-  rowCountA,
-  rowCountB
+  fileData
 }) {
-  if (mode === 'dual' && schemaA && schemaB) {
+  if (mode === 'multi' && fileData?.files?.length) {
     return (
       <div className="fade-in-1 space-y-4">
         <div className="text-xs font-medium uppercase tracking-wider" style={{ color: 'var(--text-tertiary)' }}>
-          Two datasets · JOIN with views <code className="text-[10px]">a</code> and <code className="text-[10px]">b</code>
+          {fileData.files.length} datasets · JOIN with views <code className="text-[10px]">table1</code>, <code className="text-[10px]">table2</code>, etc.
         </div>
-        <div>
-          <div className="flex items-center gap-2 mb-2">
-            <span className="font-semibold text-sm" style={{ color: 'var(--text-primary)' }}>{filenameA}</span>
-            <span className="text-xs px-2 py-0.5 rounded-full" style={{ background: 'var(--accent-glow)', color: 'var(--accent)', fontFamily: 'JetBrains Mono' }}>
-              {rowCountA?.toLocaleString()} rows
-            </span>
+        {fileData.files.map((file, idx) => (
+          <div key={idx}>
+            <div className="flex items-center gap-2 mb-2">
+              <span className="font-semibold text-sm" style={{ color: 'var(--text-primary)' }}>{file.filename}</span>
+              <span className="text-xs px-2 py-0.5 rounded-full" style={{ background: 'var(--accent-glow)', color: 'var(--accent)', fontFamily: 'JetBrains Mono' }}>
+                {file.rowCount?.toLocaleString()} rows
+              </span>
+            </div>
+            <ColumnStrip schema={file.schema} />
           </div>
-          <ColumnStrip schema={schemaA} />
-        </div>
-        <div>
-          <div className="flex items-center gap-2 mb-2">
-            <span className="font-semibold text-sm" style={{ color: 'var(--text-primary)' }}>{filenameB}</span>
-            <span className="text-xs px-2 py-0.5 rounded-full" style={{ background: 'var(--accent-glow)', color: 'var(--accent)', fontFamily: 'JetBrains Mono' }}>
-              {rowCountB?.toLocaleString()} rows
-            </span>
-          </div>
-          <ColumnStrip schema={schemaB} />
-        </div>
+        ))}
       </div>
     );
   }

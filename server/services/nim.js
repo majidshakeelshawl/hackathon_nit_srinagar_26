@@ -43,24 +43,22 @@ Interpret the new request as a modification or follow-up to that query (e.g. fil
 export function buildNl2SqlSystemPrompt(fileInfo, context = {}) {
   const fu = followUpBlock(context);
 
-  if (fileInfo.mode === 'dual') {
-    const aCols = describeColumns(fileInfo.schemaA, 'a');
-    const bCols = describeColumns(fileInfo.schemaB, 'b');
-    return `You are a DuckDB SQL expert. Two datasets are available as views:
-VIEW a — from file "${fileInfo.filenameA || 'file1'}"
-VIEW b — from file "${fileInfo.filenameB || 'file2'}"
+  if (fileInfo.mode === 'multi' && fileInfo.files) {
+    const viewsDesc = fileInfo.files.map(f => `VIEW ${f.tablePrefix} — from file "${f.filename}"`).join('\n');
+    const colsDesc = fileInfo.files.map(f => `TABLE ${f.tablePrefix} columns:\n${describeColumns(f.schema, f.tablePrefix)}`).join('\n\n');
 
-TABLE a columns:
-${aCols}
+    return `You are a DuckDB SQL expert. Up to 4 datasets are available as views:
+${viewsDesc}
 
-TABLE b columns:
-${bCols}
+${colsDesc}
 
-JOIN RULES: Infer join keys from matching column names (e.g. customer_id, order_id, region) or semantic keys. Use explicit INNER JOIN a ... ON ... b ... when combining both tables. If the question only needs one table, query only that view (a or b).
+JOIN RULES: Infer join keys from matching column names (e.g. customer_id, order_id, region) or semantic keys. Use explicit INNER JOIN when combining tables. If the question only needs one table, query only that view.
 
 ${fu}
 RULES: Return ONLY raw SQL. No backticks. No explanation. No preamble.
-Only SELECT. Use DuckDB syntax. Qualify columns with a. or b. when both tables are used.
+Only SELECT. Use DuckDB syntax. Qualify columns with table prefix (e.g. table1.) when multiple tables are used.
+If applying math/aggregations (SUM, AVG) to string columns, MUST cast first: TRY_CAST(REPLACE(REPLACE(col, '$', ''), ',', '') AS DOUBLE).
+If applying DATE functions (EXTRACT, DATE_TRUNC, MONTH) to string columns, MUST cast first: TRY_CAST(col AS DATE) or use strptime.
 For top N use ORDER BY + LIMIT. Use readable column aliases.`;
   }
 
@@ -72,6 +70,8 @@ ${schemaDescription}
 ${fu}
 RULES: Return ONLY raw SQL. No backticks. No explanation. No preamble.
 Only SELECT. Use only columns listed above. Use DuckDB syntax.
+If applying math/aggregations (SUM, AVG) to string columns, MUST cast first: TRY_CAST(REPLACE(REPLACE(col, '$', ''), ',', '') AS DOUBLE).
+If applying DATE functions (EXTRACT, DATE_TRUNC, MONTH) to string columns, MUST cast first: TRY_CAST(col AS DATE) or use strptime.
 For top N use ORDER BY + LIMIT. Use readable column aliases.`;
 }
 

@@ -24,7 +24,7 @@ export default function Workspace() {
   const [uploadMode, setUploadMode] = useState('single');
   const [conversationContext, setConversationContext] = useState(null);
 
-  const { uploading, progress, error: uploadError, fileData, upload, uploadDual, reset } = useFileUpload();
+  const { uploading, progress, error: uploadError, fileData, upload, uploadMulti, reset } = useFileUpload();
   const {
     loading,
     error: queryError,
@@ -51,9 +51,9 @@ export default function Workspace() {
     await upload(file);
   }, [upload]);
 
-  const handleDualAccepted = useCallback(async (f1, f2) => {
-    await uploadDual(f1, f2);
-  }, [uploadDual]);
+  const handleMultiAccepted = useCallback(async (files) => {
+    await uploadMulti(files);
+  }, [uploadMulti]);
 
   const handleReset = useCallback(() => {
     reset();
@@ -213,7 +213,7 @@ export default function Workspace() {
                   Query your data in <span style={{ color: 'var(--accent)' }}>plain English</span>
                 </h1>
                 <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>
-                  Upload one or two CSV/Excel files. With two files, AI infers JOIN keys. Ask follow-ups to refine results.
+                  Upload one or multiple CSV/Excel files (up to 4). AI infers JOIN keys automatically. Ask follow-ups to refine results.
                 </p>
               </div>
 
@@ -232,15 +232,15 @@ export default function Workspace() {
                 </button>
                 <button
                   type="button"
-                  onClick={() => setUploadMode('dual')}
+                  onClick={() => setUploadMode('multi')}
                   className="text-xs px-4 py-2 rounded-lg font-medium"
                   style={{
-                    background: uploadMode === 'dual' ? 'var(--accent)' : 'var(--bg-tertiary)',
-                    color: uploadMode === 'dual' ? '#fff' : 'var(--text-secondary)',
+                    background: uploadMode === 'multi' ? 'var(--accent)' : 'var(--bg-tertiary)',
+                    color: uploadMode === 'multi' ? '#fff' : 'var(--text-secondary)',
                     border: '1px solid var(--border)'
                   }}
                 >
-                  Two files (JOIN)
+                  Multiple files (JOIN)
                 </button>
               </div>
 
@@ -260,9 +260,9 @@ export default function Workspace() {
 
                 <div className="max-w-lg mx-auto">
                   <FileUpload
-                    dual={uploadMode === 'dual'}
+                    multi={uploadMode === 'multi'}
                     onFileAccepted={handleFileAccepted}
-                    onDualAccepted={handleDualAccepted}
+                    onMultiAccepted={handleMultiAccepted}
                     uploading={uploading}
                     progress={progress}
                     error={uploadError}
@@ -277,12 +277,7 @@ export default function Workspace() {
                 filename={fileData.filename}
                 schema={fileData.schema}
                 rowCount={fileData.rowCount}
-                filenameA={fileData.filenameA}
-                filenameB={fileData.filenameB}
-                schemaA={fileData.schemaA}
-                schemaB={fileData.schemaB}
-                rowCountA={fileData.rowCountA}
-                rowCountB={fileData.rowCountB}
+                fileData={fileData}
               />
 
               {conversationContext?.previousSql && (
