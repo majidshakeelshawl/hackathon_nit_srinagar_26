@@ -81,6 +81,17 @@ body {
 
 /* ─── Utility Classes ─────────────────────────────────────── */
 
+[data-theme="dark"] .glass-nav {
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+[data-theme="light"] .glass-nav {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
 [data-theme="dark"] .bg-grad-saas {
   background: radial-gradient(circle at 50% 0%, rgba(79,142,247,0.08), transparent 60%), var(--bg-primary);
 }

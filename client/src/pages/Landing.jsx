@@ -17,7 +17,7 @@ export default function Landing() {
             <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: 'var(--accent)' }}>
               <span className="text-white text-xl font-bold">Q</span>
             </div>
-            <span className="text-xl font-bold" style={{ color: 'var(--text-primary)' }}>QueryWise</span>
+            <span className="font-bold text-lg" style={{ color: 'var(--text-primary)' }}>Query Wise</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6" style={{ color: 'var(--text-primary)', maxWidth: '720px' }}>

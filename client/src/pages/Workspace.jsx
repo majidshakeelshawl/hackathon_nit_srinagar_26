@@ -132,9 +132,8 @@ export default function Workspace() {
     <div className="flex flex-col h-[100dvh] bg-grad-saas min-h-0" style={{ background: 'var(--bg-primary)' }}>
       <OnboardingTour fileData={fileData} />
 
-      <nav className="flex items-center justify-between px-3 sm:px-5 gap-2" style={{
+      <nav className="glass-nav z-10 sticky top-0 flex items-center justify-between px-3 sm:px-5 gap-2" style={{
         height: '52px',
-        background: 'var(--bg-secondary)',
         borderBottom: '1px solid var(--border)',
         flexShrink: 0
       }}>
@@ -142,7 +141,7 @@ export default function Workspace() {
           <div className="w-8 h-8 rounded-xl flex items-center justify-center shrink-0 shadow-lg" style={{ background: 'var(--accent)' }}>
             <span className="text-white text-sm font-bold">Q</span>
           </div>
-          <span className="font-semibold text-base tracking-tight truncate" style={{ color: 'var(--text-primary)' }}>QueryWise</span>
+          <span className="font-semibold text-base tracking-tight truncate" style={{ color: 'var(--text-primary)' }}>Query Wise</span>
         </a>
         <div className="flex items-center gap-2 sm:gap-3 shrink-0">
           <ThemeToggle />
