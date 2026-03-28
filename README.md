@@ -41,7 +41,7 @@ We are proud to build with the tools provided during the Kashmir Hackathon:
   - Fallback behavior: if Convex is not configured, the app continues with in-memory storage.
 - **Cursor Pro:** The primary AI-powered IDE that significantly accelerated the entire development lifecycle of this project.
 
-### Convex Usage Proof (Organizer Reference)
+### Convex Dashboard
 
 ![Convex usage screenshot](docs/assets/convex-usage.png)
 
