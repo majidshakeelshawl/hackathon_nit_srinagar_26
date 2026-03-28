@@ -1,11 +1,19 @@
 {
   "name": "querywise",
+  "version": "1.0.0",
+  "description": "Query your company data in plain English. Get instant SQL + charts. No coding needed.",
   "private": true,
   "scripts": {
+    "start": "concurrently \"npm run start --prefix server\" \"npm run preview --prefix client\"",
+    "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "build": "npm run build --prefix client",
     "convex:codegen": "convex codegen",
     "smoke": "node scripts/smoke.mjs"
   },
   "devDependencies": {
+    "concurrently": "^8.2.2",
     "convex": "^1.7.1"
   }
 }
