@@ -148,11 +148,15 @@ export default function Workspace() {
           {fileData && (
             <button
               onClick={handleReset}
-              className="text-xs px-2 sm:px-3 py-1.5 rounded-lg transition-all duration-200"
+              className="flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-lg transition-all duration-200 hover:border-[var(--accent)] hover:text-[var(--accent)]"
               style={{ background: 'var(--bg-tertiary)', color: 'var(--text-secondary)', border: '1px solid var(--border)' }}
+              title="Reset and upload a new file"
             >
-              <span className="hidden sm:inline">← New file</span>
-              <span className="sm:hidden">New</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <polyline points="1,4 1,10 7,10" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              <span className="hidden sm:inline">Start Over</span>
             </button>
           )}
         </div>
@@ -374,6 +378,27 @@ export default function Workspace() {
                       />
                     </div>
                     <InsightsPanel insights={result.insights} />
+
+                    {/* Start Over button after results */}
+                    <div className="flex justify-center pt-4 pb-2 fade-in-4">
+                      <button
+                        onClick={handleReset}
+                        className="flex items-center gap-2 text-sm px-5 py-2.5 rounded-xl transition-all duration-200 hover:-translate-y-0.5"
+                        style={{
+                          background: 'var(--bg-tertiary)',
+                          color: 'var(--text-secondary)',
+                          border: '1px solid var(--border)'
+                        }}
+                        onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--accent)'; e.currentTarget.style.color = 'var(--accent)'; }}
+                        onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.color = 'var(--text-secondary)'; }}
+                      >
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <polyline points="1,4 1,10 7,10" strokeLinecap="round" strokeLinejoin="round"/>
+                          <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                        Start Over with New Data
+                      </button>
+                    </div>
                   </>
                 )}
                 {!result && !loading && (
