@@ -2,6 +2,12 @@
 
 > Query your company data in plain English. Get instant SQL, charts, and AI-driven insights. No coding needed.
 
+## What is Query Wise?
+
+Query Wise is a next-generation AI-powered data analytics platform designed to democratize data exploration. Instead of relying on data scientists or knowing complex SQL queries, users can simply upload their raw data files (CSV, Excel) and "talk" to their data in natural language.
+
+Behind the scenes, the platform leverages state-of-the-art LLMs (Llama 3.1 via NVIDIA NIM) and a lightning-fast embedded DuckDB engine to parse relationships across multiple datasets, write complex `JOIN` queries on the fly, and execute them instantly. It doesn't just return rows of tabular data—it visually renders the results into interactive charts and generates automatic, summarized business insights so decision-makers can act immediately.
+
 ## What it does
 
 - **Overall Features** — Query Wise acts as an advanced, AI-driven Data Analysis SaaS. You can effortlessly bridge natural language to complex underlying SQL operations without knowing any SQL.
@@ -22,6 +28,13 @@
 | SQL engine | DuckDB (in-process) | Lightning-fast local analytics engine routing standard natural language to `read_csv_auto` optimized streams. Handles multiple in-memory VIEW architectures concurrently. |
 | AI Pipeline | NVIDIA NIM (`meta/llama-3.1-70b-instruct`) | The brain of natural language comprehension. Provides lightning-fast response times to convert plain english to strict DuckDB-dialect SQL, along with contextual data insights and schema extraction. |
 | Backend | Node.js + Express | Handles asynchronous multi-part `.csv` and `.xlsx` upload streams, proxy streams SSE from NVIDIA NIM API, and serves Convex interactions. |
+
+## 🏆 Hackathon Partner Technologies
+
+We are proud to build with the tools provided during the Kashmir Hackathon:
+
+- **Convex:** The core realtime database layer of our platform. We rely on Convex to manage user schemas, synchronize state effortlessly between the client and server, and securely preserve the history of every AI query generated.
+- **Cursor Pro:** The primary AI-powered IDE that significantly accelerated the entire development lifecycle of this project.
 
 ## Environment variables
 
