@@ -3,6 +3,7 @@ import { useFileUpload } from '../hooks/useFileUpload';
 import { useQueryRunner } from '../hooks/useQueryRunner';
 import { useMediaQuery } from '../hooks/useMediaQuery';
 import { selectChartType } from '../lib/chartSelector';
+import { fetchQueryHistory, clearQueryHistory } from '../lib/api';
 import FileUpload from '../components/FileUpload';
 import SchemaCard from '../components/SchemaCard';
 import QueryInput from '../components/QueryInput';
@@ -23,6 +24,14 @@ export default function Workspace() {
   const [historyOpen, setHistoryOpen] = useState(false);
   const [uploadMode, setUploadMode] = useState('single');
   const [conversationContext, setConversationContext] = useState(null);
+  const [sessionId] = useState(() => {
+    const key = 'querywise_session_id';
+    const existing = localStorage.getItem(key);
+    if (existing) return existing;
+    const next = (globalThis.crypto?.randomUUID?.() || `session_${Date.now()}`);
+    localStorage.setItem(key, next);
+    return next;
+  });
 
   const { uploading, progress, error: uploadError, fileData, upload, uploadMulti, reset } = useFileUpload();
   const {
@@ -47,6 +56,29 @@ export default function Workspace() {
     }
   }, [result?.chartType]);
 
+  useEffect(() => {
+    let mounted = true;
+    (async () => {
+      try {
+        const persisted = await fetchQueryHistory(sessionId);
+        if (!mounted) return;
+        setHistory(persisted.map((item, idx) => ({
+          _id: item._id || `${item.createdAt || item._creationTime || Date.now()}_${idx}`,
+          question: item.question,
+          sql: item.sql,
+          rowCount: item.rowCount,
+          executionTimeMs: item.executionTimeMs,
+          createdAt: item.createdAt || item._creationTime || Date.now()
+        })));
+      } catch {
+        // non-critical; local history still works
+      }
+    })();
+    return () => {
+      mounted = false;
+    };
+  }, [sessionId]);
+
   const handleFileAccepted = useCallback(async (file) => {
     await upload(file);
   }, [upload]);
@@ -65,9 +97,10 @@ export default function Workspace() {
     const ctx = conversationContext?.previousSql
       ? {
           previousSql: conversationContext.previousSql,
-          previousQuestion: conversationContext.previousQuestion || ''
+          previousQuestion: conversationContext.previousQuestion || '',
+          sessionId
         }
-      : null;
+      : { sessionId };
     const res = await execute(fileData.fileId, question, ctx);
     if (res) {
       setConversationContext({ previousSql: res.sql, previousQuestion: res.question });
@@ -86,7 +119,7 @@ export default function Workspace() {
         anomalyFlags: res.anomalyFlags
       }, ...prev].slice(0, 20));
     }
-  }, [fileData, execute, conversationContext]);
+  }, [fileData, execute, conversationContext, sessionId]);
 
   const handleRawResult = useCallback(async (sql) => {
     if (!fileData?.fileId) return;
@@ -116,9 +149,14 @@ export default function Workspace() {
     }
   }, [setResult]);
 
-  const handleClearHistory = useCallback(() => {
+  const handleClearHistory = useCallback(async () => {
     setHistory([]);
-  }, []);
+    try {
+      await clearQueryHistory(sessionId);
+    } catch {
+      // non-critical
+    }
+  }, [sessionId]);
 
   const handleChartTypeChange = useCallback((type) => {
     setCurrentChartType(type);

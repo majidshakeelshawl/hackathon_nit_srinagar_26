@@ -48,6 +48,9 @@ export async function runQuery(fileId, question) {
 export async function runQueryStream(fileId, question, handlers = {}, conversationContext = null) {
   const base = import.meta.env.VITE_API_URL || 'http://localhost:3001';
   const body = { fileId, question };
+  if (conversationContext?.sessionId) {
+    body.sessionId = conversationContext.sessionId;
+  }
   if (conversationContext?.previousSql) {
     body.previousSql = conversationContext.previousSql;
     body.previousQuestion = conversationContext.previousQuestion || '';
@@ -136,6 +139,16 @@ export async function runQueryStream(fileId, question, handlers = {}, conversati
 
 export async function runRawSQL(fileId, sql) {
   const response = await api.post('/api/query/raw', { fileId, sql });
+  return response.data;
+}
+
+export async function fetchQueryHistory(sessionId) {
+  const response = await api.get(`/api/query/history/${encodeURIComponent(sessionId)}`);
+  return response.data?.history || [];
+}
+
+export async function clearQueryHistory(sessionId) {
+  const response = await api.delete(`/api/query/history/${encodeURIComponent(sessionId)}`);
   return response.data;
 }
 

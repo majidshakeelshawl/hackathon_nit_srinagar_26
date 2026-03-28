@@ -21,24 +21,24 @@ export const saveQuery = mutation({
 export const getHistory = query({
   args: { sessionId: v.string() },
   handler: async (ctx, args) => {
-    const results = await ctx.db
-      .query("queryHistory")
-      .withIndex("by_session", (q) => q.eq("sessionId", args.sessionId))
-      .order("desc")
-      .take(20);
-    return results;
+    // Avoid hard-depending on a specific index name to keep history resilient
+    // across deployments where schema/index migration may lag.
+    const rows = await ctx.db.query("queryHistory").collect();
+    return rows
+      .filter((r) => r.sessionId === args.sessionId)
+      .sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0))
+      .slice(0, 20);
   },
 });
 
 export const clearHistory = mutation({
   args: { sessionId: v.string() },
   handler: async (ctx, args) => {
-    const items = await ctx.db
-      .query("queryHistory")
-      .withIndex("by_session", (q) => q.eq("sessionId", args.sessionId))
-      .collect();
+    const items = await ctx.db.query("queryHistory").collect();
     for (const item of items) {
-      await ctx.db.delete(item._id);
+      if (item.sessionId === args.sessionId) {
+        await ctx.db.delete(item._id);
+      }
     }
   },
 });

@@ -10,7 +10,7 @@ import {
 } from '../services/nim.js';
 import { runQuery } from '../services/duckdb.js';
 import { flagAnomalyRows } from '../utils/anomalies.js';
-import { convexMutation } from '../services/convex.js';
+import { convexMutation, convexQuery } from '../services/convex.js';
 
 const router = Router();
 
@@ -29,6 +29,30 @@ function querySessionId(body, fileId) {
   if (body?.sessionId && typeof body.sessionId === 'string') return body.sessionId;
   return `file:${fileId}`;
 }
+
+router.get('/history/:sessionId', async (req, res) => {
+  try {
+    const { sessionId } = req.params;
+    if (!sessionId) return res.status(400).json({ error: 'sessionId is required' });
+    const history = await convexQuery('history:getHistory', { sessionId });
+    res.json({ history: Array.isArray(history) ? history : [] });
+  } catch (err) {
+    console.error('History fetch error:', err);
+    res.status(500).json({ error: 'Failed to fetch query history' });
+  }
+});
+
+router.delete('/history/:sessionId', async (req, res) => {
+  try {
+    const { sessionId } = req.params;
+    if (!sessionId) return res.status(400).json({ error: 'sessionId is required' });
+    await convexMutation('history:clearHistory', { sessionId });
+    res.json({ ok: true });
+  } catch (err) {
+    console.error('History clear error:', err);
+    res.status(500).json({ error: 'Failed to clear query history' });
+  }
+});
 
 // Natural language query
 router.post('/', async (req, res) => {
