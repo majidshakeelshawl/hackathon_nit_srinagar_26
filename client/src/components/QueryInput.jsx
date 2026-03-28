@@ -1,15 +1,35 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 
-const suggestions = [
+const defaultSuggestions = [
   'Show total revenue by product category',
   'What is the monthly revenue trend?',
   'Which region has the most orders?',
   'Top 10 customers by total spend'
 ];
 
-export default function QueryInput({ onSubmit, loading, disabled, followUpActive }) {
+export default function QueryInput({ onSubmit, loading, disabled, followUpActive, fileData }) {
   const [value, setValue] = useState('');
   const inputRef = useRef(null);
+
+  const suggestions = useMemo(() => {
+    if (!fileData || !fileData.schema?.length) return defaultSuggestions;
+    
+    const nums = fileData.schema.filter(c => ['DOUBLE', 'BIGINT', 'INTEGER'].includes(c.type));
+    const strings = fileData.schema.filter(c => c.type === 'VARCHAR');
+    const dates = fileData.schema.filter(c => ['DATE', 'TIMESTAMP'].includes(c.type));
+
+    const numCol = nums[0]?.baseName || nums[0]?.name;
+    const strCol = strings[0]?.baseName || strings[0]?.name;
+    const dateCol = dates[0]?.baseName || dates[0]?.name;
+
+    const dynamic = [];
+    if (numCol && strCol) dynamic.push(`Show total ${numCol.replace(/_/g, ' ')} by ${strCol.replace(/_/g, ' ')}`);
+    if (numCol && dateCol) dynamic.push(`What is the trend of ${numCol.replace(/_/g, ' ')} over ${dateCol.replace(/_/g, ' ')}?`);
+    if (strCol) dynamic.push(`Top 5 ${strCol.replace(/_/g, ' ')} by count`);
+    if (numCol) dynamic.push(`List all records sorted by ${numCol.replace(/_/g, ' ')} descending`);
+    
+    return dynamic.length > 0 ? dynamic : defaultSuggestions;
+  }, [fileData]);
 
   // Cmd+K / Ctrl+K to focus
   useEffect(() => {

@@ -93,9 +93,7 @@ export default function ChartPanel({ results, columns, chartType, onChartTypeCha
       );
     }
 
-    const effectiveType = chartType === 'pie' && processedForChart.length > 8 ? 'bar' : chartType;
-
-    switch (effectiveType) {
+    switch (chartType) {
       case 'bar':
         return (
           <ResponsiveContainer width="100%" height={320}>
@@ -170,10 +168,10 @@ export default function ChartPanel({ results, columns, chartType, onChartTypeCha
           <ResponsiveContainer width="100%" height={320}>
             <ScatterChart margin={{ top: 5, right: 20, left: 10, bottom: 5 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
-              <XAxis dataKey={numericCols[0]} name={numericCols[0]} tick={{ fill: 'var(--text-secondary)', fontSize: 12 }} />
-              <YAxis dataKey={numericCols[1]} name={numericCols[1]} tick={{ fill: 'var(--text-secondary)', fontSize: 12 }} />
-              <Tooltip content={<CustomTooltip />} />
-              <Scatter data={processedForChart} fill={CHART_COLORS[0]} />
+              <XAxis type="number" dataKey={numericCols[0]} name={numericCols[0]} tick={{ fill: 'var(--text-secondary)', fontSize: 12 }} />
+              <YAxis type="number" dataKey={numericCols[1]} name={numericCols[1]} tick={{ fill: 'var(--text-secondary)', fontSize: 12 }} />
+              <Tooltip cursor={{ strokeDasharray: '3 3' }} content={<CustomTooltip />} />
+              <Scatter name="Data" data={processedForChart} fill={CHART_COLORS[0]} />
             </ScatterChart>
           </ResponsiveContainer>
         );

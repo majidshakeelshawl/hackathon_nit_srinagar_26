@@ -129,7 +129,7 @@ export default function Workspace() {
   const showStreamingResults = loading && (streamingSql || sqlStreaming);
 
   return (
-    <div className="flex flex-col h-[100dvh] min-h-0" style={{ background: 'var(--bg-primary)' }}>
+    <div className="flex flex-col h-[100dvh] bg-grad-saas min-h-0" style={{ background: 'var(--bg-primary)' }}>
       <OnboardingTour fileData={fileData} />
 
       <nav className="flex items-center justify-between px-3 sm:px-5 gap-2" style={{
@@ -138,27 +138,24 @@ export default function Workspace() {
         borderBottom: '1px solid var(--border)',
         flexShrink: 0
       }}>
-        <div className="flex items-center gap-2 min-w-0">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center shrink-0" style={{ background: 'var(--accent)' }}>
+        <a href="/" className="flex items-center gap-2 min-w-0 transition-opacity hover:opacity-80">
+          <div className="w-8 h-8 rounded-xl flex items-center justify-center shrink-0 shadow-lg" style={{ background: 'var(--accent)' }}>
             <span className="text-white text-sm font-bold">Q</span>
           </div>
-          <span className="font-semibold text-sm truncate" style={{ color: 'var(--text-primary)' }}>QueryWise</span>
-        </div>
+          <span className="font-semibold text-base tracking-tight truncate" style={{ color: 'var(--text-primary)' }}>QueryWise</span>
+        </a>
         <div className="flex items-center gap-2 sm:gap-3 shrink-0">
           <ThemeToggle />
           {fileData && (
             <button
               onClick={handleReset}
-              className="text-xs px-2 sm:px-3 py-1.5 rounded-lg transition-all duration-200"
+              className="text-xs px-2 sm:px-3 py-1.5 rounded-lg transition-all duration-200 shadow-sm"
               style={{ background: 'var(--bg-tertiary)', color: 'var(--text-secondary)', border: '1px solid var(--border)' }}
             >
               <span className="hidden sm:inline">← New file</span>
               <span className="sm:hidden">New</span>
             </button>
           )}
-          <span className="text-[10px] sm:text-xs hidden sm:inline max-w-[100px] sm:max-w-none truncate" style={{ color: 'var(--text-tertiary)' }}>
-            NVIDIA NIM
-          </span>
         </div>
       </nav>
 
@@ -300,6 +297,7 @@ export default function Workspace() {
                 loading={loading}
                 disabled={!fileData}
                 followUpActive={!!conversationContext?.previousSql}
+                fileData={fileData}
               />
 
               {queryError && (

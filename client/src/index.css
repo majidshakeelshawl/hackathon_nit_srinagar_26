@@ -81,6 +81,14 @@ body {
 
 /* ─── Utility Classes ─────────────────────────────────────── */
 
+[data-theme="dark"] .bg-grad-saas {
+  background: radial-gradient(circle at 50% 0%, rgba(79,142,247,0.08), transparent 60%), var(--bg-primary);
+}
+
+[data-theme="light"] .bg-grad-saas {
+  background: radial-gradient(circle at 50% 0%, rgba(37,99,235,0.05), transparent 60%), var(--bg-primary);
+}
+
 .skeleton {
   background: linear-gradient(90deg, var(--bg-tertiary) 25%, rgba(255,255,255,0.06) 50%, var(--bg-tertiary) 75%);
   background-size: 200% 100%;
